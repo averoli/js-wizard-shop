@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css"/>
     <title>Wizard shop</title>
   </head>
   <body>
  
-    <h1>Hola adria</h1>
-    <h1>hola matias</h1>
-    <h1>Hola volha</h1>
-    <h1>hola ivan</h1>
-    <h1>hola chicos</h1>
+    <h2>Profile</h2>
+          <form id="form">
+        <label for="username">Username</label><br />
+        <input type="text" id="username" class="input-profile" value="" /><br />
+
+        <label for="email" >Email</label><br />
+        <input type="email" id="email" class="input-profile" /><br />
+
+        <label for="password">Password</label><br />
+        <input type="password" id="password" class="input-profile"/><br />
+
+        <label for="confirm">Confirm Password</label><br />
+        <input type="text" id="confirm" class="input-profile"/><br />
+        <div class="buttons-block">
+        <button id="clear-btn">Clear form</button>
+        <button  id="next-btn" class="next-btn" type="submit">Next</button>
+    </div>
+</form>
+
+    </section>
   </body>
+  <script src="./scripts/index.js"></script>
 </html>
