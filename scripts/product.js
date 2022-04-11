@@ -1,11 +1,16 @@
 const shopNowBtn = document.querySelector(".product-details-shopNow button");
-// const sections = document.querySelectorAll("body> section");
-const profileContainer = document.getElementById("profile");
-const productContainer = document.getElementById("mainProduct");
+const sections = document.querySelectorAll("body> section");
+
 shopNowBtn.addEventListener("click", showProfile);
-function showProfile() {
-  profileContainer.style.display = "block";
-  productContainer.style.display = "none";
+function showProfile(id) {
+  for (const step of sections) {
+    console.log(step.id);
+    if (step.id === id) {
+      step.style.display = "block";
+    } else {
+      step.style.display = "none";
+    }
+  }
 }
 // const greenBtn = document.querySelector(".green");
 // greenBtn.addEventListener("mouseover", changeImg);

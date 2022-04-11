@@ -27,7 +27,6 @@ document
     smallConfirmPassProfile.textContent = "";
   });
 
-
 // Errors messages
 
 function errUserNameProfile(msg) {
@@ -49,7 +48,6 @@ function errConfirmPassProfile(msg) {
   confirmPassProfile.style.borderColor = "red";
   smallConfirmPassProfile.textContent = msg;
 }
-
 
 // Validation functions
 
@@ -102,7 +100,6 @@ function confirmPassProfileValidation() {
     smallConfirmPassProfile.textContent = "";
   }
 }
-
 
 // Submitting the form - Button Next
 
