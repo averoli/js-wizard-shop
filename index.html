@@ -10,9 +10,8 @@
     <script src="scripts/shipping.js" defer></script>
     <script src="scripts/product.js" defer></script>
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Wizard shop</title>
-    
   </head>
   <body>
     <header class="menu-navigation">
@@ -44,44 +43,52 @@
         </div>
         <div class="product-details-icons">
           <span>
-            <img src="assets/instagram.png" alt="">
+            <img src="assets/instagram.png" alt="" />
           </span>
           <span>
-            <img src="assets/twitter.png" alt="">
+            <img src="assets/twitter.png" alt="" />
           </span>
           <span>
-            <img src="assets/facebook.png" alt="">
+            <img src="assets/facebook.png" alt="" />
           </span>
         </div>
       </section>
-      <section class="product-images">
-      </section>
+      <section class="product-images"></section>
     </section>
     <section id="profile">
-    <section>
-      <h2>Profile</h2>
+      <h2 class="profileContainer">Profile</h2>
       <form id="formProfile">
+
+        
         <label for="usernameProfile">Username</label><br />
         <input type="text" id="userNameProfile" class="input-profile" /><br />
-<small id="errUserNameProfile"></small><br>
-
+        <small id="errUserNameProfile"></small><br />
 
         <label for="emailProfile">Email</label><br />
         <input type="email" id="emailProfile" class="input-profile" /><br />
-        <small id="errEmailProfile"></small><br>
-
+        <small id="errEmailProfile"></small><br />
 
         <label for="passwordProfile">Password</label><br />
-        <input type="password" id="passwordProfile" class="input-profile" /><br />
-<small id="errPasswordProfile"></small><br>
+        <input
+          type="password"
+          id="passwordProfile"
+          class="input-profile"
+        /><br />
+        <small id="errPasswordProfile"></small><br />
 
         <label for="confirmPassProfile">Confirm Password</label><br />
-        <input type="text" id="confirmPassProfile" class="input-profile" /><br />
-        <small id="errConfirmPassProfile"></small><br>
+        <input
+          type="text"
+          id="confirmPassProfile"
+          class="input-profile"
+        /><br />
+        <small id="errConfirmPassProfile"></small><br />
 
         <div class="buttons-block">
           <button id="clearBtnProfile" type="button">Clear form</button>
-          <button id="nextBtnProfile" class="next-btn" type="submit">Next</button>
+          <button id="nextBtnProfile" class="next-btn" type="submit">
+            Next
+          </button>
         </div>
       </form>
     </section>
@@ -136,57 +143,80 @@
       </form>
     </section>
     <!-- SHIPPING -->
-    <section id="Shipping">
+    <section id="shipping">
       <h1>Shipping</h1>
       <h2>shipping type</h2>
       <!-- SHIPPING TYPE -->
       <form action="" class="radioImput">
-          <input type="radio" name="shipping" id="free">
-          <label for="free" >Free shipment (72H)</label>
-          <input type="radio" name="shipping" id="extra">
-          <label for="extra" >Extra shipping (48H)<b> 4,99$</b></label>
-          <input type="radio" name="shipping" id="shipping-premium">
-          <label for="shipping-premium" >Premium (24H)<b> 9,99$</b></label>
-      </form><br><br><br><br>
-          <!-- SHIPPING DATE -->
-          <div class="containerPrueba" style="display:none;">
-              <p><b>Your order will arrive</b></p>
-              <p>ESTIMATE DELIVERY DATE:</p>
-              <p id="premiumDate"> </p>
-          </div>
-          <div class="containerExtra" style="display:none;">
-              <p><b>Your order will arrive</b></p>
-              <p>ESTIMATE DELIVERY DATE:</p>
-              <p id="extraDate"> </p>
-          </div>
-          <div class="containerFree" style="display:none;">
-              <p><b>Your order will arrive</b></p>
-              <p>ESTIMATE DELIVERY DATE:</p>
-              <p id="freeDate"> </p>
-          </div>
-          <!-- FOR GIFT -->
-          <div class="checkbox-form">
-              <input class="form--input01" type="checkbox" name="gift">
-              <label for="forGift">Is it a gift?</label>
-          </div>
-          <!-- GIFT MESSAGE -->
-          <div class="gift-form">
-              <textarea class="form--input02" name="" id="" cols="10" rows="10" maxlength="200"></textarea>
-              <label for="giftMessage">Gift message</label>
-          </div>
-          <!-- GIFT IMAGE -->
-          <div class="image-form">
-              <input class="form--input03" type="file" accept="image/png, image/jpeg" name="select_image" value="Select image">
-              <label for="wrapperImage">Gift wrapper image</label>
-          </div>
-          <!-- BUTTON OF CLEAR AND NEXT -->
-          <aside>
-              <div class="aside--01">
-                  <input class="clear--button" type="button" name="clear_form_button" value="Clear form">
-                  <input class="next--button" type="button" name="next_button" value="Next">
-              </div>
-          </aside>
-        </section>
+        <input type="radio" name="shipping" id="free" />
+        <label for="free">Free shipment (72H)</label>
+        <input type="radio" name="shipping" id="extra" />
+        <label for="extra">Extra shipping (48H)<b> 4,99$</b></label>
+        <input type="radio" name="shipping" id="shipping-premium" />
+        <label for="shipping-premium">Premium (24H)<b> 9,99$</b></label>
+      </form>
+      <br /><br /><br /><br />
+      <!-- SHIPPING DATE -->
+      <div class="containerPrueba" style="display: none">
+        <p><b>Your order will arrive</b></p>
+        <p>ESTIMATE DELIVERY DATE:</p>
+        <p id="premiumDate"></p>
+      </div>
+      <div class="containerExtra" style="display: none">
+        <p><b>Your order will arrive</b></p>
+        <p>ESTIMATE DELIVERY DATE:</p>
+        <p id="extraDate"></p>
+      </div>
+      <div class="containerFree" style="display: none">
+        <p><b>Your order will arrive</b></p>
+        <p>ESTIMATE DELIVERY DATE:</p>
+        <p id="freeDate"></p>
+      </div>
+      <!-- FOR GIFT -->
+      <div class="checkbox-form">
+        <input class="form--input01" type="checkbox" name="gift" />
+        <label for="forGift">Is it a gift?</label>
+      </div>
+      <!-- GIFT MESSAGE -->
+      <div class="gift-form">
+        <textarea
+          class="form--input02"
+          name=""
+          id=""
+          cols="10"
+          rows="10"
+          maxlength="200"
+        ></textarea>
+        <label for="giftMessage">Gift message</label>
+      </div>
+      <!-- GIFT IMAGE -->
+      <div class="image-form">
+        <input
+          class="form--input03"
+          type="file"
+          accept="image/png, image/jpeg"
+          name="select_image"
+          value="Select image"
+        />
+        <label for="wrapperImage">Gift wrapper image</label>
+      </div>
+      <!-- BUTTON OF CLEAR AND NEXT -->
+      <aside>
+        <div class="aside--01">
+          <input
+            class="clear--button"
+            type="button"
+            name="clear_form_button"
+            value="Clear form"
+          />
+          <input
+            class="next--button"
+            type="button"
+            name="next_button"
+            value="Next"
+          />
+        </div>
+      </aside>
+    </section>
   </body>
- 
 </html>

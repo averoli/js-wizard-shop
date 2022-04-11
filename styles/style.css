@@ -11,10 +11,11 @@
   color: gray;
 }
 
-/*Menu navegador*/
+/*MENU NAVEGADOR*/
 .menu-navigation {
   position: fixed;
   height: 10vh;
+  /* cursor: pointer; */
 }
 .menu-navigation ul {
   display: flex;
@@ -25,4 +26,11 @@
 
 .menu-navigation ul li {
   padding: 10px 30px;
+}
+
+/*DISPLAY / HIDE*/
+#profile,
+#address,
+#shipping {
+  display: none;
 }

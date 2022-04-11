@@ -13,6 +13,8 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
+const addressContainer = document.getElementById("address")
+
 const requiredFiel = "This field is required";
 
 // Clear the form - Button Clear
@@ -55,6 +57,7 @@ function errConfirmPassProfile(msg) {
 // Validation functions
 
 function userNameProfileValidation() {
+  console.log("kuku");
   element = "userName";
   if (userNameProfile.value == "") {
     errUserNameProfile(requiredFiel);
@@ -113,4 +116,9 @@ formProfile.addEventListener("submit", function (event) {
   emailProfileValidation();
   passwordProfileValidation();
   confirmPassProfileValidation();
+  // function showAddress(){
+  //   addressContainer.style.display = "block"
+  //   profileContainer.style.display = "none"
+
+  // }
 });
