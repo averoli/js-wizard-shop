@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./styles/profile.css" />
     <script src="./scripts/profile.js" defer></script>
     <title>Wizard shop</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="styles/address.css" />
+    <script src="scripts/address.js" defer></script>
   </head>
   <body>
     <section id="profile">
@@ -37,12 +40,54 @@
         </div>
       </form>
     </section>
-
+    <!-- ADDRESS -->
     <section id="address">
       <h2>ADDRESS</h2>
-      <form id="formAdress">
-        <label for="lastNameAddress">Last name:</label>
-        <input type="text" id="lastNameAddress" class="last-name-addr" />
+      <form action="" id="addressForm">
+        <!-- First name -->
+        <label for="firstNameAddress">First Name:</label>
+        <input type="text" id="firstNameAddress" /><br />
+        <!--Last name-->
+        <label for="lastNameAddress">Last Name:</label>
+        <input type="text" id="lastNameAddress" />
+        <!--Birthday-->
+        <label for="birthdayAddress">Birthday</label>
+        <input type="date" name="" id="birthdayAddress" />
+        <!--Address 1-->
+        <label for="address1">Address 1</label>
+        <input type="text" name="" id="address1" />
+        <!--Address 2-->
+        <label for="address2">Address 2</label>
+        <input type="text" id="address2" />
+        <!--Postal code-->
+        <label for="postalCodeAddress">Postal Code:</label>
+        <input type="number" name="" id="postalCodeAddress" />
+        <!--Country-->
+        <label for="countryBornAddress">Country</label>
+        <select name="" id="countryBornAddress">
+          <option value="Andorra">Andorra</option>
+          <option value="España">España</option>
+          <option value="Francia">Francia</option>
+          <option value="Alemania">Alemania</option>
+          <option value="Grecia">Grecia</option>
+        </select>
+        <!-- Phone country code-->
+        <label for="countryPhoneAddress">Phone</label>
+        <select name="" id="countryPhoneAddress">
+          <option value="">376 - AND</option>
+          <option value="">34 - ESP</option>
+          <option value="">33 - FRA</option>
+          <option value="">49 - DEU</option>
+          <option value="">30 - GRC</option>
+        </select>
+        <!--Phone number-->
+        <label for="phoneNumberAddress"></label>
+        <input type="tel" name="" id="phoneNumberAddress" />
+        <!-- Current address checkbox -->
+        <label for="currentAddress">This is my regular address</label>
+        <input type="checkbox" name="" id="currentAddress" />
+        <!--Submit -->
+        <input type="submit" value="Sumbit" />
       </form>
     </section>
   </body>

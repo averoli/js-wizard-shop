@@ -13,6 +13,7 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
+// Clear the form - Button Clear
 document
   .getElementById("clearBtnProfile")
   .addEventListener("click", function (event) {
@@ -25,6 +26,9 @@ document
     smallPasswordProfile.textContent = "";
     smallConfirmPassProfile.textContent = "";
   });
+
+
+// Errors messages
 
 function errUserNameProfile(msg) {
   userNameProfile.style.borderColor = "red";
@@ -45,6 +49,9 @@ function errConfirmPassProfile(msg) {
   confirmPassProfile.style.borderColor = "red";
   smallConfirmPassProfile.textContent = msg;
 }
+
+
+// Validation functions
 
 function userNameProfileValidation() {
   if (userNameProfile.value == "") {
@@ -95,6 +102,9 @@ function confirmPassProfileValidation() {
     smallConfirmPassProfile.textContent = "";
   }
 }
+
+
+// Submitting the form - Button Next
 
 formProfile.addEventListener("submit", function (event) {
   event.preventDefault();
