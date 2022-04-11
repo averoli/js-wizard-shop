@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="./styles/profile.css" />
     <script src="./scripts/profile.js" defer></script>
     <title>Wizard shop</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/address.css" />
+    <link rel="stylesheet" href="styles/shipping.css" />
     <script src="scripts/address.js" defer></script>
+    <script src="scripts/shipping.js" defer></script>
   </head>
   <body>
     <section id="profile">
@@ -90,6 +92,58 @@
         <input type="submit" value="Sumbit" />
       </form>
     </section>
+    <!-- SHIPPING -->
+    <section id="Shipping">
+      <h1>Shipping</h1>
+      <h2>shipping type</h2>
+      <!-- SHIPPING TYPE -->
+      <form action="" class="radioImput">
+          <input type="radio" name="shipping" id="free">
+          <label for="free" >Free shipment (72H)</label>
+          <input type="radio" name="shipping" id="extra">
+          <label for="extra" >Extra shipping (48H)<b> 4,99$</b></label>
+          <input type="radio" name="shipping" id="shipping-premium">
+          <label for="shipping-premium" >Premium (24H)<b> 9,99$</b></label>
+      </form><br><br><br><br>
+          <!-- SHIPPING DATE -->
+          <div class="containerPrueba" style="display:none;">
+              <p><b>Your order will arrive</b></p>
+              <p>ESTIMATE DELIVERY DATE:</p>
+              <p id="premiumDate"> </p>
+          </div>
+          <div class="containerExtra" style="display:none;">
+              <p><b>Your order will arrive</b></p>
+              <p>ESTIMATE DELIVERY DATE:</p>
+              <p id="extraDate"> </p>
+          </div>
+          <div class="containerFree" style="display:none;">
+              <p><b>Your order will arrive</b></p>
+              <p>ESTIMATE DELIVERY DATE:</p>
+              <p id="freeDate"> </p>
+          </div>
+          <!-- FOR GIFT -->
+          <div class="checkbox-form">
+              <input class="form--input01" type="checkbox" name="gift">
+              <label for="forGift">Is it a gift?</label>
+          </div>
+          <!-- GIFT MESSAGE -->
+          <div class="gift-form">
+              <textarea class="form--input02" name="" id="" cols="10" rows="10" maxlength="200"></textarea>
+              <label for="giftMessage">Gift message</label>
+          </div>
+          <!-- GIFT IMAGE -->
+          <div class="image-form">
+              <input class="form--input03" type="file" accept="image/png, image/jpeg" name="select_image" value="Select image">
+              <label for="wrapperImage">Gift wrapper image</label>
+          </div>
+          <!-- BUTTON OF CLEAR AND NEXT -->
+          <aside>
+              <div class="aside--01">
+                  <input class="clear--button" type="button" name="clear_form_button" value="Clear form">
+                  <input class="next--button" type="button" name="next_button" value="Next">
+              </div>
+          </aside>
+        </section>
   </body>
  
 </html>
