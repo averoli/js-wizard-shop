@@ -4,30 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <script src="./scripts/profile.js" defer></script>
     <title>Wizard shop</title>
   </head>
   <body>
     <section id="profile">
+    <section>
       <h2>Profile</h2>
-      <form id="form">
-        <label for="username">Username</label><br />
-        <input type="text" id="username" class="input-profile" /><br />
+      <form id="formProfile">
+        <label for="usernameProfile">Username</label><br />
+        <input type="text" id="userNameProfile" class="input-profile" /><br />
+<small id="errUserNameProfile"></small><br>
 
-        <label for="email">Email</label><br />
-        <input type="email" id="email" class="input-profile" /><br />
 
-        <label for="password">Password</label><br />
-        <input type="password" id="password" class="input-profile" /><br />
+        <label for="emailProfile">Email</label><br />
+        <input type="email" id="emailProfile" class="input-profile" /><br />
+        <small id="errEmailProfile"></small><br>
 
-        <label for="confirmPass">Confirm Password</label><br />
-        <input type="text" id="confirmPass" class="input-profile" /><br />
+
+        <label for="passwordProfile">Password</label><br />
+        <input type="password" id="passwordProfile" class="input-profile" /><br />
+<small id="errPasswordProfile"></small><br>
+
+        <label for="confirmPassProfile">Confirm Password</label><br />
+        <input type="text" id="confirmPassProfile" class="input-profile" /><br />
+        <small id="errConfirmPassProfile"></small><br>
+
         <div class="buttons-block">
-          <button id="clear-btn" type="button">Clear form</button>
-          <button id="next-btn" class="next-btn" type="submit">Next</button>
+          <button id="clearBtnProfile" type="button">Clear form</button>
+          <button id="nextBtnProfile" class="next-btn" type="submit">Next</button>
         </div>
       </form>
     </section>
+
+    <section id="address">
+      <h2>ADDRESS</h2>
+      <form id="formAdress">
+        <label for="lastNameAddress">Last name:</label>
+        <input type="text" id="lastNameAddress" class="last-name-addr" />
+      </form>
+    </section>
   </body>
-  <script src="./scripts/index.js"></script>
+ 
 </html>
