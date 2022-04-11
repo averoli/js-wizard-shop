@@ -1,0 +1,28 @@
+@import url(product.css);
+@import url(profile.css);
+@import url(address.css);
+@import url(shipping.css);
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  color: gray;
+}
+
+/*Menu navegador*/
+.menu-navigation {
+  position: fixed;
+  height: 10vh;
+}
+.menu-navigation ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.menu-navigation ul li {
+  padding: 10px 30px;
+}
