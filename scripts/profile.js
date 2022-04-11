@@ -13,6 +13,8 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
+const requiredFiel = "This field is required";
+
 // Clear the form - Button Clear
 document
   .getElementById("clearBtnProfile")
@@ -26,7 +28,6 @@ document
     smallPasswordProfile.textContent = "";
     smallConfirmPassProfile.textContent = "";
   });
-
 
 // Errors messages
 
@@ -54,8 +55,9 @@ function errConfirmPassProfile(msg) {
 // Validation functions
 
 function userNameProfileValidation() {
+  element = "userName";
   if (userNameProfile.value == "") {
-    errUserNameProfile("Is empty!");
+    errUserNameProfile(requiredFiel);
   } else if (userNameProfile.value.indexOf(" ") >= 0) {
     errUserNameProfile("Name has spaces");
   } else if (userNameProfile.value.length < 5) {
@@ -70,7 +72,7 @@ function userNameProfileValidation() {
 
 function emailProfileValidation() {
   if (emailProfile.value == "") {
-    errEmailProfile("Is empty!");
+    errEmailProfile(requiredFiel);
   } else if (emailProfile.value.length > 50) {
     errEmailProfile("email more then 50");
   } else {
@@ -86,7 +88,7 @@ function passwordProfileValidation() {
     passwordProfile.style.borderColor = "green";
     smallPasswordProfile.textContent = "";
   } else if (passwordProfile.value == "") {
-    errPasswordProfile("Is empty!");
+    errPasswordProfile(requiredFiel);
   } else {
     errPasswordProfile("The password must contain at least ...");
   }
@@ -94,7 +96,7 @@ function passwordProfileValidation() {
 
 function confirmPassProfileValidation() {
   if (confirmPassProfile.value == "") {
-    errConfirmPassProfile("Is empty!");
+    errConfirmPassProfile(requiredFiel);
   } else if (confirmPassProfile.value !== passwordProfile.value) {
     errConfirmPassProfile("Passwords don t match!");
   } else {
@@ -102,7 +104,6 @@ function confirmPassProfileValidation() {
     smallConfirmPassProfile.textContent = "";
   }
 }
-
 
 // Submitting the form - Button Next
 
