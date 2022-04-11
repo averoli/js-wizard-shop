@@ -1,0 +1,97 @@
+/* INPUT RADIO */
+
+.radioImput input {
+    float: left;
+    clear: left;
+    width: 50px;
+    line-height: 20px;
+}
+
+.radioImput, label {
+    float: left;
+    vertical-align: middle;
+}
+
+.servicePremium{
+    display: none;
+}
+
+.radio-form{
+    text-align: start;
+}
+
+
+/* checkbox-form */
+.checkbox-form{
+    margin: 5px 10px;
+    display: flex;
+}
+
+.checkbox-form label{
+    padding-left: 10px;
+}
+
+/* DATE SHIPPING */
+
+.containerPrueba, .containerExtra, .containerFree{
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* GIFT FORM */
+
+.gift-form{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 5px;
+    text-align: start;
+}
+
+.gift-form label{
+    padding-bottom: 5px;
+}
+
+.form--input02{
+    border-radius:5px ;
+    max-width: 200px;
+    height: 200px;
+}
+
+textarea{
+    border-color: 10px black;
+    margin-left: 5px;
+}
+
+/* GIFT IMAGE  */
+.image-form{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.image-form label{
+    margin: 5px;
+}
+
+.form--input03{
+    margin: 5px;
+    padding-bottom: 15px;
+}
+
+
+/* ASIDE BUTTONS */
+
+.clear--button{
+    margin-right: 5px;
+}
+
+.aside--01{
+    background-color: rgb(208, 205, 205);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+}
