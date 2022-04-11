@@ -53,7 +53,6 @@ function errConfirmPassProfile(msg) {
   smallConfirmPassProfile.textContent = msg;
 }
 
-
 // Validation functions
 
 function userNameProfileValidation() {
