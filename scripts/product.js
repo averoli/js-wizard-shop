@@ -1,7 +1,11 @@
-//TODO Hover on image show big image
-// const greenBtn = document.querySelector(".green");
-// greenBtn.addEventListener("mouseover", changeImg);
-// const productImage = document.querySelector(".product-images");
-// function changeImg(params) {
-//   productImage.style.backgroundImage = `url(../assets/green-sweatshirt.png)`;
-// }
+const shopNowNext = document.querySelector(".product-details-shopNow button");
+
+shopNowNext.addEventListener("click", showSection);
+
+function showSection() {
+  console.log("ee");
+  const nextSection = document.querySelector("#profile");
+  const currentSection = document.querySelector("#mainProduct");
+  nextSection.style.display = "block";
+  currentSection.style.display = "none";
+}
