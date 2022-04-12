@@ -1,3 +1,5 @@
+let element = false;
+
 const sectionProfile = document.getElementById("profile");
 const sectionAddress = document.getElementById("address");
 const formProfile = document.getElementById("formProfile");
@@ -58,7 +60,7 @@ function errConfirmPassProfile(msg) {
 // Validation functions
 
 function userNameProfileValidation() {
-  element = "userName";
+  
   if (userNameProfile.value == "") {
     errUserNameProfile(requiredFiel);
   } else if (userNameProfile.value.indexOf(" ") >= 0) {
@@ -117,10 +119,14 @@ formProfile.addEventListener("submit", function (event) {
   passwordProfileValidation();
   confirmPassProfileValidation();
   
-  for( const field of fields){
-    if(field.style.borderColor == "green"){
+  
+    if(userNameProfile.style.borderColor == "green" && 
+    emailProfile.style.borderColor == "green" &&
+    passwordProfile.style.borderColor == "green" &&
+    confirmPassProfile.style.borderColor == "green"
+    ){
       sectionProfile.style.display = "none";
       sectionAddress.style.display = "block"
     }
-  }
+  
 });
