@@ -15,7 +15,7 @@
 .menu-navigation {
   position: fixed;
   height: 10vh;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .menu-navigation ul {
   display: flex;

@@ -1,5 +1,9 @@
 /* PROFILE */
 
+.profileContainer {
+    padding: 10px;
+}
+
 .input-profile {
 margin: 8px 0;
 padding: 8px;
