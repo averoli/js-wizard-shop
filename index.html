@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- JS SCRIPT -->
+    <script src="scripts/index.js" defer></script>
     <script src="scripts/profile.js" defer></script>
     <script src="scripts/address.js" defer></script>
     <script src="scripts/shipping.js" defer></script>
@@ -25,10 +26,12 @@
       </nav>
     </header>
     <section id="mainProduct">
-      <section class="product-details">
+      <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
-        <div class="product-details-shopNow"><button>SHOP NOW</button></div>
+        <div class="product-details-shopNow">
+          <button class="nextSection">SHOP NOW</button>
+        </div>
         <div class="product-details-colors">
           <button class="orange"></button>
           <button class="green"></button>
@@ -52,8 +55,8 @@
             <img src="assets/facebook.png" alt="" />
           </span>
         </div>
-      </section>
-      <section class="product-images"></section>
+      </div>
+      <div class="product-images"></div>
     </section>
     <section id="profile">
       <h2>Profile</h2>
@@ -84,7 +87,11 @@
 
         <div class="buttons-block">
           <button id="clearBtnProfile" type="button">Clear form</button>
-          <button id="nextBtnProfile" class="next-btn" type="submit">
+          <button
+            id="nextBtnProfile"
+            class="next-btn nextSection"
+            type="submit"
+          >
             Next
           </button>
         </div>
@@ -137,7 +144,7 @@
         <label for="currentAddress">This is my regular address</label>
         <input type="checkbox" name="" id="currentAddress" />
         <!--Submit -->
-        <input type="submit" value="Sumbit" />
+        <input type="submit" value="Next" class="nextSection" />
       </form>
     </section>
     <!-- SHIPPING -->
@@ -208,7 +215,7 @@
             value="Clear form"
           />
           <input
-            class="next--button"
+            class="next--button nextSection"
             type="button"
             name="next_button"
             value="Next"

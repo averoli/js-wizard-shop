@@ -1,17 +1,4 @@
-const shopNowBtn = document.querySelector(".product-details-shopNow button");
-const sections = document.querySelectorAll("body> section");
-
-shopNowBtn.addEventListener("click", showSection);
-function showSection(id) {
-  for (const step of sections) {
-    console.log(step.id);
-    if (step.id === id) {
-      step.style.display = "block";
-    } else {
-      step.style.display = "none";
-    }
-  }
-}
+//TODO Hover on image show big image
 // const greenBtn = document.querySelector(".green");
 // greenBtn.addEventListener("mouseover", changeImg);
 // const productImage = document.querySelector(".product-images");
