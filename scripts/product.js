@@ -1,8 +1,8 @@
 const shopNowBtn = document.querySelector(".product-details-shopNow button");
 const sections = document.querySelectorAll("body> section");
 
-shopNowBtn.addEventListener("click", showProfile);
-function showProfile(id) {
+shopNowBtn.addEventListener("click", showSection);
+function showSection(id) {
   for (const step of sections) {
     console.log(step.id);
     if (step.id === id) {
