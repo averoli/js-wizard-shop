@@ -9,3 +9,23 @@ function showSection() {
   nextSection.style.display = "block";
   currentSection.style.display = "none";
 }
+
+
+const intervalContainer = document.querySelector(".interval");
+let timeAdria = 0;
+let string = "hello";
+ 
+let showEveryMinute = setInterval(function () {
+  intervalContainer.style.display="block";
+  show2Seconds();
+  timeAdria++;
+  if (timeAdria === 5) {
+    clearInterval(showEveryMinute);
+  }
+}, 2000);
+ 
+function show2Seconds() {
+  setTimeout(function () {
+    intervalContainer.style.display="none";
+  }, 1000);
+}

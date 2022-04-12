@@ -74,3 +74,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.interval {
+  display: none;
+}
