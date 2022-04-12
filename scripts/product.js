@@ -12,6 +12,7 @@ function showSection() {
 
 
 const intervalContainer = document.querySelector(".interval");
+const minutesTime = document.getElementById("timeMinutes");
 let timeAdria = 0;
 let string = "hello";
  
@@ -22,10 +23,11 @@ let showEveryMinute = setInterval(function () {
   if (timeAdria === 5) {
     clearInterval(showEveryMinute);
   }
-}, 2000);
+}, 60000);
  
 function show2Seconds() {
   setTimeout(function () {
     intervalContainer.style.display="none";
-  }, 1000);
+  }, 5000);
 }
+
