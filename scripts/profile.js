@@ -1,3 +1,5 @@
+const sectionProfile = document.getElementById("profile");
+const sectionAddress = document.getElementById("address");
 const formProfile = document.getElementById("formProfile");
 const fields = document.querySelectorAll(".input-profile");
 
@@ -13,7 +15,7 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
-const addressContainer = document.getElementById("address")
+
 
 const requiredFiel = "This field is required";
 
@@ -56,7 +58,6 @@ function errConfirmPassProfile(msg) {
 // Validation functions
 
 function userNameProfileValidation() {
-  console.log("kuku");
   element = "userName";
   if (userNameProfile.value == "") {
     errUserNameProfile(requiredFiel);
@@ -115,9 +116,11 @@ formProfile.addEventListener("submit", function (event) {
   emailProfileValidation();
   passwordProfileValidation();
   confirmPassProfileValidation();
-  // function showAddress(){
-  //   addressContainer.style.display = "block"
-  //   profileContainer.style.display = "none"
-
-  // }
+  
+  for( const field of fields){
+    if(field.style.borderColor == "green"){
+      sectionProfile.style.display = "none";
+      sectionAddress.style.display = "block"
+    }
+  }
 });
