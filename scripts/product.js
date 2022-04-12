@@ -3,7 +3,7 @@ const shopNowNext = document.querySelector(".product-details-shopNow button");
 shopNowNext.addEventListener("click", showSection);
 
 function showSection() {
-  
+
   const nextSection = document.querySelector("#profile");
   const currentSection = document.querySelector("#mainProduct");
   nextSection.style.display = "block";
@@ -13,14 +13,15 @@ function showSection() {
 
 const intervalContainer = document.querySelector(".interval");
 const minutesTime = document.getElementById("timeMinutes");
-let timeAdria = 0;
+let timeAdria = 5;
 let string = "hello";
  
 let showEveryMinute = setInterval(function () {
   intervalContainer.style.display="block";
   show2Seconds();
-  timeAdria++;
-  if (timeAdria === 5) {
+  timeAdria--;
+  minutesTime.textContent = timeAdria;
+  if (timeAdria === 0) {
     clearInterval(showEveryMinute);
   }
 }, 60000);
@@ -30,4 +31,6 @@ function show2Seconds() {
     intervalContainer.style.display="none";
   }, 5000);
 }
+
+
 
