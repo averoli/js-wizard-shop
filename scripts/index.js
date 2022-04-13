@@ -16,3 +16,17 @@
 //     }
 //   }
 // }
+
+/*Object to store info about product*/
+class Product {
+  constructor(sizeProduct, colorProduct, shippingPrice, totalPrice) {
+    this.sizeProduct = sizeProduct;
+    this.colorProduct = colorProduct;
+    this.shippingPrice = shippingPrice;
+    this.totalPrice = totalPrice;
+  }
+}
+
+let tshirt = new Product();
+
+export { tshirt };

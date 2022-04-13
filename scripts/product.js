@@ -1,12 +1,22 @@
+//Next button to next step
 const shopNowNext = document.querySelector(".product-details-shopNow button");
-const minutesTime = document.getElementById("timeMinutes");
-
-const intervalContainer = document.querySelector(".interval");
-let timeAdria = 5;
-let string = "hello";
-
 shopNowNext.addEventListener("click", showSection);
-
+//Import object from index.js
+import { tshirt } from "./index.js";
+//Get inputs colors
+const inputColors = document.querySelectorAll(".product-details-colors input");
+for (const color of inputColors) {
+  color.addEventListener("change", pickColor);
+}
+//Get inputs sizes
+const inputSizes = document.querySelectorAll(".product-details-sizes input");
+for (const sizes of inputSizes) {
+  sizes.addEventListener("change", pickSize);
+}
+/*
+SHOW SECTION
+Show section with display hide/block
+*/
 function showSection() {
   const nextSection = document.querySelector("#profile");
   const currentSection = document.querySelector("#mainProduct");
@@ -15,6 +25,7 @@ function showSection() {
   timeRegister();
 }
 
+/*TIMER FUNCTION*/
 //CountDown function
 function timeRegister(params) {
   //Interval every minute
@@ -66,4 +77,15 @@ function redirectProduct() {
       step.style.display = "none";
     }
   }
+}
+
+/*GET INFO PRODUCTS*/
+function pickColor(e) {
+  tshirt.colorProduct = e.target.value;
+  console.log(tshirt.colorProduct);
+}
+
+function pickSize(e) {
+  tshirt.sizeProduct = e.target.value;
+  console.log(tshirt.sizeProduct);
 }
