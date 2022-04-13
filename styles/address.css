@@ -4,7 +4,7 @@
 }
 
 /*ADDRESS = PROFILE DETAILS*/
-.profile-details {
+/*.profile-details {
   display: flex;
   width: 60%;
   height: 100%;
@@ -17,7 +17,7 @@
   justify-content: end;
 }
 
-
+*/
 
 #addressForm {
   padding: 10px 40px;
