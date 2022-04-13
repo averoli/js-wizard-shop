@@ -70,3 +70,23 @@ function showFree(e) {
         sendFree.style.display = "none";
     }
 }
+
+// VALIDAR GIFT
+
+const giftvalue = document.getElementById("gift-value");
+const textAreaShipping = document.getElementById("textAreaShipping");
+
+
+giftvalue.addEventListener("change" , showTextArea)
+
+function showTextArea() {
+    console.log("Gift " + giftvalue);
+    console.log("textarea " + textAreaShipping);
+    if(giftvalue.checked){
+        textAreaShipping.disabled = false;
+    }
+    else{
+        textAreaShipping.disabled = true;
+    }
+
+}
