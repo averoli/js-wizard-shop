@@ -8,7 +8,7 @@
     <script src="scripts/profile.js" defer></script>
     <script src="scripts/address.js" defer></script>
     <script src="scripts/shipping.js" defer></script>
-    <script src="scripts/product.js" defer></script>
+    <script src="scripts/product.js" defer type="module"></script>
     <!-- CSS LINK -->
     <link rel="stylesheet" href="styles/style.css" />
     <title>Wizard shop</title>
@@ -33,16 +33,25 @@
           <button class="nextSection">SHOP NOW</button>
         </div>
         <div class="product-details-colors">
-          <button class="orange"></button>
-          <button class="green"></button>
-          <button class="pink"></button>
-          <button class="blue"></button>
+         
+          <input class="orange" value="orange" type="radio" name="product-color-pick" id="orange"></input>
+          <label for="orange" class="orange"></label>
+          <input class="green" value="green" type="radio" name="product-color-pick" id="green"></input> 
+          <label for="green" class="green"> </label>
+          <input class="pink" value="pink" type="radio" name="product-color-pick" id="pink"></input>
+          <label for="pink" class="pink"></label>
+          <input class="blue" value="blue"  type="radio" name="product-color-pick" id="blue"></input>
+          <label for="blue" class="blue"></label>
         </div>
         <div class="product-details-sizes">
-          <button>XS</button>
-          <button>S</button>
-          <button>M</button>
-          <button>L</button>
+        <input type="radio" name="product-size-pick" id="xs"  value="XS"> 
+        <label for="xs">XS</label>
+        <input type="radio" name="product-size-pick" id="s" value="S"> 
+        <label for="s">S</label>
+        <input type="radio" name="product-size-pick" id="m" value="M">
+        <label for="m">M</label>
+        <input type="radio" name="product-size-pick" id="l" value="L">
+        <label for="l">L</label>
         </div>
         <div class="product-details-icons">
           <span>
