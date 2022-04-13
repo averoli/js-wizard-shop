@@ -1,97 +1,40 @@
-/* INPUT RADIO */
-
-.radioImput input {
-    float: left;
-    clear: left;
-    width: 50px;
-    line-height: 20px;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-.radioImput, label {
-    float: left;
-    vertical-align: middle;
-}
-
-.servicePremium{
-    display: none;
-}
-
-.radio-form{
-    text-align: start;
-}
-
-
-/* checkbox-form */
-.checkbox-form{
-    margin: 5px 10px;
+/* SHIPPING CONTAINER */
+#shipping {
+    height: 100vh;
     display: flex;
 }
 
-.checkbox-form label{
-    padding-left: 10px;
-}
-
-/* DATE SHIPPING */
-
-.containerPrueba, .containerExtra, .containerFree{
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-
-
-/* GIFT FORM */
-
-.gift-form{
+.containerShipping {
+    width: 60%;
+    height: 100%;
     display: flex;
-    flex-direction: column-reverse;
-    margin: 5px;
-    text-align: start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(189deg,
+            rgba(255, 255, 255, 1) 70%,
+            rgba(190, 229, 228, 1) 100%);
 }
 
-.gift-form label{
-    padding-bottom: 5px;
+.containerShipping>* {
+    max-height: 100%;
+    padding: 10px 0;
+    margin-left: 20%;
 }
 
-.form--input02{
-    border-radius:5px ;
-    max-width: 200px;
-    height: 200px;
-}
 
-textarea{
-    border-color: 10px black;
-    margin-left: 5px;
-}
-
-/* GIFT IMAGE  */
-.image-form{
+.imageShipping {
     display: flex;
-    flex-direction: column-reverse;
-}
-
-.image-form label{
-    margin: 5px;
-}
-
-.form--input03{
-    margin: 5px;
-    padding-bottom: 15px;
-}
-
-
-/* ASIDE BUTTONS */
-
-.clear--button{
-    margin-right: 5px;
-}
-
-.aside--01{
-    background-color: rgb(208, 205, 205);
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 1rem;
-
+    width: 40%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./imagenShipping.png');
 }
