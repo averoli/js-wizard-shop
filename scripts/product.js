@@ -1,5 +1,5 @@
 const shopNowNext = document.querySelector(".product-details-shopNow button");
-const timeMinutes = document.getElementById("timeMinutes");
+const minutesTime = document.getElementById("timeMinutes");
 
 const intervalContainer = document.querySelector(".interval");
 let timeAdria = 5;
@@ -18,7 +18,7 @@ let showEveryMinute = setInterval(function () {
   intervalContainer.style.display = "block";
   show2Seconds();
   timeAdria--;
-  timeMinutes.textContent = timeAdria;
+  minutesTime.textContent = timeAdria;
   if (timeAdria === 0) {
     clearInterval(showEveryMinute);
   }
@@ -29,4 +29,3 @@ function show2Seconds() {
     intervalContainer.style.display = "none";
   }, 5000);
 }
-
