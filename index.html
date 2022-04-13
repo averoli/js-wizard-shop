@@ -14,7 +14,7 @@
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation">
+    <header class="menu-navigation" style="display: none">
       <nav>
         <ul>
           <li>HOME</li>
@@ -60,8 +60,6 @@
     <section id="profile">
       <h2 class="profileContainer">Profile</h2>
       <form id="formProfile">
-
-        
         <label for="usernameProfile">Username</label><br />
         <input type="text" id="userNameProfile" class="input-profile" /><br />
         <small id="errUserNameProfile"></small><br />
@@ -80,7 +78,7 @@
 
         <label for="confirmPassProfile">Confirm Password</label><br />
         <input
-          type="text"
+          type="password"
           id="confirmPassProfile"
           class="input-profile"
         /><br />
@@ -163,7 +161,7 @@
         <label for="shipping-premium">Premium (24H)<b> 9,99$</b></label>
         <br /><br /><br /><br />
       <!-- SHIPPING DATE -->
-      <div class="containerPrueba" style="display: none">
+      <div class="containerPremium" style="display: none">
         <p><b>Your order will arrive</b></p>
         <p>ESTIMATE DELIVERY DATE:</p>
         <p id="premiumDate"></p>
@@ -180,7 +178,7 @@
       </div>
       <!-- FOR GIFT -->
       <div class="checkbox-form">
-        <input class="form--input01" type="checkbox" name="gift" />
+        <input class="form--input01" type="checkbox" name="gift" id="gift-value"/>
         <label for="forGift">Is it a gift?</label>
       </div>
       <!-- GIFT MESSAGE -->
@@ -188,7 +186,7 @@
         <textarea
           class="form--input02"
           name=""
-          id=""
+          id="textAreaShipping"
           cols="10"
           rows="10"
           maxlength="200"
@@ -221,13 +219,30 @@
             type="button"
             name="next_button"
             value="Next"
+            id="nextButton"
           />
+        </div>
+        <div class="containerExtra" style="display: none">
+          <p><b>Your order will arrive</b></p>
+          <p>ESTIMATE DELIVERY DATE:</p>
+          <p id="extraDate"></p>
+        </div>
+        <div class="containerFree" style="display: none">
+          <p><b>Your order will arrive</b></p>
+          <p>ESTIMATE DELIVERY DATE:</p>
+          <p id="freeDate"></p>
         </div>
       </aside>
       </form>
     </section>
-    <div class="interval">
-      <p>You started registering <br> <span id="timeMinutes"></span> Hurry up!</p>
+    <div class="intervalTimer">
+      <p>
+        You started registering <br />
+        <span id="timeMinutes"></span> Hurry up!
+      </p>
+    </div>
+    <div class="intervalTimerOver">
+      <p>Your time it's over</p>
     </div>
   </body>
 </html>

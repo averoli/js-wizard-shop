@@ -75,6 +75,9 @@
   background-size: cover;
 }
 
-.interval {
+.intervalTimer {
+  display: none;
+}
+.intervalTimerOver {
   display: none;
 }

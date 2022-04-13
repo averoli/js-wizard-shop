@@ -18,7 +18,7 @@ for (const radio of inputPremium) {
     radio.addEventListener("change" , showPremium);
 }
 
-const prueba = document.querySelector(".containerPrueba");
+const prueba = document.querySelector(".containerPremium");
 
 function showPremium(e) {
     console.log(e.target);
@@ -93,3 +93,20 @@ function showTextArea() {
     }
 
 }
+
+//NEXT BUTTON VALIDATIO
+
+const buttonRadioFree = document.getElementById("free");
+const buttonRadioExtra = document.getElementById("extra");
+const buttonRadioPremium = document.getElementById("shipping-premium");
+
+const nextButton = document.getElementById("nextButton");
+
+nextButton.addEventListener("click", ButtonValidationShipping)
+
+function ButtonValidationShipping(e){
+    if(buttonRadioFree.checked || buttonRadioExtra.checked || buttonRadioPremium.checked ){
+    }
+    else{return alert('You must choose your shipping type')}
+}
+
