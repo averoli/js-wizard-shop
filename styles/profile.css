@@ -1,20 +1,97 @@
-/* PROFILE */
+/* PROFILE CONTAINER*/
+#profile {
+  height: 100vh;
+}
 
-.profileContainer {
-    padding: 10px;
+/*PROFILE DETAILS*/
+.profile-details {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    189deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(190, 229, 228, 1) 100%
+  );
+  justify-content: end;
+}
+
+/*PROFILE LEFT BLOCK - SOCIAL ICONS + PROGRESS BAR*/
+.profile-left {
+  display: flex;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-rl;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+/*PROFILE RIGTH BLOCK - TITLE + FORM*/
+.profile-rigth {
+  display: flex;
+  margin: auto 0;
+  background-color: #c8fcef;
+  height: fit-content;
+}
+
+.profile-title {
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+#formProfile {
+  padding: 10px 40px;
 }
 
 .input-profile {
-margin: 8px 0;
-padding: 8px;
+  margin-top: 15px;
+  padding: 8px 100px 8px 8px;
+  background-color: transparent;
 }
 
+/*PROFILE  SMALL TEXT*/
+small {
+color: red;
+font-size: 0.6rem;
+padding-left: 10px;
+}
 
-
+/*PROFILE  BUTTONS BLOCK - CLEAR + NEXT*/
 .buttons-block {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
-.next-btn {
-    background-color: #4CAF50;
+#profile button {
+  border: 0;
+  background-color: transparent;
+}
+.clear-btn {
+  color: #8dcfbe;
+}
+
+.next-btn, .clear-btn {
+font-size: 1rem;
+padding: 0 40px;
+}
+
+/*PROFILE IMAGES*/
+.profile-images {
+  width: 40%;
+  height: 100%;
+  background-image: url("../assets/profile-address.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

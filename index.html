@@ -24,6 +24,7 @@
         </ul>
       </nav>
     </header>
+
     <section id="mainProduct">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
@@ -58,94 +59,141 @@
       <div class="product-images"></div>
     </section>
     <section id="profile">
-      <h2 class="profileContainer">Profile</h2>
-      <form id="formProfile">
-        <label for="usernameProfile">Username</label><br />
-        <input type="text" id="userNameProfile" class="input-profile" /><br />
-        <small id="errUserNameProfile"></small><br />
+      <div class="profile-details">
 
-        <label for="emailProfile">Email</label><br />
-        <input type="email" id="emailProfile" class="input-profile" /><br />
-        <small id="errEmailProfile"></small><br />
-
-        <label for="passwordProfile">Password</label><br />
-        <input
-          type="password"
-          id="passwordProfile"
-          class="input-profile"
-        /><br />
-        <small id="errPasswordProfile"></small><br />
-
-        <label for="confirmPassProfile">Confirm Password</label><br />
-        <input
-          type="password"
-          id="confirmPassProfile"
-          class="input-profile"
-        /><br />
-        <small id="errConfirmPassProfile"></small><br />
-
-        <div class="buttons-block">
-          <button id="clearBtnProfile" type="button">Clear form</button>
-          <button
-            id="nextBtnProfile"
-            class="next-btn nextSection"
-            type="submit"
-          >
-            Next
-          </button>
+        <div class="profile-left">
+          <div class="social-media-icons">
+            <span>
+              <img src="assets/instagram.png" alt="" />
+            </span>
+            <span>
+              <img src="assets/twitter.png" alt="" />
+            </span>
+            <span>
+              <img src="assets/facebook.png" alt="" />
+            </span>
+          </div>
+          <div class="progress-bar"><p>ProgressBar</p></div>
         </div>
-      </form>
+
+        <div class="profile-rigth">
+          <h2 class="profile-title">Profile</h2>
+          <form id="formProfile">
+            <input
+              type="text"
+              id="userNameProfile"
+              class="input-profile"
+              placeholder="USERNAME"
+            /><br />
+            <small id="errUserNameProfile"></small><br />
+         
+            <input type="email" id="emailProfile" class="input-profile" 
+            placeholder="EMAIL"/><br />
+            <small id="errEmailProfile"></small><br />
+
+            <input
+              type="password"
+              id="passwordProfile"
+              class="input-profile"
+              placeholder="PASSWORD"
+            /><br />
+            <small id="errPasswordProfile"></small><br />
+
+            <input
+              type="password"
+              id="confirmPassProfile"
+              class="input-profile"
+              placeholder=" CONFIRM PASSWORD"
+            /><br />
+            <small id="errConfirmPassProfile"></small><br />
+
+            <div class="buttons-block">
+              <button id="clearBtnProfile" class="clear-btn" type="button">CLEAR</button>
+              <button
+                id="nextBtnProfile"
+                class="next-btn nextSection"
+                type="submit"
+              >
+                NEXT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="profile-images"></div>
     </section>
     <!-- ADDRESS -->
     <section id="address">
-      <h2>ADDRESS</h2>
-      <form action="" id="addressForm">
-        <!-- First name -->
-        <label for="firstNameAddress">First Name:</label>
-        <input type="text" id="firstNameAddress" /><br />
-        <!--Last name-->
-        <label for="lastNameAddress">Last Name:</label>
-        <input type="text" id="lastNameAddress" />
-        <!--Birthday-->
-        <label for="birthdayAddress">Birthday</label>
-        <input type="date" name="" id="birthdayAddress" />
-        <!--Address 1-->
-        <label for="address1">Address 1</label>
-        <input type="text" name="" id="address1" />
-        <!--Address 2-->
-        <label for="address2">Address 2</label>
-        <input type="text" id="address2" />
-        <!--Postal code-->
-        <label for="postalCodeAddress">Postal Code:</label>
-        <input type="number" name="" id="postalCodeAddress" />
-        <!--Country-->
-        <label for="countryBornAddress">Country</label>
-        <select name="" id="countryBornAddress">
-          <option value="Andorra">Andorra</option>
-          <option value="España">España</option>
-          <option value="Francia">Francia</option>
-          <option value="Alemania">Alemania</option>
-          <option value="Grecia">Grecia</option>
-        </select>
-        <!-- Phone country code-->
-        <label for="countryPhoneAddress">Phone</label>
-        <select name="" id="countryPhoneAddress">
-          <option value="">376 - AND</option>
-          <option value="">34 - ESP</option>
-          <option value="">33 - FRA</option>
-          <option value="">49 - DEU</option>
-          <option value="">30 - GRC</option>
-        </select>
-        <!--Phone number-->
-        <label for="phoneNumberAddress"></label>
-        <input type="tel" name="" id="phoneNumberAddress" />
-        <!-- Current address checkbox -->
-        <label for="currentAddress">This is my regular address</label>
-        <input type="checkbox" name="" id="currentAddress" />
-        <!--Submit -->
-        <input type="submit" value="Next" class="nextSection" />
-        <input type="reset" value="Reset" />
-      </form>
+      <div class="profile-details">
+        <div class="profile-left">
+          <div class="social-media-icons">
+            <span>
+              <img src="assets/instagram.png" alt="" />
+            </span>
+            <span>
+              <img src="assets/twitter.png" alt="" />
+            </span>
+            <span>
+              <img src="assets/facebook.png" alt="" />
+            </span>
+          </div>
+          <div class="progress-bar"><p>ProgressBar</p></div>
+        </div>
+
+        <div class="profile-rigth">
+      <h2 class="profile-title">ADDRESS</h2>
+      <div>
+        <form action="" id="addressForm">
+          <!-- First name -->
+          <label for="firstNameAddress">First Name:</label>
+          <input type="text" id="firstNameAddress" /><br />
+          <!--Last name-->
+          <label for="lastNameAddress">Last Name:</label>
+          <input type="text" id="lastNameAddress" />
+          <!--Birthday-->
+          <label for="birthdayAddress">Birthday</label>
+          <input type="date" name="" id="birthdayAddress" />
+          <!--Address 1-->
+          <label for="address1">Address 1</label>
+          <input type="text" name="" id="address1" />
+          <!--Address 2-->
+          <label for="address2">Address 2</label>
+          <input type="text" id="address2" />
+          <!--Postal code-->
+          <label for="postalCodeAddress">Postal Code:</label>
+          <input type="number" name="" id="postalCodeAddress" />
+          <!--Country-->
+          <label for="countryBornAddress">Country</label>
+          <select name="" id="countryBornAddress">
+            <option value="Andorra">Andorra</option>
+            <option value="España">España</option>
+            <option value="Francia">Francia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Grecia">Grecia</option>
+          </select>
+          <!-- Phone country code-->
+          <label for="countryPhoneAddress">Phone</label>
+          <select name="" id="countryPhoneAddress">
+            <option value="">376 - AND</option>
+            <option value="">34 - ESP</option>
+            <option value="">33 - FRA</option>
+            <option value="">49 - DEU</option>
+            <option value="">30 - GRC</option>
+          </select>
+          <!--Phone number-->
+          <label for="phoneNumberAddress"></label>
+          <input type="tel" name="" id="phoneNumberAddress" />
+          <!-- Current address checkbox -->
+          <label for="currentAddress">This is my regular address</label>
+          <input type="checkbox" name="" id="currentAddress" />
+          <!--Submit -->
+          <input type="submit" value="Next" class="nextSection" />
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
+    </div>
+    </div>
+    <div class="profile-images"></div>
     </section>
     <!-- SHIPPING -->
     <section id="shipping">

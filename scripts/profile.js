@@ -126,7 +126,7 @@ formProfile.addEventListener("submit", function (event) {
     confirmPassProfile.style.borderColor == "green"
     ){
       sectionProfile.style.display = "none";
-      sectionAddress.style.display = "block"
+      sectionAddress.style.display = "flex"
     }
   
 });

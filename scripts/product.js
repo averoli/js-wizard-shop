@@ -1,11 +1,16 @@
 const shopNowNext = document.querySelector(".product-details-shopNow button");
+const minutesTime = document.getElementById("timeMinutes");
+
+const intervalContainer = document.querySelector(".interval");
+let timeAdria = 5;
+let string = "hello";
 
 shopNowNext.addEventListener("click", showSection);
 
 function showSection() {
   const nextSection = document.querySelector("#profile");
   const currentSection = document.querySelector("#mainProduct");
-  nextSection.style.display = "block";
+  nextSection.style.display = "flex";
   currentSection.style.display = "none";
   timeRegister();
 }
