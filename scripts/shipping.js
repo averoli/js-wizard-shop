@@ -1,11 +1,14 @@
-///FECHAS DE ENVIOS///
+//FECHAS DE ENVIO
 const hoy = new Date();
-const fecha = hoy.getDate() + ' de Abril ' + hoy.getFullYear();
-const fechaDeEnvio = hoy.getDate() + 1 + ' de Abril ' + hoy.getFullYear() + " 20:00hs";
-const fechaDeEnvioGratis =hoy.getDate() + 2 + ' de Abril ' + hoy.getFullYear() + " 20:00hs";
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const meses = month[hoy.getMonth()];
+const fecha = hoy.getDate() + " " + meses + " " + hoy.getFullYear();
+const fechaDeEnvio = hoy.getDate() + 1 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
+const fechaDeEnvioGratis =hoy.getDate() + 2 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
 const datePremium = fecha + " 09:00hs" + " and " + fecha + " 20:00hs";
 const dateExtra = fecha + " 09:00hs" + " and " + fechaDeEnvio;
 const dateFree = fecha + " 09:00hs" + " and " + fechaDeEnvioGratis;
+console.log(hoy.meses);
 
 const inputPremium = document.querySelectorAll(".radioImput input[type='radio']");
 
