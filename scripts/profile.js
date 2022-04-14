@@ -17,7 +17,11 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
-
+const progressBar = document.getElementById("progress-bar");
+const progressNext = document.getElementById("progress-next");
+const progressPrev = document.getElementById("progress-prev");
+const steps = document.querySelectorAll(".step");
+let active = 1;
 
 const requiredFiel = "This field is required";
 
@@ -60,7 +64,6 @@ function errConfirmPassProfile(msg) {
 // Validation functions
 
 function userNameProfileValidation() {
-  
   if (userNameProfile.value == "") {
     errUserNameProfile(requiredFiel);
   } else if (userNameProfile.value.indexOf(" ") >= 0) {
@@ -118,15 +121,46 @@ formProfile.addEventListener("submit", function (event) {
   emailProfileValidation();
   passwordProfileValidation();
   confirmPassProfileValidation();
-  
-  
-    if(userNameProfile.style.borderColor == "green" && 
+
+  if (
+    userNameProfile.style.borderColor == "green" &&
     emailProfile.style.borderColor == "green" &&
     passwordProfile.style.borderColor == "green" &&
     confirmPassProfile.style.borderColor == "green"
-    ){
-      sectionProfile.style.display = "none";
-      sectionAddress.style.display = "flex"
-    }
-  
+  ) {
+   
+    sectionProfile.style.display = "none";
+    sectionAddress.style.display = "flex";
+    progress();
+  }
 });
+
+function progress() {
+  active++;
+  if (active > steps.length) {
+    active = steps.length;
+  }
+  updateProgress();
+}
+
+const updateProgress = () => {
+  // toggle active class on list items
+  steps.forEach((step, i) => {
+    if (i < active) {
+      step.classList.add("active");
+    } else {
+      step.classList.remove("active");
+    }
+  });
+  // set progress bar width
+  progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
+  // enable disable prev and next buttons
+  if (active === 1) {
+    progressPrev.disabled = true;
+  } else if (active === steps.length) {
+    progressNext.disabled = true;
+  } else {
+    progressPrev.disabled = false;
+    progressNext.disabled = false;
+  }
+};
