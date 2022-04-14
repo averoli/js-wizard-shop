@@ -1,31 +1,64 @@
 /* ADDRESS CONTAINER*/
-#address{
+#address {
   height: 100vh;
+  width: 100%;
+  display: flex;
 }
 
-/*ADDRESS = PROFILE DETAILS*/
-/*.profile-details {
-  display: flex;
+/*ADDRESS-DETAILS*/
+.address-details {
   width: 60%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     189deg,
     rgba(255, 255, 255, 1) 70%,
     rgba(190, 229, 228, 1) 100%
   );
-  justify-content: end;
 }
-
-*/
-
+/*FORM*/
 #addressForm {
-  padding: 10px 40px;
-
-
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
+  margin-right: 8rem;
+  height: 30%;
+  justify-content: center;
+}
+/*FORM INPUTS*/
+#addressForm input:not(#currentAddress),
+select {
+  padding: 1rem;
+  margin-top: 1.2rem;
+  margin-right: 1.7rem;
+}
+#birthdayAddress {
+  width: 43%;
+}
+.fieldCurrentAddress {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.fieldCurrentAddress > * {
+  padding: 1rem 0;
+}
+.fieldAddress {
+  display: flex;
+}
+.fieldAddress input,
+select {
+  flex: 1;
+}
+.addressBtn input {
+  padding: 0.5rem 1.2rem;
 }
 
+/*ADDRESS-IMAGE main*/
+.address-image {
+  background-image: url("../assets/image-step/imagenShipping.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40%;
+}

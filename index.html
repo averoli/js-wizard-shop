@@ -14,7 +14,7 @@
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation" >
+    <header class="menu-navigation" style="display: none;">
       <nav>
         <ul>
           <li>HOME</li>
@@ -144,90 +144,84 @@
     </section>
     <!-- ADDRESS -->
     <section id="address">
-      <div class="profile-details">
-        <div class="profile-left">
-          <div class="social-media-icons">
-            <span>
-              <img src="assets/icons/instagram.png" alt="" />
-            </span>
-            <span>
-              <img src="assets/icons/twitter.png" alt="" />
-            </span>
-            <span>
-              <img src="assets/icons/facebook.png" alt="" />
-            </span>
-          </div>
-          <div class="progress-bar"><p>ProgressBar</p></div>
-        </div>
-
-        <div class="profile-rigth">
-      <h2 class="profile-title">ADDRESS</h2>
-      <div>
+      <div class="address-details">
         <form action="" id="addressForm">
+          <div class="fieldAddress">
           <!-- First name -->
-          <label for="firstNameAddress">First Name:</label>
-          <input type="text" id="firstNameAddress" /><br />
+          <input type="text" id="firstNameAddress" placeholder="NAME"/>
           <!--Last name-->
-          <label for="lastNameAddress">Last Name:</label>
-          <input type="text" id="lastNameAddress" />
+          <input type="text" id="lastNameAddress" placeholder="LAST NAME" />
+        </div>
           <!--Birthday-->
-          <label for="birthdayAddress">Birthday</label>
           <input type="date" name="" id="birthdayAddress" />
           <!--Address 1-->
-          <label for="address1">Address 1</label>
-          <input type="text" name="" id="address1" />
+          <input type="text" name="" id="address1" placeholder="ADDRESS 1"/>
           <!--Address 2-->
-          <label for="address2">Address 2</label>
-          <input type="text" id="address2" />
+          <input type="text" id="address2" placeholder="ADDRESS 2"/>
+          <div class="fieldAddress">
           <!--Postal code-->
-          <label for="postalCodeAddress">Postal Code:</label>
-          <input type="number" name="" id="postalCodeAddress" />
+          <input type="number" name="" id="postalCodeAddress" placeholder="POSTAL CODE"/>
           <!--Country-->
-          <label for="countryBornAddress">Country</label>
           <select name="" id="countryBornAddress">
-            <option value="Andorra">Andorra</option>
+            <option value="Andorra" selected>Andorra</option>
             <option value="España">España</option>
             <option value="Francia">Francia</option>
             <option value="Alemania">Alemania</option>
             <option value="Grecia">Grecia</option>
           </select>
+        </div>
+        <div class="fieldAddress ">
           <!-- Phone country code-->
-          <label for="countryPhoneAddress">Phone</label>
           <select name="" id="countryPhoneAddress">
-            <option value="">376 - AND</option>
+            <option value="" selected>376 - AND</option>
             <option value="">34 - ESP</option>
             <option value="">33 - FRA</option>
             <option value="">49 - DEU</option>
             <option value="">30 - GRC</option>
           </select>
           <!--Phone number-->
-          <label for="phoneNumberAddress"></label>
-          <input type="tel" name="" id="phoneNumberAddress" />
+          <input type="tel" name="" id="phoneNumberAddress" placeholder="PHONE NUMBER" />
+          </div>
           <!-- Current address checkbox -->
-          <label for="currentAddress">This is my regular address</label>
+          <div class="fieldAddress fieldCurrentAddress">
+          <label for="currentAddress" class="currAddr">This is my regular address</label>
           <input type="checkbox" name="" id="currentAddress" />
+        </div>
           <!--Submit -->
-          <input type="submit" value="Next" class="nextSection" />
+          <div class="fieldAddress addressBtn">
           <input type="reset" value="Reset" />
+          <input type="submit" value="Next" class="nextSection" /></div>
         </form>
-      </div>
-    </div>
-    </div>
-    <div class="profile-images"></div>
+      </div> 
+      <div class="address-image"></div>
+    </section>
+   
     </section>
     <!-- SHIPPING -->
-    <section id="shipping" style="display: block;">
+    <section id="shipping" style="display: none;">
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
           <form action="" class="radioImput">
               <div class="radioImputShipping">
-                  <label for="free">Free shipment (72H) <input type="radio" name="shipping" id="free"
-                          value="registro" /></label>
-                  <label for="extra">Extra shipping (48H)<b> 4,99$</b> <input type="radio" name="shipping" id="extra"
-                          value="registro" /></label>
-                  <label for="shipping-premium">Premium (24H)<b> 9,99$</b> <input type="radio" name="shipping"
-                          id="shipping-premium" value="registro" /></label>
+                  <label for="free"><input type="radio" name="shipping" id="free" value="registro" />
+                    Free shipment (72H) 
+                  </label>
+                  <label for="extra">
+                    <input type="radio" name="shipping" id="extra" value="registro" />
+                    Extra shipping (48H)<b> 4,99$</b> 
+                  </label>
+                  <label for="shipping-premium">
+                    <input type="radio" name="shipping" id="shipping-premium" value="registro" />
+                    Premium (24H)<b> 9,99$</b> 
+                  </label>
+                   <!-- FOR GIFT -->
+              <div class="checkbox-form">
+                <label class="labelCheckbox" for="forGift">
+                  <input class="form--input01" type="checkbox" name="gift" id="gift-value" />
+                  Is it a gift? Write your message! 
+                </label>
+            </div>
               </div>
               <!-- SHIPPING DATE -->
   
@@ -252,11 +246,7 @@
                       <p id="freeDateSend"></p>
                   </div> -->
            
-              <!-- FOR GIFT -->
-              <div class="checkbox-form">
-                  <label class="labelCheckbox" for="forGift">Is it a gift? Write your message! <input
-                          class="form--input01" type="checkbox" name="gift" id="gift-value" /></label>
-              </div>
+             
               <!-- GIFT MESSAGE -->
               <div class="gift-form">
                   <textarea class="form--input02" name="" id="textAreaShipping" cols="10" rows="10" maxlength="200"
