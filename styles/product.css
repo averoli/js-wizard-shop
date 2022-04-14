@@ -93,11 +93,12 @@
 .product-details-miniature {
   display: flex;
   padding: 1rem;
+  justify-content: center;
 }
 
 .product-details-miniature .miniature {
-  flex: 1;
-  height: 6.5rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #ade6e5;
   margin-left: 1rem;
 }
