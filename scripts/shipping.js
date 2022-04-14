@@ -1,14 +1,25 @@
-//FECHAS DE ENVIO
+///FECHAS DE ENVIOS///
 const hoy = new Date();
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const meses = month[hoy.getMonth()];
 const fecha = hoy.getDate() + " " + meses + " " + hoy.getFullYear();
 const fechaDeEnvio = hoy.getDate() + 1 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
 const fechaDeEnvioGratis =hoy.getDate() + 2 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
-const datePremium = fecha + " 09:00hs" + " and " + fecha + " 20:00hs";
-const dateExtra = fecha + " 09:00hs" + " and " + fechaDeEnvio;
-const dateFree = fecha + " 09:00hs" + " and " + fechaDeEnvioGratis;
-console.log(hoy.meses);
+
+///FECHAS DE EXTRA///
+const extraDateSend = document.getElementById("extraDateSend");
+const datePremium = fecha + " 09:00hs"
+const dateFinally = fecha + " 20:00hs"
+
+///FECHAS DE FREE//
+const freeDateSend = document.getElementById("freeDateSend")
+const dateExtra = fecha + " 09:00hs" ;
+const dateExtraFinally = fechaDeEnvio;
+
+///FECHAS DE PREMIUM///
+const premiumDateSend = document.getElementById("premiumDateSend");
+const dateFree = fecha + " 09:00hs" ;
+const freeDateFinally = fechaDeEnvioGratis;
 
 const inputPremium = document.querySelectorAll(".radioImput input[type='radio']");
 
@@ -18,18 +29,18 @@ for (const radio of inputPremium) {
     radio.addEventListener("change" , showPremium);
 }
 
-const prueba = document.querySelector(".containerPremium");
+const containerPremium = document.querySelector(".containerPremium");
 
 function showPremium(e) {
     console.log(e.target);
     if(e.target.id === "shipping-premium"){
-        prueba.style.display = "block";
+        containerPremium.style.display = "block";
         const premiumDate = document.getElementById("premiumDate");
         premiumDate.textContent = `Between: ${datePremium}`;
-
+        premiumDateSend.textContent = `and ${dateFinally}`;
     }
     else{
-        prueba.style.display = "none";
+        containerPremium.style.display = "none";
     }
 }
 
@@ -48,6 +59,7 @@ function showExtra(e) {
         sendExtra.style.display = "block";
         const extraDate = document.getElementById("extraDate");
         extraDate.textContent = `Between: ${dateExtra}`;
+        extraDateSend.textContent = `and ${dateExtraFinally}`;
     }
     else{
         sendExtra.style.display = "none";
@@ -68,9 +80,26 @@ function showFree(e) {
         sendFree.style.display = "block";
         const freeDate = document.getElementById("freeDate");
         freeDate.textContent = `Between: ${dateFree}`;
+        freeDateSend.textContent = `and ${freeDateFinally}`;
     }
     else{
         sendFree.style.display = "none";
+    }
+}
+
+// VALIDARCION SHIPPING
+
+function validar(){
+    let radioInputCheck= inputPremium.value
+
+    if( radioInputCheck == null || radioInputCheck.length == 0) {
+        alert('Error, rellena el campo nombre');
+    return false;
+    }
+
+    if(!registro.checked ){
+        alert('Debe aceptar el registro');
+        return false;
     }
 }
 
@@ -108,5 +137,12 @@ function ButtonValidationShipping(e){
     if(buttonRadioFree.checked || buttonRadioExtra.checked || buttonRadioPremium.checked ){
     }
     else{return alert('You must choose your shipping type')}
+}
+
+// CHANGE BUTTON INPUT FILE
+
+function inputChangeFile(){
+    const inputFile = document.getElementById('file-button').files[0].name;
+    document.getElementById('info').innerHTML = inputFile;
 }
 

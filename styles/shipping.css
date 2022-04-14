@@ -1,9 +1,3 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
 /* SHIPPING CONTAINER */
 #shipping {
     height: 100vh;
@@ -36,5 +30,133 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./imagenShipping.png');
+    background-image: url('.assets/imagenShipping.png');
+}
+
+
+.radioImput{
+    padding: 2% 0%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #C8FCEF;
+    margin-top: 10%;
+    padding-left: 20%;
+    margin-left: 35%;
+}
+
+.radioImputShipping {
+    padding: 20px;
+    text-align: left;
+    padding-left: 25%;
+}
+
+
+.radioImputShipping, label{
+    display: block
+}
+
+.dateContainerShipping{
+    margin-bottom: 12px;
+}
+
+
+.form--input01,
+.labelCheckbox {
+    text-align: center;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+
+/* TITLE H1 SHIPPING */
+
+.shippingTittle{
+    position: absolute;
+    font-size: 7rem;
+    letter-spacing: 0.8rem;
+    display: flex;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    text-transform: uppercase;
+    margin-left: 25%;
+    margin-top: 7%;
+    font-style: bolder;
+}
+
+
+/* TEXTAREA GIFT MESSAGE */
+
+textarea{
+    width: 250px;
+    border: 3px solid gray;
+    border-radius: 5px;
+}
+
+
+/* INPUT BUTTON FILE */
+.buttonFile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    background-color: #A4EFE3;
+    height: 30px;
+    width: 33%;
+    margin-left: 33%;
+    margin-top: 7px;
+}
+
+
+.buttonFile:hover{
+    color:#fff;
+    background: gray;
+}
+
+
+
+/* BUTTONS CLEAR FORM AND NEXT */
+
+.aside--01 {
+    margin: 20px 0;
+    border: 0;
+}
+
+.next--button, .clear--button {
+    font-size: 1rem;
+    padding: 0px 40px;
+    height: 30px;
+    width: auto;
+    }
+
+.clear--button {
+        color: #8dcfbe;
+        background-color: gray;
+        height: 30px;
+        width: auto;
+}
+
+/*PROFILE LEFT BLOCK - SOCIAL ICONS + PROGRESS BAR*/
+
+.profile-left {
+    display: flex;
+    position: absolute;
+
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    padding-right: 10px;
+    margin-top: -2052%;
+    margin-left: 22%;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    padding-right: 200px;
+    rotate: 50%;
 }
