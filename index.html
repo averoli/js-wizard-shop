@@ -7,7 +7,7 @@
     <!-- JS SCRIPT -->
     <script src="scripts/profile.js" defer></script>
     <script src="scripts/address.js" defer></script>
-    <script src="scripts/shipping.js" defer></script>
+    <script src="scripts/shipping.js" defer type="module"></script>
     <script src="scripts/product.js" defer type="module"></script>
     <!-- CSS LINK -->
     <link rel="stylesheet" href="styles/style.css" />
@@ -25,7 +25,7 @@
       </nav>
     </header>
 
-    <section id="mainProduct">
+    <section id="mainProduct" style="display: none;">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -216,7 +216,7 @@
     <div class="profile-images"></div>
     </section>
     <!-- SHIPPING -->
-    <section id="shipping">
+    <section id="shipping" style="display: block;">
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
@@ -230,8 +230,13 @@
                           id="shipping-premium" value="registro" /></label>
               </div>
               <!-- SHIPPING DATE -->
-              <div class="dateContainerShipping">
-                  <div class="containerPremium" style="display: none">
+  
+                <div class="containerDate">
+                  <p>ESTIMATE DELIVERY DATE:</p>
+                  <p id="dateFromEstimate"></p>
+                   <p id="dateToEstimate"></p>
+                </div>
+                  <!-- <div class="containerPremium" style="display: none">
                       <p>ESTIMATE DELIVERY DATE:</p>
                       <p id="premiumDate"></p>
                       <p id="premiumDateSend"></p>
@@ -245,8 +250,8 @@
                       <p>ESTIMATE DELIVERY DATE:</p>
                       <p id="freeDate"></p>
                       <p id="freeDateSend"></p>
-                  </div>
-              </div>
+                  </div> -->
+           
               <!-- FOR GIFT -->
               <div class="checkbox-form">
                   <label class="labelCheckbox" for="forGift">Is it a gift? Write your message! <input
@@ -277,8 +282,8 @@
       </form>
       <div class="imageShipping"></div>
   </section>
-  <!-- ADDRESS -->
-  <section id="address">
+  <!-- ICONOS-->
+  <section id="address" style="display: none;">
       <div class="profile-details">
           <div class="profile-left">
               <div class="social-media-icons">
