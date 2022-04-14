@@ -14,7 +14,7 @@
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation" style="display: none">
+    <header class="menu-navigation" >
       <nav>
         <ul>
           <li>HOME</li>
@@ -34,7 +34,7 @@
         </div>
         <div class="product-details-colors">
          
-          <input class="orange" value="orange" type="radio" name="product-color-pick" id="orange"></input>
+          <input class="orange" value="orange" type="radio" name="product-color-pick" id="orange" checked></input>
           <label for="orange" class="orange"></label>
           <input class="green" value="green" type="radio" name="product-color-pick" id="green"></input> 
           <label for="green" class="green"> </label>
@@ -44,7 +44,7 @@
           <label for="blue" class="blue"></label>
         </div>
         <div class="product-details-sizes">
-        <input type="radio" name="product-size-pick" id="xs"  value="XS"> 
+        <input type="radio" name="product-size-pick" id="xs"  value="XS" checked> 
         <label for="xs">XS</label>
         <input type="radio" name="product-size-pick" id="s" value="S"> 
         <label for="s">S</label>
@@ -52,6 +52,17 @@
         <label for="m">M</label>
         <input type="radio" name="product-size-pick" id="l" value="L">
         <label for="l">L</label>
+        </div>
+        <div class="product-details-miniature">
+          <div class="miniature front-tshirt">
+            <img src="assets/tshirt-front/orange-sweatshirt.png" alt="">
+          </div>
+          <div class="miniature back-tshirt">
+            <img src="assets/tshirt-back/orange-sweatshirt.png" alt="">
+          </div>
+          <div class="miniature front-back-tshirt">
+            <img src="assets/tshirt-back-front/orange-sweatshirt.png" alt="">
+          </div>
         </div>
         <div class="product-details-icons">
           <span>
@@ -65,7 +76,8 @@
           </span>
         </div>
       </div>
-      <div class="product-images"></div>
+      <div class="product-images">
+      </div>
     </section>
     <section id="profile">
       <div class="profile-details">
@@ -136,13 +148,13 @@
         <div class="profile-left">
           <div class="social-media-icons">
             <span>
-              <img src="assets/instagram.png" alt="" />
+              <img src="assets/icons/instagram.png" alt="" />
             </span>
             <span>
-              <img src="assets/twitter.png" alt="" />
+              <img src="assets/icons/twitter.png" alt="" />
             </span>
             <span>
-              <img src="assets/facebook.png" alt="" />
+              <img src="assets/icons/facebook.png" alt="" />
             </span>
           </div>
           <div class="progress-bar"><p>ProgressBar</p></div>

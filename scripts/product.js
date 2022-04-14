@@ -78,14 +78,42 @@ function redirectProduct() {
     }
   }
 }
-
+const mainImage = document.querySelector(".product-images");
 /*GET INFO PRODUCTS*/
 function pickColor(e) {
-  tshirt.colorProduct = e.target.value;
-  console.log(tshirt.colorProduct);
+  let color = e.target.value;
+  tshirt.colorProduct = color;
+  //This should change in other computer JS-SHOP-WIZARD folder only in my local
+  const newSrc = `../JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
+  mainImage.style.backgroundImage = `url(${newSrc})`;
+  changeColorMiniature(color);
 }
 
 function pickSize(e) {
   tshirt.sizeProduct = e.target.value;
   console.log(tshirt.sizeProduct);
+}
+
+const miniatureImgs = document.querySelectorAll(
+  ".product-details-miniature .miniature img"
+);
+
+for (const minImg of miniatureImgs) {
+  minImg.addEventListener("click", clickMiniature);
+}
+function clickMiniature(e) {
+  console.log(e.target.src);
+  mainImage.style.backgroundImage = `url(${e.target.src})`;
+}
+
+function changeColorMiniature(color) {
+  const regexColors = /orange|blue|green|pink/i;
+
+  for (let minImg of miniatureImgs) {
+    // let minImgStr = minImg.src.toString();
+    // console.log(minImgStr);
+    // console.log(minImg.src.search(regexColors));
+    let newSrc = minImg.src.replace(regexColors, color);
+    minImg.src = newSrc;
+  }
 }

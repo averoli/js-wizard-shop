@@ -89,17 +89,32 @@
   width: 2rem;
   cursor: pointer;
 }
+/*MINIATURE IMAGES*/
+.product-details-miniature {
+  display: flex;
+  padding: 1rem;
+}
 
+.product-details-miniature .miniature {
+  flex: 1;
+  height: 6.5rem;
+  background-color: #ade6e5;
+  margin-left: 1rem;
+}
+.product-details-miniature .miniature img {
+  width: 100%;
+  height: 100%;
+}
 /*PRODUCT IMAGES*/
 .product-images {
   width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
-  background-image: url("../assets/pink-sweatshirt.png");
-
+  background-image: url("../assets/tshirt-front/orange-sweatshirt.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
 }
 
 .intervalTimer {

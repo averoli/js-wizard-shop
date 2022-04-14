@@ -16,7 +16,34 @@
 //     }
 //   }
 // }
+// let images = [];
 
+// window.addEventListener("load", (e) => {
+//   preload();
+// });
+
+// function preload() {
+//   for (const imgSrc of arguments) {
+//     let img = new Image();
+//     img.src = imgSrc;
+//     images.push(img);
+//   }
+// }
+
+// preload(
+//   "../JS-WIZARD-SHOP/assets/tshirt-front/blue-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-front/orange-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-front/pink-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-front/green-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back/blue-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back/orange-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back/pink-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back/green-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back-front/blue-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back-front/orange-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back-front/pink-sweatshirt.png",
+//   "../JS-WIZARD-SHOP/assets/tshirt-back-front/green-sweatshirt.png"
+// );
 /*Object to store info about product*/
 class Product {
   constructor(sizeProduct, colorProduct, shippingPrice, totalPrice) {
