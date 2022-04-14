@@ -1,106 +1,127 @@
+//Import object from index.js
+import { tshirt } from "./index.js";
 ///FECHAS DE ENVIOS///
 const hoy = new Date();
-const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 const meses = month[hoy.getMonth()];
 const fecha = hoy.getDate() + " " + meses + " " + hoy.getFullYear();
-const fechaDeEnvio = hoy.getDate() + 1 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
-const fechaDeEnvioGratis =hoy.getDate() + 2 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
+const fechaDeEnvio =
+  hoy.getDate() + 1 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
+const fechaDeEnvioGratis =
+  hoy.getDate() + 2 + " " + meses + " " + hoy.getFullYear() + " 20:00hs";
 
 ///FECHAS DE EXTRA///
-const extraDateSend = document.getElementById("extraDateSend");
-const datePremium = fecha + " 09:00hs"
-const dateFinally = fecha + " 20:00hs"
+// const extraDateSend = document.getElementById("extraDateSend");
+const datePremium = fecha + " 09:00hs";
+const dateFinally = fecha + " 20:00hs";
 
 ///FECHAS DE FREE//
-const freeDateSend = document.getElementById("freeDateSend")
-const dateExtra = fecha + " 09:00hs" ;
+// const freeDateSend = document.getElementById("freeDateSend");
+const dateExtra = fecha + " 09:00hs";
 const dateExtraFinally = fechaDeEnvio;
 
 ///FECHAS DE PREMIUM///
-const premiumDateSend = document.getElementById("premiumDateSend");
-const dateFree = fecha + " 09:00hs" ;
+// const premiumDateSend = document.getElementById("premiumDateSend");
+const dateFree = fecha + " 09:00hs";
 const freeDateFinally = fechaDeEnvioGratis;
 
-const inputPremium = document.querySelectorAll(".radioImput input[type='radio']");
+const inputPremium = document.querySelectorAll(
+  ".radioImput input[type='radio']"
+);
+
+const containerDate = document.querySelector(".containerDate");
+const dateFromEstimate = document.querySelector("#dateFromEstimate");
+const dateToEstimate = document.querySelector("#dateToEstimate");
 
 ///FECHA DE ENVIO PREMIUM ///
-
-for (const radio of inputPremium) {
-    radio.addEventListener("change" , showPremium);
-}
-
-const containerPremium = document.querySelector(".containerPremium");
-
+document
+  .querySelector("#shipping-premium")
+  .addEventListener("change", showPremium);
+// const containerPremium = document.querySelector(".containerPremium");
 function showPremium(e) {
-    console.log(e.target);
-    if(e.target.id === "shipping-premium"){
-        containerPremium.style.display = "block";
-        const premiumDate = document.getElementById("premiumDate");
-        premiumDate.textContent = `Between: ${datePremium}`;
-        premiumDateSend.textContent = `and ${dateFinally}`;
-    }
-    else{
-        containerPremium.style.display = "none";
-    }
+  //Store variables in object
+  tshirt.shippingType = "Premium";
+  tshirt.shippingDate = `Between: ${datePremium} and ${dateFinally}`;
+  tshirt.shippingPrice = 9.99;
+  tshirt.totalPrice = 9.99 + 27.95;
+  console.log(e.target);
+  if (e.target.id === "shipping-premium") {
+    containerDate.style.display = "block";
+    // const premiumDate = document.getElementById("premiumDate");
+    dateFromEstimate.textContent = `Between: ${datePremium}`;
+    dateToEstimate.textContent = `and ${dateFinally}`;
+  }
 }
-
 
 ///FECHA DE ENVIO 48HS ///
 
-for (const radio of inputPremium) {
-    radio.addEventListener("change" , showExtra);
-}
+document.querySelector("#extra").addEventListener("change", showExtra);
 
-const sendExtra = document.querySelector(".containerExtra");
+// const sendExtra = document.querySelector(".containerExtra");
 
 function showExtra(e) {
-    console.log(e.target);
-    if(e.target.id === "extra"){
-        sendExtra.style.display = "block";
-        const extraDate = document.getElementById("extraDate");
-        extraDate.textContent = `Between: ${dateExtra}`;
-        extraDateSend.textContent = `and ${dateExtraFinally}`;
-    }
-    else{
-        sendExtra.style.display = "none";
-    }
+  //Store variables in object
+  tshirt.shippingType = "Extra";
+  tshirt.shippingDate = `Between: ${dateExtra} and ${dateExtraFinally}`;
+  tshirt.shippingPrice = 4.99;
+  tshirt.totalPrice = 4.99 + 27.95;
+  console.log(e.target);
+  if (e.target.id === "extra") {
+    containerDate.style.display = "block";
+    // const extraDate = document.getElementById("extraDate");
+    dateFromEstimate.textContent = `Between: ${dateExtra}`;
+    dateToEstimate.textContent = `and ${dateExtraFinally}`;
+  }
 }
 
 ///FECHA DE ENVIO FREE ///
 
-for (const radio of inputPremium) {
-    radio.addEventListener("change" , showFree);
-}
+document.querySelector("#free").addEventListener("change", showFree);
 
-const sendFree = document.querySelector(".containerFree");
+// const sendFree = document.querySelector(".containerFree");
 
 function showFree(e) {
-    console.log(e.target);
-    if(e.target.id === "free"){
-        sendFree.style.display = "block";
-        const freeDate = document.getElementById("freeDate");
-        freeDate.textContent = `Between: ${dateFree}`;
-        freeDateSend.textContent = `and ${freeDateFinally}`;
-    }
-    else{
-        sendFree.style.display = "none";
-    }
+  //Store variables in object
+  tshirt.shippingType = "Free";
+  tshirt.shippingDate = `Between: ${dateFree} and ${freeDateFinally}`;
+  tshirt.shippingPrice = "Gratis";
+  tshirt.totalPrice = 27.95;
+  console.log(e.target);
+  if (e.target.id === "free") {
+    containerDate.style.display = "block";
+    // const freeDate = document.getElementById("freeDate");
+    dateFromEstimate.textContent = `Between: ${dateFree}`;
+    dateToEstimate.textContent = `and ${freeDateFinally}`;
+  }
 }
 
 // VALIDARCION SHIPPING
 
-function validar(){
-    let radioInputCheck= inputPremium.value
+function validar() {
+  let radioInputCheck = inputPremium.value;
 
-    if( radioInputCheck == null || radioInputCheck.length == 0) {
-        alert('Error, rellena el campo nombre');
+  if (radioInputCheck == null || radioInputCheck.length == 0) {
+    alert("Error, rellena el campo nombre");
     return false;
-    }
+  }
 
-    if(!registro.checked ){
-        alert('Debe aceptar el registro');
-        return false;
-    }
+  if (!registro.checked) {
+    alert("Debe aceptar el registro");
+    return false;
+  }
 }
 
 // VALIDAR GIFT
@@ -108,19 +129,16 @@ function validar(){
 const giftvalue = document.getElementById("gift-value");
 const textAreaShipping = document.getElementById("textAreaShipping");
 
-
-giftvalue.addEventListener("change" , showTextArea)
+giftvalue.addEventListener("change", showTextArea);
 
 function showTextArea() {
-    console.log("Gift " + giftvalue);
-    console.log("textarea " + textAreaShipping);
-    if(giftvalue.checked){
-        textAreaShipping.disabled = false;
-    }
-    else{
-        textAreaShipping.disabled = true;
-    }
-
+  console.log("Gift " + giftvalue);
+  console.log("textarea " + textAreaShipping);
+  if (giftvalue.checked) {
+    textAreaShipping.disabled = false;
+  } else {
+    textAreaShipping.disabled = true;
+  }
 }
 
 //NEXT BUTTON VALIDATIO
@@ -131,18 +149,23 @@ const buttonRadioPremium = document.getElementById("shipping-premium");
 
 const nextButton = document.getElementById("nextButton");
 
-nextButton.addEventListener("click", ButtonValidationShipping)
+nextButton.addEventListener("click", ButtonValidationShipping);
 
-function ButtonValidationShipping(e){
-    if(buttonRadioFree.checked || buttonRadioExtra.checked || buttonRadioPremium.checked ){
-    }
-    else{return alert('You must choose your shipping type')}
+function ButtonValidationShipping(e) {
+  console.log(tshirt);
+  if (
+    buttonRadioFree.checked ||
+    buttonRadioExtra.checked ||
+    buttonRadioPremium.checked
+  ) {
+  } else {
+    return alert("You must choose your shipping type");
+  }
 }
 
 // CHANGE BUTTON INPUT FILE
 
-function inputChangeFile(){
-    const inputFile = document.getElementById('file-button').files[0].name;
-    document.getElementById('info').innerHTML = inputFile;
+function inputChangeFile() {
+  const inputFile = document.getElementById("file-button").files[0].name;
+  document.getElementById("info").innerHTML = inputFile;
 }
-

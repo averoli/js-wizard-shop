@@ -46,9 +46,18 @@
 // );
 /*Object to store info about product*/
 class Product {
-  constructor(sizeProduct, colorProduct, shippingPrice, totalPrice) {
+  constructor(
+    sizeProduct,
+    colorProduct,
+    shippingDate,
+    shippingType,
+    shippingPrice,
+    totalPrice
+  ) {
     this.sizeProduct = sizeProduct;
     this.colorProduct = colorProduct;
+    this.shippingDate = shippingDate;
+    this.shippingType = shippingType;
     this.shippingPrice = shippingPrice;
     this.totalPrice = totalPrice;
   }
