@@ -33,7 +33,6 @@
           <button class="nextSection">SHOP NOW</button>
         </div>
         <div class="product-details-colors">
-         
           <input class="orange" value="orange" type="radio" name="product-color-pick" id="orange" checked></input>
           <label for="orange" class="orange"></label>
           <input class="green" value="green" type="radio" name="product-color-pick" id="green"></input> 
@@ -44,9 +43,9 @@
           <label for="blue" class="blue"></label>
         </div>
         <div class="product-details-sizes">
-        <input type="radio" name="product-size-pick" id="xs"  value="XS" checked> 
+        <input type="radio" name="product-size-pick" id="xs"  value="XS" checked>
         <label for="xs">XS</label>
-        <input type="radio" name="product-size-pick" id="s" value="S"> 
+        <input type="radio" name="product-size-pick" id="s" value="S">
         <label for="s">S</label>
         <input type="radio" name="product-size-pick" id="m" value="M">
         <label for="m">M</label>
@@ -81,7 +80,6 @@
     </section>
     <section id="profile">
       <div class="profile-details">
-
         <div class="profile-left">
           <div class="social-media-icons">
             <span>
@@ -107,7 +105,7 @@
               placeholder="USERNAME"
             /><br />
             <small id="errUserNameProfile"></small><br />
-            <input type="email" id="emailProfile" class="input-profile" 
+            <input type="email" id="emailProfile" class="input-profile"
             placeholder="EMAIL"/><br />
             <small id="errEmailProfile"></small><br />
 
@@ -193,10 +191,8 @@
           <input type="reset" value="Reset" />
           <input type="submit" value="Next" class="nextSection" /></div>
         </form>
-      </div> 
+      </div>
       <div class="address-image"></div>
-    </section>
-   
     </section>
     <!-- SHIPPING -->
     <section id="shipping">
@@ -205,49 +201,26 @@
           <!-- SHIPPING TYPE -->
           <form action="" class="radioImput">
               <div class="radioImputShipping">
-                  <label for="free"><input type="radio" name="shipping" id="free" value="registro" />
-                    Free shipment (72H) 
-                  </label>
-                  <label for="extra">
-                    <input type="radio" name="shipping" id="extra" value="registro" />
-                    Extra shipping (48H)<b> 4,99$</b> 
-                  </label>
-                  <label for="shipping-premium">
-                    <input type="radio" name="shipping" id="shipping-premium" value="registro" />
-                    Premium (24H)<b> 9,99$</b> 
-                  </label>
-                   <!-- FOR GIFT -->
-              <div class="checkbox-form">
-                <label class="labelCheckbox" for="forGift">
-                  <input class="form--input01" type="checkbox" name="gift" id="gift-value" />
-                  Is it a gift? Write your message! 
-                </label>
-            </div>
+                  <label for="free"><input type="radio" name="shipping" id="free"
+                          value="registro" /> Free shipment (72H) </label>
+                  <label for="extra"><input type="radio" name="shipping" id="extra"
+                          value="registro" /> Extra shipping (48H)<b> 4,99$</b> </label>
+                  <label for="shipping-premium"><input type="radio" name="shipping"
+                          id="shipping-premium" value="registro" /> Premium (24H)<b> 9,99$</b> </label>
               </div>
               <!-- SHIPPING DATE -->
-  
-                <div class="containerDate">
+              <div class="dateContainerShipping">
+                <div class="containerDate" style="display: none;">
                   <p>ESTIMATE DELIVERY DATE:</p>
                   <p id="dateFromEstimate"></p>
-                   <p id="dateToEstimate"></p>
+                  <p id="dateToEstimate"></p>
                 </div>
-                  <!-- <div class="containerPremium" style="display: none">
-                      <p>ESTIMATE DELIVERY DATE:</p>
-                      <p id="premiumDate"></p>
-                      <p id="premiumDateSend"></p>
-                  </div>
-                  <div class="containerExtra" style="display: none">
-                      <p>ESTIMATE DELIVERY DATE:</p>
-                      <p id="extraDate"></p>
-                      <p id="extraDateSend"></p>
-                  </div>
-                  <div class="containerFree" style="display: none">
-                      <p>ESTIMATE DELIVERY DATE:</p>
-                      <p id="freeDate"></p>
-                      <p id="freeDateSend"></p>
-                  </div> -->
-           
-             
+              </div>
+              <!-- FOR GIFT -->
+              <div class="checkbox-form">
+                  <label class="labelCheckbox" for="forGift"><input
+                          class="form--input01" type="checkbox" name="gift" id="gift-value" /> Is it a gift? Write your message! </label>
+              </div>
               <!-- GIFT MESSAGE -->
               <div class="gift-form">
                   <textarea class="form--input02" name="" id="textAreaShipping" cols="10" rows="10" maxlength="200"
@@ -256,7 +229,7 @@
               </div>
               <!-- GIFT IMAGE -->
               <div class="image-form">
-                  <label for="wrapperImage">Gift wrapper image</label>
+                  <label id="formImageShipping" for="wrapperImage">Gift wrapper image</label>
                   <label class="buttonFile" for="file-button">Select image</label>
                   <input id="file-button" class="form--input03" type="file" onchange='inputChangeFile()'
                       accept="image/png, image/jpeg" name="select_image" style="display:none;" />
@@ -274,24 +247,23 @@
       <div class="imageShipping"></div>
   </section>
   <!-- ICONOS-->
-  <section id="address" style="display: none;">
-      <div class="profile-details">
+  <section id="iconShipping">
+      <div class="profile-detailsShipping">
           <div class="profile-left">
               <div class="social-media-icons">
                   <span>
-                      <img src="assets/icons/instagram.png" alt=""/>
+                    <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png" alt=""/></a>
                   </span>
                   <span>
-                      <img src="assets/icons/twitter.png" alt="" />
+                    <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
                   </span>
                   <span>
-                      <img src="assets/icons/facebook.png" alt="" />
+                    <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png" alt="" /></a>
                   </span>
               </div>
           </div>
     <div class="intervalTimer">
-      <p>
-        You started registering <br />
+      <p>You started registering <br />
         <span id="timeMinutes"></span> Hurry up!
       </p>
     </div>

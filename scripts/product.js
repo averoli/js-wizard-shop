@@ -84,7 +84,7 @@ function pickColor(e) {
   let color = e.target.value;
   tshirt.colorProduct = color;
   //This should change in other computer JS-SHOP-WIZARD folder only in my local
-  const newSrc = `../JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
+  const newSrc = `../assets/tshirt-front/${color}-sweatshirt.png`;
   mainImage.style.backgroundImage = `url(${newSrc})`;
   changeColorMiniature(color);
 }
