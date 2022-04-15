@@ -23,6 +23,7 @@ const progressPrev = document.getElementById("progress-prev");
 const steps = document.querySelectorAll(".step");
 let active = 1;
 
+
 const requiredFiel = "This field is required";
 
 // Clear the form - Button Clear
@@ -131,9 +132,13 @@ formProfile.addEventListener("submit", function (event) {
    
     sectionProfile.style.display = "none";
     sectionAddress.style.display = "flex";
-    progress();
+    // progress();
   }
 });
+
+
+// PROGRESS BAR
+document.getElementById("next-progress").addEventListener("click", progress)
 
 function progress() {
   active++;
@@ -148,19 +153,9 @@ const updateProgress = () => {
   steps.forEach((step, i) => {
     if (i < active) {
       step.classList.add("active");
-    } else {
-      step.classList.remove("active");
-    }
+    } 
   });
   // set progress bar width
   progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
-  // enable disable prev and next buttons
-  if (active === 1) {
-    progressPrev.disabled = true;
-  } else if (active === steps.length) {
-    progressNext.disabled = true;
-  } else {
-    progressPrev.disabled = false;
-    progressNext.disabled = false;
-  }
+   
 };

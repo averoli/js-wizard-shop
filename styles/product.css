@@ -108,6 +108,7 @@
 }
 /*PRODUCT IMAGES*/
 .product-images {
+  background-color: aliceblue;
   width: 75%;
   height: 100%;
   display: flex;

@@ -3,13 +3,12 @@
   margin-bottom: 30px;
   writing-mode: vertical-lr;
   padding-right: 100px;
-  
 }
 
 #progress-bar {
   position: absolute;
   background: lightseagreen;
-  height: 5px;
+  width: 5px;
   transform: rotate(90deg);
 }
 

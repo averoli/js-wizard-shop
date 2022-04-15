@@ -31,7 +31,7 @@
 
 /*DISPLAY / HIDE*/
 #profile,
-/* #address, */
+#address,
 #shipping {
   display: none;
 }
