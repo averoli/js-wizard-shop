@@ -88,3 +88,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+/*Order color */
+.colorParragraph {
+  display: flex;
+}
+#orderDetailsColor {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
