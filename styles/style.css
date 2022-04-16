@@ -49,6 +49,8 @@ body:after {
 /*DISPLAY / HIDE*/
 #profile,
 #address,
-#shipping {
+#shipping,
+#order,
+#thankYou {
   display: none;
 }

@@ -14,7 +14,7 @@
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation">
+    <header class="menu-navigation" style="display: none;">
       <nav>
         <ul>
           <li>HOME</li>
@@ -25,7 +25,7 @@
       </nav>
     </header>
 
-    <section id="mainProduct">
+    <section id="mainProduct" >
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -152,7 +152,7 @@
       <div class="profile-images"></div>
     </section>
     <!-- ADDRESS -->
-    <section id="address">
+    <section id="address" >
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
         <form action="" id="addressForm">
@@ -257,166 +257,90 @@
       </form>
       <div class="imageShipping"></div>
   </section>
-  <!-- ICONOS-->
-  <section id="iconShipping">
-      <div class="profile-detailsShipping">
-          <div class="profile-left">
-              <div class="social-media-icons">
-                  <span>
-                    <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png" alt=""/></a>
-                  </span>
-                  <span>
-                    <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
-                  </span>
-                  <span>
-                    <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png" alt="" /></a>
-                  </span>
-              </div>
-          </div>
+
+  <!--ORDER SECTION-->
+ <section id="order">
+   <!--Left Section-->
+   <div class="order-details">
+     <div class="order-details-title">
+       <h2>YOUR ORDER</h2>
+     </div>
+     <div class="order-details-content">
+     <!-- Info about the product -->
+     <div class="order-details-info">
+     <h2><span id="orderDetailsColor">ORANGE</span> SWEATSHIRT</h2>
+     <div class="orderField">
+     <p>Size: <span id="orderDetailsSize">M</span></p>
+     <p>Color: <span id="orderDetailsColor">Orange</span> </p>
+    </div>
+     <!-- Date about the order -->
+    <div class="order-details-date">
+      <h3>Estimate date delivery</h3>
+      <p id="orderEstimatedDate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto ab optio nisi autem temporibus maiores accusantium quo laborum suscipit!</p>
+    </div>
+    </div>
+    <!-- Form accept terms -->
+    <form class="order-details-form">
+      <div class="orderCheckbox">
+      <input type="checkbox" id="acceptOrder">
+      <label for="acceptOrder">I have read and accept the terms and conditions.</label>
+    </div>
+    <div class="orderSubmit">
+      <input type="submit" value="Buy now!">
+    </div>
+    </form>
+   </div>
+  </div>
+   <!-- Right Section -->
+   <div class="order-image">
+     <div class="order-image-info">
+       <h2>Your order</h2>
+       <div class="orderField">
+       <p>Sweatshirt: <span id="orderProductPrice">17,95€</span></p>
+       <p><span id="orderShipType">Premium</span> Shipping: <span id="orderShipPrice">9.99€</span></p>
+       </div>
+       <p>Total: <span id="orderFinalPrice">25.55€</span></p>
+     
       </div>
-    <div class="intervalTimer">
-      <p>You started registering <br />
-        <span id="timeMinutes"></span> Hurry up!
-      </p>
+     <div class="order-image-mainImg"></div>
+   </div>
+ </section>
+
+ <!-- THANK YOU SECTION -->
+ <section id="thankYou">
+   <div class="thankYou-details">
+     <div class="thankYou-details-title">
+       <h2>THANK YOU!</h2>
+     </div>
+     <div class="thankYou-details-content">
+    <div class="thankYou-details-field1">
+      <h2>Your order is completed!</h2>
+      <div class="thankYou-field">
+      <p>Size: <span id="orderDetailsSize">M</span></p>
+      <p>Color: <span id="orderDetailsColor">Orange</span> </p>
     </div>
-    <div class="intervalTimerOver">
-      <p>Your time it's over</p>
+    <div class="thankYou-field">
+      <h3>Estimate date delivery</h3>
+      <p id="orderEstimatedDate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto ab optio nisi autem temporibus maiores accusantium quo laborum suscipit!</p>
     </div>
-  </section>
-  <!-- YOUR ORDER PAGE-->
-  <section id="orderPage">
-    <div class="containerOrderPage">
-        <h1 class="orderPageTittle">YOUR ORDER</h1>
-        <!-- NAME OF ORDER -->
-        <form action="" class="radioImput-orderPage">
-            <div class="radioImputOrderPage">
-                <h1>ORANGE SWEATSHIRT</h1>
-            </div>
-                <div class="waistOrder">
-                    <div class="">
-                        <h2>Size: M</h2>
-                    </div>
-                    <div class="sizeOrder">
-                        <h2>Color: </h2>
-                    </div>
-                </div><br>
-            <div class="dateEstimateOrder">
-                <p>ESTIMATE DELIVERY DATE:</p><br>
-                <p>between 21/02/2022 from 14:00h to</p>
-                <p>21/02/2022 at 18:00h</p>
-            </div><br>
-            <!-- GIFT IMAGE -->
-            <div class="image-form">
-                <laber><input type="checkbox"> I have read and I accept the terms and conditions.</laber>
-            </div>
-            <!-- BUTTON OF BUY NOW! -->
-            <aside>
-                <div class="aside--01-buyNow">
-                    <input class="buyNowButton" type="reset" name="clear_form_button" value="BUY NOW!" />
-                </div>
-            </aside>
     </div>
-    </form>
-    <div class="sectionRigthOrderPage">
-        <h2 id= "titleSelectionOrder" class="titleSectionRight">Your Order</h2>
-        <div class="columnPriceOrder">
-            <div class="valuePriceOrder">
-                <p>Sweatshirt: 17'96$</p>
-                <p>Premium Shipping: 9'99$</p><hr>
-            </div>
-            <div class="valueTotalPrice">
-                <p>Total: 25'55$</p><hr>
-            </div>
-        </div>
-        <div class="imageSweatshirtOrder">
-            <img src="assets/tshirt-back-front/orange-sweatshirt.png" width="400px">
-        </div>
+    <div class="thankYou-details-field2">
+      <div class="thankYou-price">
+        <h2>Your Order</h2>
+        <div class="thankYou-field-price">
+          <p>Sweatshirt: <span id="orderProductPrice">17,95€</span></p>
+          <p><span id="orderShipType">Premium</span> Shipping: <span id="orderShipPrice">9.99€</span></p>
+          </div>
+          <p>Total: <span id="orderFinalPrice">25.55€</span></p>
+      </div>
+      <div class="thankYou-details-image"></div>
     </div>
-</section>
-<!-- ICONOS OF ORDER PAGE -->
-<section id="address">
-    <div class="profile-details-orderPage">
-        <div class="profile-left-orderPage">
-            <div class="social-media-icons-orderPage">
-                <span>
-                    <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png"
-                            alt="" /></a>
-                </span>
-                <span>
-                    <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
-                </span>
-                <span>
-                    <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png"
-                            alt="" /></a>
-                </span>
-            </div>
-        </div>
+    <div class="thankYou-details-field3">
+      <button>RETURN</button>
     </div>
-</section>
-  <!-- THANK YOU PAGE -->
-  <section id="thankYouPage">
-    <div class="containerThankYouPage">
-        <h1 class="thankYouPageTittle">Thank you!</h1>
-        <!-- NAME OF ORDER -->
-        <form action="" class="radioImputThankYouPage">
-            <div class="msgImputThankYouPage">
-                <h1>Your order is completed!</h1>
-            </div>
-                <div class="sizeOrderThankYouPage">
-                    <div class="">
-                        <h2>Size: M</h2>
-                    </div>
-                    <div class="colorOrderThankYouPage">
-                        <h2>Color: </h2>
-                    </div>
-                </div><br>
-            <div class="dateEstimateOrderThankYouPage">
-                <p>ESTIMATE DELIVERY DATE:</p><br>
-                <p>between 21/02/2022 from 14:00h to</p>
-                <p>21/02/2022 at 18:00h</p>
-            </div><br>
-            <div class="sectionRigthThankYouPage">
-                <h2 class="titleSectionRight">Your Order</h2>
-                <div class="valuePriceOrder">
-                    <p>Sweatshirt: 17'96$</p>
-                    <p>Premium Shipping: 9'99$</p><hr><br>
-                </div>
-                <div class="valueTotalPrice">
-                    <p>Total: 25'55$</p><hr>
-                </div>
-            </div>
-                <div class="imageSweatshirtOrder-thankYouPage">
-                    <img src="assets/tshirt-back-front/orange-sweatshirt.png" width="200px">
-                </div>
-            <!-- BUTTON OF BUY NOW! -->
-            <aside>
-                <div class="aside--01-ThankYouPage">
-                    <input class="buyNowButton" type="reset" name="clear_form_button" value="You registration took: 3'min 22'second" />
-                </div>
-            </aside>
-    </div>
-    </form>
-    <div class="sectionRigthImage"></div>
-</section>
-<!-- ICONS ThankYouPage -->
-<section id="iconThankYouPage">
-    <div class="profile-details-thankYouPage">
-        <div class="profile-left-thankYouPage">
-            <div class="social-media-icons-thankYouPage">
-                <span>
-                    <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png"
-                            alt="" /></a>
-                </span>
-                <span>
-                    <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
-                </span>
-                <span>
-                    <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png"
-                            alt="" /></a>
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
+   </div>
+  </div>
+   <div class="thankYou-image"></div>
+ </section>
   </body>
 </html>

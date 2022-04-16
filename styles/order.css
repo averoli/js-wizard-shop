@@ -1,210 +1,90 @@
-/* ORDER CONTAINER */
-#orderPage {
-    height: 100vh;
-    display: flex;
+/*Order container*/
+#order {
+  height: 100vh;
+  /* display: flex; */
 }
 
-.containerOrderPage {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(189deg,
-            rgba(255, 255, 255, 1) 70%,
-            rgba(190, 229, 228, 1) 100%);
+/*ORDER DETAILS INFO*/
+.order-details {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    189deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(190, 229, 228, 1) 100%
+  );
 }
 
-.containerOrderPage>* {
-    max-height: 100%;
-    padding: 10px 0;
-    margin-left: 20%;
+/*Order details title*/
+.order-details-title h2 {
+  font-size: 7rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 1rem;
+}
+/*Order details form*/
+.order-details-form > * {
+  padding: 1rem 0;
+}
+.orderCheckbox {
+  display: flex;
+  align-items: center;
+}
+.orderCheckbox input {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-
-.radioImput-orderPage{
-    padding: 2% 0%;
-    max-width: 100%;
-    max-height: 100%;
-    margin-top: 10%;
-    padding-left: 20%;
-    margin-left: 35%;
+.orderCheckbox > * {
+  padding: 0 0.6rem;
 }
 
-.radioImputOrderPage {
-    padding: 20px;
-    text-align: left;
-    padding-left: 19%;
-    margin-bottom: 23%;
-    font-size: 27px;
+/*Order form button*/
+.orderSubmit input {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+}
+/*Order details content title,size etc...*/
+.order-details-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-around;
+  font-size: 1.4rem;
 }
 
-.waistOrder{
-    margin-left: -46%;
+.order-details-info > * {
+  padding: 1rem 0;
 }
 
-.sizeOrder{
-    padding-right: 12px;
+/*ORDER-IMAGE WITH INFO*/
+/*conatiner general order-image*/
+.order-image {
+  background-color: #94d9cc;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 }
-
-.dateEstimateOrder{
-    padding-bottom: 33%;
-    text-align: start;
-    margin-top: 8%;
-    margin-left: 18%;
+/*Info inside order-image price, total price etc..*/
+.order-image-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  flex: 1;
 }
-/*SECTION RIGHT "YOUR ORDER"*/
-.titleSectionRight{
-    margin-left: 10%;
-    margin-top: 12%;
-    font-size: 40px;
-    width: 0px;
+.order-image-info > * {
+  padding: 1rem;
 }
-
-#titleSelectionOrder{
-    width: 422px;
-}
-
-.sectionRigthOrderPage {
-    display: flex;
-    width: 40%;
-    height: 100%;
-    background-color: #94D9CC;
-}
-
-.columnPriceOrder{
-    margin-left: -48%;
-}
-
-.valuePriceOrder{
-    font-size: 25px;
-    margin-top: 70%;
-    margin-left: -26%;
-    padding-left: 8%;
-}
-
-.valueTotalPrice{
-    font-size: 25px;
-    margin-top: 22%;
-    margin-left: -18%;
-}
-
-/* IMAGEN SWEATSHIRT */
-
-.imageSweatshirtOrder{
-    margin-top: 40%;
-    margin-left: -13%;
-}
-
-
-/* TITLE H1 OrderPage */
-
-.orderPageTittle{
-        position: absolute;
-        font-size: 7rem;
-        letter-spacing: 0.2rem;
-        display: flex;
-        justify-content: center;
-        writing-mode: vertical-lr;
-        transform: rotate(-180deg);
-        text-transform: uppercase;
-        margin-left: 24%;
-        margin-top: 6%;
-        font-style: bolder;
-}
-
-/* GIFT FORM */
-
-#formImageShipping {
-    display: flex;
-    text-align: left;
-    margin-left:20%;
-
-}
-
-
-
-/* BUTTON BUYNOW! */
-
-.aside--01-buyNow {
-    margin: 20px 0;
-    border: 0;
-}
-
-.buyNowButton {
-        color: #8dcfbe;
-        background-color: gray;
-        height: 30px;
-        width: 30%;
-        font-size: 1rem;
-        border: 0;
-}
-
-
-/*PROFILE LEFT BLOCK - SOCIAL ICONS + PROGRESS BAR*/
-
-.profile-left-orderPage {
-    display: flex;
-    position: absolute;
-
-}
-
-.social-media-icons-orderPage {
-    display: flex;
-    justify-content: center;
-    writing-mode: vertical-rl;
-    padding-right: 10px;
-    margin-top: -2052%;
-    margin-left: 22%;
-}
-
-.progress-bar {
-    display: flex;
-    justify-content: center;
-    writing-mode: vertical-lr;
-    padding-right: 200px;
-    rotate: 50%;
-}
-
-@media (min-width: 746px) and (max-width: 1540px){
-    .orderPageTittle {
-        font-size: 5rem;
-        margin-left: 20%;
-        }
-    .radioImput-orderPage{
-        margin-left: 29%;
-        }
-    #address .social-media-icons {
-        margin-top: -2000%;
-        }
-    .dateEstimateOrder {
-        padding-bottom: 20%;
-    }
-    .valuePriceOrder {
-        margin-left: -42%;
-    }
-    .valueTotalPrice {
-        margin-top: 22%;
-        margin-left: -34%;
-    }
-    .columnPriceOrder{
-        margin-top: -10%;
-        margin-left: -55%;
-    }
-    .titleSectionRight {
-        margin-left: 7%;
-    }
-    .titleSectionRight h2{
-        width: 55%;
-    }
-    #titleSelectionOrder{
-        width: 422px;
-    }
-    .imageSweatshirtOrder {
-        position: absolute;
-        margin-top: 20%;
-        padding-left: 24%;
-    }
+/*Image of the step order-image*/
+.order-image-mainImg {
+  flex: 2;
+  background-image: url("../assets/tshirt-back-front/orange-sweatshirt.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
