@@ -2,6 +2,7 @@
 #profile {
   height: 100vh;
   width: auto;
+  display: flex;
 }
 
 /*PROFILE DETAILS*/
@@ -17,10 +18,7 @@
   justify-content: end;
 }
 
-/*PROFILE LEFT BLOCK - SOCIAL ICONS + PROGRESS BAR*/
-.profile-left {
-  display: flex;
-}
+/*SOCIAL ICONS*/
 
 .social-media-icons {
   display: flex;
@@ -29,44 +27,27 @@
   padding-right: 10px;
 }
 
-.progress-bar {
-  display: flex;
-  justify-content: center;
-  writing-mode: vertical-lr;
-  padding-right: 200px;
-  rotate: 50%;
-}
 
-/*PROFILE RIGTH BLOCK - TITLE + FORM*/
-.profile-rigth {
-  display: flex;
-  margin: auto 0;
-}
+/*TITLE + FORM*/
 
 .profile-title {
-  font-size: 6rem;
-  letter-spacing: 0.8rem;
-  display: flex;
-  justify-content: center;
-  writing-mode: tb-rl;
-  transform: rotate(-180deg);
-  text-transform: uppercase;
-  padding-left: 20px;
-  padding-top: 160px;
-  font-style: bolder;
+  font-size: 7rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
 }
 
 #formProfile {
-  padding: 260px 40px;
-  background-color: #8dcfbe;
+  margin: 250px 60px;
 }
 
 .input-profile {
-  margin-top: 15px;
-  padding: 8px 100px 8px 8px;
+  margin-top: 20px;
+  padding: 10px 120px 10px 8px;
   background-color: transparent;
   border-style: solid;
   border-color: rgb(116, 116, 116);
+  font-size: 1.1rem;
 }
 
 /*PROFILE  SMALL TEXT*/
@@ -87,16 +68,13 @@ small {
 .clear-btn {
   color: #8dcfbe;
   background-color: gray;
-  height: 30px;
-  width: auto;
+  margin-right: 10px;
 }
 
 .next-btn,
 .clear-btn {
-  font-size: 1rem;
-  padding: 0px 40px;
-  height: 30px;
-  width: auto;
+  font-size: 1.1rem;
+  padding: 10px 50px;
 }
 
 /*PROFILE IMAGES*/
