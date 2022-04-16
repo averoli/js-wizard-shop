@@ -97,10 +97,10 @@
 }
 
 .product-details-miniature .miniature {
-  width: 5rem;
-  height: 5rem;
+  width: 4.7rem;
   background-color: #ade6e5;
   margin-left: 1rem;
+  border-radius: 0.2rem;
 }
 .product-details-miniature .miniature img {
   width: 100%;

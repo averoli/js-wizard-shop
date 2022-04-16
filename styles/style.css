@@ -11,7 +11,22 @@
   font-family: "Raleway", sans-serif;
   color: gray;
 }
-
+/* PRELOAD IMAGES
+body:after {
+  display: none;
+  content: url(../assets/tshirt-front/orange-sweatshirt.png)
+    url(../assets/tshirt-front/blue-sweatshirt.png)
+    url(../assets/tshirt-front/pink-sweatshirt.png)
+    url(../assets/tshirt-back/green-sweatshirt.png)
+    url(../assets/tshirt-back/orange-sweatshirt.png)
+    url(../assets/tshirt-back/blue-sweatshirt.png)
+    url(../assets/tshirt-back/pink-sweatshirt.png)
+    url(../assets/tshirt-back/green-sweatshirt.png)
+    url(../assets/tshirt-back-front/orange-sweatshirt.png)
+    url(../assets/tshirt-back-front/blue-sweatshirt.png)
+    url(../assets/tshirt-back-front/pink-sweatshirt.png)
+    url(../assets/tshirt-back-front/green-sweatshirt.png);
+} */
 /*MENU NAVEGADOR*/
 .menu-navigation {
   position: fixed;

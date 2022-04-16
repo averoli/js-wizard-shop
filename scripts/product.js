@@ -23,6 +23,7 @@ function showSection() {
   nextSection.style.display = "flex";
   currentSection.style.display = "none";
   timeRegister();
+  console.log(tshirt);
 }
 
 /*TIMER FUNCTION*/
@@ -84,8 +85,9 @@ function pickColor(e) {
   let color = e.target.value;
   tshirt.colorProduct = color;
   //This should change in other computer JS-SHOP-WIZARD folder only in my local
-  const newSrc = `../assets/tshirt-front/${color}-sweatshirt.png`;
-  mainImage.style.backgroundImage = `url(${newSrc})`;
+  // const newSrc =`../assets/tshirt-front/${color}-sweatshirt.png`;
+  const newSrc = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
+  mainImage.style.backgroundImage = `url("${newSrc}")`;
   changeColorMiniature(color);
 }
 
@@ -110,9 +112,6 @@ function changeColorMiniature(color) {
   const regexColors = /orange|blue|green|pink/i;
 
   for (let minImg of miniatureImgs) {
-    // let minImgStr = minImg.src.toString();
-    // console.log(minImgStr);
-    // console.log(minImg.src.search(regexColors));
     let newSrc = minImg.src.replace(regexColors, color);
     minImg.src = newSrc;
   }
