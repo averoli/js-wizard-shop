@@ -87,6 +87,7 @@ function pickColor(e) {
   tshirt.colorProduct = color;
   tshirt.colorHex = colorHex;
   //This should change in other computer JS-SHOP-WIZARD folder only in my local
+  //CHANGE URL
   // const newSrc =`../assets/tshirt-front/${color}-sweatshirt.png`;
   const newSrc = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
   mainImage.style.backgroundImage = `url("${newSrc}")`;

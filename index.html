@@ -15,7 +15,8 @@
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation" style="display: none;">
+    <!-- *!NAVIGATION MENU -->
+    <header class="menu-navigation">
       <nav>
         <ul>
           <li>HOME</li>
@@ -25,8 +26,8 @@
         </ul>
       </nav>
     </header>
-
-    <section id="mainProduct" style="display: flex;">
+<!-- *!MAIN PRODUCT -->
+    <section id="mainProduct">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -152,7 +153,9 @@
       </div>
       <div class="profile-images"></div>
     </section>
-    <!-- ADDRESS -->
+
+
+    <!-- *!ADDRESS -->
     <section id="address" >
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
@@ -206,8 +209,11 @@
       </div>
       <div class="address-image"></div>
     </section>
-    <!-- SHIPPING -->
-    <section id="shipping" style=" display:flex">
+
+
+
+    <!-- *!SHIPPING -->
+    <section id="shipping">
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
@@ -259,8 +265,10 @@
       <div class="imageShipping"></div>
   </section>
 
-  <!--ORDER SECTION-->
- <section id="order" style=" display:flex" >
+
+
+  <!-- *!ORDER SECTION-->
+ <section id="order" >
    <!--Left Section-->
    <div class="order-details">
      <div class="order-details-title">
@@ -298,17 +306,20 @@
        <h2>Your order</h2>
        <div class="orderField">
        <p>Sweatshirt: 27,95€</p>
-       <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span></p>
+       <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>
        </div>
-       <p>Total: <span id="orderFinalPrice"></span></p>
+       <p>Total: <span id="orderFinalPrice"></span>€</p>
      
       </div>
      <div class="order-image-mainImg imageSelectedOrder"></div>
    </div>
  </section>
 
- <!-- THANK YOU SECTION -->
- <section id="thankYou" style="display:flex">
+
+
+
+ <!-- *!THANK YOU SECTION -->
+ <section id="thankYou" >
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU!</h2>
@@ -330,14 +341,14 @@
         <h2>Your Order</h2>
         <div class="thankYou-field-price">
           <p>Sweatshirt: 27,95€</p>
-          <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span></p>
+          <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>
           </div>
-          <p>Total: <span id="orderFinalPrice"></span></p>
+          <p>Total: <span id="orderFinalPrice"></span>€</p>
       </div>
       <div class="thankYou-details-image imageSelectedOrder"></div>
     </div>
     <div class="thankYou-details-field3">
-      <button>RETURN</button>
+      <button><a href=".">Main Product</a></button>
     </div>
    </div>
   </div>
