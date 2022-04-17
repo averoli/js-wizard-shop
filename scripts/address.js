@@ -126,7 +126,7 @@ function isFormCheckedAddress() {
   const nextSection = document.querySelector("#shipping");
   const currentSection = document.querySelector("#address");
 
-  nextSection.style.display = "block";
+  nextSection.style.display = "flex";
   currentSection.style.display = "none";
 }
 // TODO error message

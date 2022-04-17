@@ -152,15 +152,21 @@ const nextButton = document.getElementById("nextButton");
 nextButton.addEventListener("click", ButtonValidationShipping);
 
 function ButtonValidationShipping(e) {
-  console.log(tshirt);
+  e.preventDefault();
   if (
     buttonRadioFree.checked ||
     buttonRadioExtra.checked ||
     buttonRadioPremium.checked
   ) {
-  } else {
-    return alert("You must choose your shipping type");
+    const nextSection = document.querySelector("#order");
+    const currentSection = document.querySelector("#shipping");
+    nextSection.style.display = "flex";
+    currentSection.style.display = "none";
+    addOrderParameters();
   }
+  // else {
+  //   return alert("You must choose your shipping type");
+  // }
 }
 
 // CHANGE BUTTON INPUT FILE
@@ -168,4 +174,49 @@ function ButtonValidationShipping(e) {
 function inputChangeFile() {
   const inputFile = document.getElementById("file-button").files[0].name;
   document.getElementById("info").innerHTML = inputFile;
+}
+
+function addOrderParameters(params) {
+  let {
+    sizeProduct,
+    colorHex,
+    colorProduct,
+    shippingDate,
+    shippingType,
+    shippingPrice,
+    totalPrice,
+  } = tshirt;
+  console.log(sizeProduct);
+  //Title info
+  const title = document.querySelector("#orderDetailsColorTitle");
+  title.textContent = colorProduct.toUpperCase();
+  //size info
+  const size = document.querySelectorAll("#orderDetailsSize");
+  AddOrderParamsFor(size, sizeProduct);
+  const color = document.querySelectorAll("#orderDetailsColor");
+  for (const colorSpan of color) {
+    colorSpan.style.backgroundColor = colorHex;
+  }
+  // AddOrderParamsFor(color, colorProduct);
+  const date = document.querySelectorAll("#orderEstimatedDate");
+  AddOrderParamsFor(date, shippingDate);
+  const orderType = document.querySelectorAll("#orderShipType");
+  AddOrderParamsFor(orderType, shippingType);
+  const orderPrice = document.querySelectorAll("#orderShipPrice");
+  AddOrderParamsFor(orderPrice, shippingPrice);
+  const finalPrice = document.querySelectorAll("#orderFinalPrice");
+  AddOrderParamsFor(finalPrice, totalPrice);
+
+  const orderImage = document.querySelectorAll(".imageSelectedOrder");
+  //CHANGE URL
+  // let src = `../assets/tshirt-back-front/${color}-sweatshirt.png`;
+  let src = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-back-front/${colorProduct}-sweatshirt.png`;
+  for (const imgSec of orderImage) {
+    imgSec.style.backgroundImage = `url("${src}")`;
+  }
+}
+function AddOrderParamsFor(elementHtml, property) {
+  for (const e of elementHtml) {
+    e.textContent = property;
+  }
 }

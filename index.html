@@ -9,12 +9,14 @@
     <script src="scripts/address.js" defer></script>
     <script src="scripts/shipping.js" defer type="module"></script>
     <script src="scripts/product.js" defer type="module"></script>
+    <script src="scripts/order.js" defer type="module"></script>
     <!-- CSS LINK -->
     <link rel="stylesheet" href="styles/style.css" />
     <title>Wizard shop</title>
   </head>
   <body>
-    <header class="menu-navigation" style="display: none;">
+    <!-- *!NAVIGATION MENU -->
+    <header class="menu-navigation">
       <nav>
         <ul>
           <li>HOME</li>
@@ -24,8 +26,8 @@
         </ul>
       </nav>
     </header>
-
-    <section id="mainProduct" >
+<!-- *!MAIN PRODUCT -->
+    <section id="mainProduct">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -33,13 +35,13 @@
           <button class="nextSection">SHOP NOW</button>
         </div>
         <div class="product-details-colors">
-          <input class="orange" value="orange" type="radio" name="product-color-pick" id="orange" checked></input>
+          <input data-color-hex="#fcca81" class="orange" value="orange" type="radio" name="product-color-pick" id="orange" checked></input>
           <label for="orange" class="orange"></label>
-          <input class="green" value="green" type="radio" name="product-color-pick" id="green"></input> 
+          <input data-color-hex="#b9d29c" class="green" value="green" type="radio" name="product-color-pick" id="green"></input> 
           <label for="green" class="green"> </label>
-          <input class="pink" value="pink" type="radio" name="product-color-pick" id="pink"></input>
+          <input data-color-hex="#e2bce1" class="pink" value="pink" type="radio" name="product-color-pick" id="pink"></input>
           <label for="pink" class="pink"></label>
-          <input class="blue" value="blue"  type="radio" name="product-color-pick" id="blue"></input>
+          <input data-color-hex="#9ccff3" class="blue" value="blue"  type="radio" name="product-color-pick" id="blue"></input>
           <label for="blue" class="blue"></label>
         </div>
         <div class="product-details-sizes">
@@ -158,7 +160,9 @@
       </div>
       <div class="profile-images"></div>
     </section>
-    <!-- ADDRESS -->
+
+
+    <!-- *!ADDRESS -->
     <section id="address" >
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
@@ -212,12 +216,15 @@
       </div>
       <div class="address-image"></div>
     </section>
-    <!-- SHIPPING -->
+
+
+
+    <!-- *!SHIPPING -->
     <section id="shipping">
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
-          <form action="" class="radioImput">
+          <form action="" class="radioImput" id="shippingForm">
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -260,13 +267,15 @@
                       <input id="nextButton" class="next--button" type="submit" name="next_button" value="Next" />
                   </div>
               </aside>
+            </form>
       </div>
-      </form>
       <div class="imageShipping"></div>
   </section>
 
-  <!--ORDER SECTION-->
- <section id="order">
+
+
+  <!-- *!ORDER SECTION-->
+ <section id="order" >
    <!--Left Section-->
    <div class="order-details">
      <div class="order-details-title">
@@ -275,15 +284,15 @@
      <div class="order-details-content">
      <!-- Info about the product -->
      <div class="order-details-info">
-     <h2><span id="orderDetailsColor">ORANGE</span> SWEATSHIRT</h2>
+     <h2><span id="orderDetailsColorTitle"></span> SWEATSHIRT</h2>
      <div class="orderField">
-     <p>Size: <span id="orderDetailsSize">M</span></p>
-     <p>Color: <span id="orderDetailsColor">Orange</span> </p>
+     <p>Size: <span id="orderDetailsSize"></span></p>
+     <p class="colorParragraph">Color: <span id="orderDetailsColor"></span> </p>
     </div>
      <!-- Date about the order -->
     <div class="order-details-date">
       <h3>Estimate date delivery</h3>
-      <p id="orderEstimatedDate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto ab optio nisi autem temporibus maiores accusantium quo laborum suscipit!</p>
+      <p id="orderEstimatedDate"></p>
     </div>
     </div>
     <!-- Form accept terms -->
@@ -303,18 +312,21 @@
      <div class="order-image-info">
        <h2>Your order</h2>
        <div class="orderField">
-       <p>Sweatshirt: <span id="orderProductPrice">17,95€</span></p>
-       <p><span id="orderShipType">Premium</span> Shipping: <span id="orderShipPrice">9.99€</span></p>
+       <p>Sweatshirt: 27,95€</p>
+       <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>
        </div>
-       <p>Total: <span id="orderFinalPrice">25.55€</span></p>
+       <p>Total: <span id="orderFinalPrice"></span>€</p>
      
       </div>
-     <div class="order-image-mainImg"></div>
+     <div class="order-image-mainImg imageSelectedOrder"></div>
    </div>
  </section>
 
- <!-- THANK YOU SECTION -->
- <section id="thankYou">
+
+
+
+ <!-- *!THANK YOU SECTION -->
+ <section id="thankYou" >
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU!</h2>
@@ -323,31 +335,40 @@
     <div class="thankYou-details-field1">
       <h2>Your order is completed!</h2>
       <div class="thankYou-field">
-      <p>Size: <span id="orderDetailsSize">M</span></p>
-      <p>Color: <span id="orderDetailsColor">Orange</span> </p>
+      <p>Size: <span id="orderDetailsSize"></span></p>
+      <p class="colorParragraph">Color: <span id="orderDetailsColor"></span> </p>
     </div>
     <div class="thankYou-field">
       <h3>Estimate date delivery</h3>
-      <p id="orderEstimatedDate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto ab optio nisi autem temporibus maiores accusantium quo laborum suscipit!</p>
+      <p id="orderEstimatedDate"></p>
     </div>
     </div>
     <div class="thankYou-details-field2">
       <div class="thankYou-price">
         <h2>Your Order</h2>
         <div class="thankYou-field-price">
-          <p>Sweatshirt: <span id="orderProductPrice">17,95€</span></p>
-          <p><span id="orderShipType">Premium</span> Shipping: <span id="orderShipPrice">9.99€</span></p>
+          <p>Sweatshirt: 27,95€</p>
+          <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>
           </div>
-          <p>Total: <span id="orderFinalPrice">25.55€</span></p>
+          <p>Total: <span id="orderFinalPrice"></span>€</p>
       </div>
-      <div class="thankYou-details-image"></div>
+      <div class="thankYou-details-image imageSelectedOrder"></div>
     </div>
     <div class="thankYou-details-field3">
-      <button>RETURN</button>
+      <button><a href=".">Main Product</a></button>
     </div>
    </div>
   </div>
-   <div class="thankYou-image"></div>
+   <div class="thankYou-image "></div>
  </section>
+ <!--! INTERVAL ALERT -->
+ <div class="intervalTimer">
+  <p>You started registering <br />
+    <span id="timeMinutes"></span> Hurry up!
+  </p>
+</div>
+<div class="intervalTimerOver">
+  <p>Your time it's over</p>
+</div>
   </body>
 </html>

@@ -55,6 +55,13 @@
 .thankYou-field-price > * {
   padding: 0.2rem 0;
 }
+/*Than you button*/
+.thankYou-details-field3 a {
+  text-decoration: none;
+}
+.thankYou-details-field3 button {
+  padding: 0.5rem 1rem;
+}
 /*Thank you details image*/
 .thankYou-details-image {
   flex: 2;

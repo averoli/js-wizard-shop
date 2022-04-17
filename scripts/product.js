@@ -83,8 +83,11 @@ const mainImage = document.querySelector(".product-images");
 /*GET INFO PRODUCTS*/
 function pickColor(e) {
   let color = e.target.value;
+  let colorHex = e.target.dataset.colorHex;
   tshirt.colorProduct = color;
+  tshirt.colorHex = colorHex;
   //This should change in other computer JS-SHOP-WIZARD folder only in my local
+  //CHANGE URL
   // const newSrc =`../assets/tshirt-front/${color}-sweatshirt.png`;
   const newSrc = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
   mainImage.style.backgroundImage = `url("${newSrc}")`;
