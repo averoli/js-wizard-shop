@@ -209,8 +209,8 @@ function addOrderParameters(params) {
 
   const orderImage = document.querySelectorAll(".imageSelectedOrder");
   //CHANGE URL
-  // let src = `../assets/tshirt-back-front/${color}-sweatshirt.png`;
-  let src = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-back-front/${colorProduct}-sweatshirt.png`;
+  let src = `../assets/tshirt-back-front/${colorProduct}-sweatshirt.png`;
+  // let src = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-back-front/${colorProduct}-sweatshirt.png`;
   for (const imgSec of orderImage) {
     imgSec.style.backgroundImage = `url("${src}")`;
   }

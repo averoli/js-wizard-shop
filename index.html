@@ -20,12 +20,14 @@
       <nav>
         <ul>
           <li>HOME</li>
-          <li>SHOP</li>
+          <li class="shopButton">SHOP</li>
           <li>SCHOOL</li>
           <li>CONTACT</li>
         </ul>
       </nav>
     </header>
+
+
 <!-- *!MAIN PRODUCT -->
     <section id="mainProduct">
       <div class="product-details">
@@ -80,6 +82,8 @@
       <div class="product-images">
       </div>
     </section>
+
+   <!-- *!PROFILE --> 
     <section id="profile">
       <div class="profile-details">
         <div id="progress">
@@ -149,16 +153,16 @@
             </div>
           </form>
         </div>
-        
       </div>
       <div class="profile-images"></div>
     </section>
 
 
     <!-- *!ADDRESS -->
-    <section id="address" >
+    <section id="address" style="display: flex;">
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
+        
         <form action="" id="addressForm">
           <div class="fieldAddress">
           <!-- First name -->
@@ -198,12 +202,11 @@
           </div>
           <!-- Current address checkbox -->
           <div class="fieldAddress fieldCurrentAddress">
-          <label for="currentAddress" class="currAddr">This is my regular address</label>
-          <input type="checkbox" name="" id="currentAddress" />
+          <label for="currentAddress" class="currAddr">This is my regular address <input type="checkbox" name="" id="currentAddress" /></label>
         </div>
           <!--Submit -->
           <div class="fieldAddress addressBtn">
-          <input type="reset" value="Reset" />
+          <input type="reset" value="Reset" class="resetSection" />
           <input type="submit" value="Next" class="nextSection" /></div>
         </form>
       </div>
@@ -213,11 +216,11 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping">
+    <section id="shipping" style="display: flex;">
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
-          <form action="" class="radioImput" id="shippingForm">
+          <!--<form action="" class="radioImput" id="shippingForm">-->
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -247,7 +250,7 @@
               </div>
               <!-- GIFT IMAGE -->
               <div class="image-form">
-                  <label id="formImageShipping" for="wrapperImage">Gift wrapper image</label>
+                  <label id="formImageShipping" for="wrapperImage">Add gift wrapper image</label>
                   <label class="buttonFile" for="file-button">Select image</label>
                   <input id="file-button" class="form--input03" type="file" onchange='inputChangeFile()'
                       accept="image/png, image/jpeg" name="select_image" style="display:none;" />
@@ -268,7 +271,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order" >
+ <section id="order" style="display: flex;">
    <!--Left Section-->
    <div class="order-details">
      <div class="order-details-title">
@@ -319,10 +322,10 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou" >
+ <section id="thankYou" style="display: flex;">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
-       <h2>THANK YOU!</h2>
+       <h2>THANK YOU</h2>
      </div>
      <div class="thankYou-details-content">
     <div class="thankYou-details-field1">
@@ -338,7 +341,7 @@
     </div>
     <div class="thankYou-details-field2">
       <div class="thankYou-price">
-        <h2>Your Order</h2>
+        <h2>Your order</h2>
         <div class="thankYou-field-price">
           <p>Sweatshirt: 27,95€</p>
           <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>

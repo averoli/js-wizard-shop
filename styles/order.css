@@ -12,15 +12,15 @@
   align-items: center;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    189deg,
-    rgba(255, 255, 255, 1) 70%,
+    126deg,
+    rgba(255, 255, 255, 1) 10%,
     rgba(190, 229, 228, 1) 100%
   );
 }
 
 /*Order details title*/
 .order-details-title h2 {
-  font-size: 7rem;
+  font-size: 6rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   padding: 1rem;
@@ -32,10 +32,11 @@
 .orderCheckbox {
   display: flex;
   align-items: center;
+  font-size: 10px;
 }
 .orderCheckbox input {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.em;
+  height: 1rem;
 }
 
 .orderCheckbox > * {
@@ -46,6 +47,8 @@
 .orderSubmit input {
   padding: 0.2rem 1rem;
   font-size: 1.2rem;
+  background-color: #8dcfbe;
+  border: none;
 }
 /*Order details content title,size etc...*/
 .order-details-content {
@@ -54,7 +57,7 @@
   flex-direction: column;
   height: 80%;
   justify-content: space-around;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .order-details-info > * {
@@ -65,17 +68,20 @@
 /*conatiner general order-image*/
 .order-image {
   background-color: #94d9cc;
+  background-size: 40%;
   width: 40%;
   display: flex;
   flex-direction: column;
+  padding-top: 40px;
 }
 /*Info inside order-image price, total price etc..*/
 .order-image-info {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1rem;
   justify-content: space-around;
   flex: 1;
+  
 }
 .order-image-info > * {
   padding: 1rem;
@@ -84,10 +90,12 @@
 .order-image-mainImg {
   flex: 2;
   background-image: url("../assets/tshirt-back-front/orange-sweatshirt.png");
-  background-size: contain;
+  background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
+  
 }
+
 /*Order color */
 .colorParragraph {
   display: flex;
