@@ -11,16 +11,16 @@ countrySelect.addEventListener("change", checkCountryBornAddress);
 function checkInputAddress(e) {
   let checkedForm = true;
   e.preventDefault();
-  const firstNameContainer = document.getElementById("firstNameAddress");
-  const firstName = document.getElementById("firstNameAddress").value;
-  const lastName = document.getElementById("lastNameAddress").value;
-  const birthday = document.getElementById("birthdayAddress").value;
-  const address1 = document.getElementById("address1").value;
-  const address2 = document.getElementById("address2").value;
-  const postalCode = document.getElementById("postalCodeAddress").value;
+  const firstName = document.getElementById("firstNameAddress");
+  const lastName = document.getElementById("lastNameAddress");
+  const birthday = document.getElementById("birthdayAddress");
+  const address1 = document.getElementById("address1");
+  const address2 = document.getElementById("address2");
+  const postalCode = document.getElementById("postalCodeAddress");
+  const phoneNumber = document.getElementById("phoneNumberAddress");
 
   //   Check first name
-  let firstN = checkFirstNameAddres(firstName, firstNameContainer);
+  let firstN = checkFirstNameAddres(firstName);
   //   Check last name
   let lastN = checkLastNameAddres(lastName);
   //   Check birthday
@@ -31,82 +31,104 @@ function checkInputAddress(e) {
   let addr2 = checkAddres2(address2);
   //   Check postal Code
   let postC = checkPostalCodeAddress(postalCode);
-  if (firstN && lastN && birthD && addr1 && addr2 && postC) {
+  // Check phone number
+  let phoneN = checkPhoneNumberAddres(phoneNumber);
+  if (firstN && lastN && birthD && addr1 && addr2 && postC && phoneN) {
     //Function to show next section or not
     isFormCheckedAddress(checkedForm);
   }
 }
 
-function checkFirstNameAddres(firstName, firstNameContainer) {
+function checkFirstNameAddres(firstN) {
+  let firstName = firstN.value;
   if (firstName.length > 20) {
-    console.log("Only 20 characters allowed");
+    errorMsgAddress("Only 20 characters allowed", firstN);
     return false;
   } else if (firstName.length === 0) {
-    console.log("This field is required");
+    errorMsgAddress("First name is required", firstN);
     return false;
   } else {
-    console.log("First name is OK: " + firstName);
+    checkMsgAddress(firstN);
     return true;
   }
 }
 
-function checkLastNameAddres(lastName) {
+function checkLastNameAddres(lastN) {
+  let lastName = lastN.value;
   if (lastName.length > 20) {
-    console.log("Only 20 characters allowed");
+    errorMsgAddress("Only 20 characters allowed", lastN);
     return false;
   } else if (lastName.length === 0) {
-    console.log("lastName is required");
+    errorMsgAddress("Last name is required", lastN);
     return false;
   } else {
-    console.log("lastName is OK: " + lastName);
+    checkMsgAddress(lastN);
     return true;
   }
 }
 
-function checkBirthdayAddres(birthday) {
+function checkBirthdayAddres(birthD) {
+  let birthday = birthD.value;
   if (birthday.length === 0) {
-    console.log("birthday is required");
+    errorMsgAddress("Birthday is required", birthD);
     return false;
   } else {
-    console.log("Birthday is OK: " + birthday);
+    checkMsgAddress(birthD);
     return true;
   }
 }
-function checkAddres1(address1) {
+function checkAddres1(addr1) {
+  let address1 = addr1.value;
   if (address1.length > 50) {
-    console.log("Only 50 characters allowed");
+    errorMsgAddress("Only 50 characters allowed", addr1);
     return false;
   } else if (address1.length === 0) {
-    console.log("address1 is required");
+    errorMsgAddress("Address-1 is required", addr1);
     return false;
   } else {
-    console.log("address1 is OK: " + address1);
+    checkMsgAddress(addr1);
     return true;
   }
 }
 
-function checkAddres2(address2) {
+function checkAddres2(addr2) {
+  let address2 = addr2.value;
   if (address2.length > 50) {
-    console.log("Only 50 characters allowed");
+    errorMsgAddress("Only 50 characters allowed", addr2);
     return false;
   } else if (address2.length === 0) {
-    console.log("address2 is required");
+    errorMsgAddress("Address-2 is required", addr2);
     return false;
   } else {
-    console.log("address2 is OK: " + address2);
+    checkMsgAddress(addr2);
     return true;
   }
 }
 
-function checkPostalCodeAddress(postalCode) {
-  if (postalCode.length === 0) {
-    console.log("postalCode is required");
+function checkPhoneNumberAddres(phoneN) {
+  let phoneNumber = phoneN.value;
+  if (phoneNumber.length > 9) {
+    errorMsgAddress("Only 9 digits allowed", phoneN);
     return false;
-  } else if (postalCode.length > 5) {
-    console.log("Only 5 numbers");
+  } else if (phoneNumber.length === 0) {
+    errorMsgAddress("Phone number is required", phoneN);
     return false;
   } else {
-    console.log("postalCode is OK: " + postalCode);
+    checkMsgAddress(phoneN);
+    return true;
+  }
+}
+
+function checkPostalCodeAddress(postalC) {
+  let postalCode = postalC.value;
+  if (postalCode.length === 0) {
+    errorMsgAddress("Postal code is required", postalC);
+    return false;
+  } else if (postalCode.length > 5) {
+    errorMsgAddress("Only 5 numbers allowed", postalC);
+    return false;
+  } else {
+    checkMsgAddress(postalC);
     return true;
   }
 }
@@ -129,6 +151,12 @@ function isFormCheckedAddress() {
   nextSection.style.display = "flex";
   currentSection.style.display = "none";
 }
-// TODO error message
-// function errorAddress(msg, element) {
-// }
+
+function errorMsgAddress(msg, element) {
+  element.className = "error-input";
+  element.nextElementSibling.textContent = msg;
+}
+function checkMsgAddress(element) {
+  element.className = "check-input";
+  element.nextElementSibling.textContent = "";
+}

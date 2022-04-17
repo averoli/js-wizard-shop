@@ -39,7 +39,7 @@ function timeRegister(params) {
   let countDown = 5;
 
   let timerOneMinute = setInterval(function () {
-    intervalContainer.style.display = "block";
+    intervalContainer.style.display = "flex";
     timerDuration();
     countDown -= 1;
     minutesTime.textContent = countDown;
@@ -58,9 +58,11 @@ function timeRegister(params) {
 }
 
 function timerOver() {
+  const intervalContainer = document.querySelector(".intervalTimer");
+  intervalContainer.style.display = "none";
   //timer 5 minutes its over
   const intervalContainer2 = document.querySelector(".intervalTimerOver");
-  intervalContainer2.style.display = "block";
+  intervalContainer2.style.display = "flex";
   setTimeout(function () {
     intervalContainer2.style.display = "none";
     redirectProduct();
@@ -88,7 +90,7 @@ function pickColor(e) {
   tshirt.colorHex = colorHex;
   //This should change in other computer JS-SHOP-WIZARD folder only in my local
   //CHANGE URL
-  const newSrc =`../assets/tshirt-front/${color}-sweatshirt.png`;
+  const newSrc = `../assets/tshirt-front/${color}-sweatshirt.png`;
   //const newSrc = `/JS/JS_WIZARD_SHOP-v2/JS-WIZARD-SHOP/assets/tshirt-front/${color}-sweatshirt.png`;
   mainImage.style.backgroundImage = `url("${newSrc}")`;
   changeColorMiniature(color);

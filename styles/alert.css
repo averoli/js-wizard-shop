@@ -1,0 +1,61 @@
+/*Timer interval*/
+.intervalTimer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #dde4fec2;
+  border-radius: 10px;
+  width: 300px;
+  height: 100px;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* margin-top: 12px;
+  margin-left: 12px; */
+  /* position: relative; */
+  /* animation: mymove 5s infinite; */
+}
+
+.pop-up-img {
+  display: flex;
+  background-image: url("../assets/alert/alert1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 32%;
+  height: 50%;
+  margin-left: 9rem;
+  margin-top: -2rem;
+}
+
+/*Time over*/
+.intervalTimerOver {
+  background-color: #edd3bacc;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 0.8rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* margin-top: 12px;
+  margin-left: 12px; */
+  /* position: relative;
+  animation: mymove 5s infinite; */
+}
+.time-over-msg {
+  padding-left: 10px;
+  flex: 1;
+}
+
+.time-over-image {
+  background-image: url("../assets/alert/alert2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 3;
+  background-position: center;
+}

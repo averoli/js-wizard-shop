@@ -5,6 +5,7 @@
 @import url(progress.css);
 @import url(thankyou.css);
 @import url(order.css);
+@import url(alert.css);
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 * {
   margin: 0;
@@ -41,7 +42,7 @@ body:after {
   font-size: 0.8rem;
   padding: 10px;
 }
-.shopButton{
+.shopButton {
   font-size: 1.4rem;
   margin-top: -5px;
 }

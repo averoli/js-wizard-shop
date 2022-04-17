@@ -159,26 +159,44 @@
 
 
     <!-- *!ADDRESS -->
-    <section id="address" style="display: flex;">
+    <section id="address">
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
         
         <form action="" id="addressForm">
           <div class="fieldAddress">
           <!-- First name -->
+          <label for="firstNameAddress">
           <input type="text" id="firstNameAddress" placeholder="NAME"/>
+          <small></small>
+        </label>
           <!--Last name-->
+          <label for="lastNameAddress">
           <input type="text" id="lastNameAddress" placeholder="LAST NAME" />
+          <small></small>
+        </label>
         </div>
           <!--Birthday-->
+          <label for="birthdayAddress">
           <input type="date" name="" id="birthdayAddress" />
+          <small></small>
+        </label>
           <!--Address 1-->
+          <label for="address1">
           <input type="text" name="" id="address1" placeholder="ADDRESS 1"/>
+          <small></small>
+        </label>
           <!--Address 2-->
+        <label for="address2">
           <input type="text" id="address2" placeholder="ADDRESS 2"/>
+          <small></small>
+        </label>
           <div class="fieldAddress">
           <!--Postal code-->
+            <label for="postalCodeAddress">
           <input type="number" name="" id="postalCodeAddress" placeholder="POSTAL CODE"/>
+          <small></small>
+        </label>
           <!--Country-->
           <select name="" id="countryBornAddress">
             <option value="Andorra" selected>Andorra</option>
@@ -198,11 +216,16 @@
             <option value="">30 - GRC</option>
           </select>
           <!--Phone number-->
-          <input type="tel" name="" id="phoneNumberAddress" placeholder="PHONE NUMBER" />
+          <label for="phoneNumberAddress">
+          <input type="number" name="" id="phoneNumberAddress" placeholder="PHONE NUMBER" />
+          <small></small>
+        </label>
           </div>
           <!-- Current address checkbox -->
           <div class="fieldAddress fieldCurrentAddress">
-          <label for="currentAddress" class="currAddr">This is my regular address <input type="checkbox" name="" id="currentAddress" /></label>
+          <label for="currentAddress" class="currAddr">This is my regular address 
+            <input type="checkbox" name="" id="currentAddress" />
+          </label>
         </div>
           <!--Submit -->
           <div class="fieldAddress addressBtn">
@@ -216,7 +239,7 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping" style="display: flex;">
+    <section id="shipping" >
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
@@ -271,7 +294,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order" style="display: flex;">
+ <section id="order">
    <!--Left Section-->
    <div class="order-details">
      <div class="order-details-title">
@@ -322,7 +345,7 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou" style="display: flex;">
+ <section id="thankYou">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU</h2>
@@ -358,13 +381,29 @@
    <div class="thankYou-image "></div>
  </section>
  <!--! INTERVAL ALERT -->
- <div class="intervalTimer">
+ <!-- <div class="intervalTimer" >
   <p>You started registering <br />
     <span id="timeMinutes"></span> Hurry up!
   </p>
 </div>
 <div class="intervalTimerOver">
   <p>Your time it's over</p>
+</div> -->
+
+
+<div class="intervalTimer">
+  <div class="pop-up-msg">
+      <p>You've started registrering <span id="timeMinutes"></span> min ago.</p>
+  </div>
+  <div class="pop-up-msg2">
+      <h2>Hurry up!</h2>
+  </div>
+  <div class="pop-up-img"></div>
+</div>
+
+<div class="intervalTimerOver">
+  <div class="time-over-msg"><p>Your time is over!<br>You'll be redirected to the main page.</p></div>
+  <div class="time-over-image"></div>
 </div>
   </body>
 </html>

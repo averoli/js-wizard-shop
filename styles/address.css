@@ -4,7 +4,11 @@
   width: 100%;
   display: flex;
 }
-
+/*Small error tag*/
+#address small {
+  padding-left: unset;
+  padding-top: 0.2rem;
+}
 /*ADDRESS-DETAILS*/
 .address-details {
   width: 60%;
@@ -23,7 +27,13 @@
   flex-direction: column;
   margin-right: 3rem;
   justify-content: center;
-  
+}
+#addressForm select {
+  height: 2.5rem;
+}
+#addressForm label {
+  display: flex;
+  flex-direction: column;
 }
 /*FORM INPUTS*/
 #addressForm input:not(#currentAddress),
@@ -33,19 +43,9 @@ select {
   margin-right: 1rem;
   border: 0.15rem solid rgb(116, 116, 116);
   background-color: transparent;
+  border-radius: 0.2rem;
 }
-
-#birthdayAddress {
-  width: 43%;
-}
-.fieldCurrentAddress {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-.fieldCurrentAddress > * {
-  padding: 1rem 0;
-}
+/*General fields*/
 .fieldAddress {
   display: flex;
 }
@@ -53,8 +53,29 @@ select {
 select {
   flex: 1;
 }
+
+/*Birtday field*/
+#birthdayAddress {
+  width: 43%;
+}
+/*Current address*/
+.fieldCurrentAddress {
+  margin-top: 1rem;
+}
+.fieldCurrentAddress > * {
+  padding: 1rem 0;
+}
+
 .addressBtn input {
   padding: 0.5rem 1.2rem;
+}
+.currAddr {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+#currentAddress {
+  height: 1.2rem;
+  width: 2rem;
 }
 /*ADDRESS TITLE*/
 .addressTitle h2 {
@@ -71,13 +92,22 @@ select {
   width: 40%;
 }
 
-
-.fieldAddress .resetSection{
+.fieldAddress .resetSection {
   background: rgb(116, 116, 116) !important;
   color: rgba(190, 229, 228, 1);
 }
 
-.fieldAddress .nextSection{
+.fieldAddress .nextSection {
   background-color: #8dcfbe !important;
   border: none !important;
+}
+/*ERROR STYLE INPUT*/
+.error-input {
+  border: 2px solid red !important;
+}
+/*CHECK STYLE INPUT*/
+.check-input {
+  border: 2px solid green !important;
+  height: 2.5rem;
+  flex: 0 !important;
 }
