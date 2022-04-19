@@ -164,9 +164,10 @@ function ButtonValidationShipping(e) {
     currentSection.style.display = "none";
     addOrderParameters();
   }
-  // else {
-  //   return alert("You must choose your shipping type");
-  // }
+  else{
+    const msgErrorShipping = document.querySelector(".msgErrorShipping");
+    msgErrorShipping.textContent = "You must complete the field";
+  }
 }
 
 // CHANGE BUTTON INPUT FILE

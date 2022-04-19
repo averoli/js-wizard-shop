@@ -179,3 +179,10 @@ textarea {
   padding-right: 200px;
   rotate: 50%;
 }
+
+
+/* ERROR DIV */
+.msgErrorShipping{
+  color: red;
+  text-align: left;
+}
