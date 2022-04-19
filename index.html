@@ -20,12 +20,14 @@
       <nav>
         <ul>
           <li>HOME</li>
-          <li>SHOP</li>
+          <li class="shopButton">SHOP</li>
           <li>SCHOOL</li>
           <li>CONTACT</li>
         </ul>
       </nav>
     </header>
+
+
 <!-- *!MAIN PRODUCT -->
     <section id="mainProduct">
       <div class="product-details">
@@ -80,6 +82,8 @@
       <div class="product-images">
       </div>
     </section>
+
+   <!-- *!PROFILE --> 
     <section id="profile">
       <div class="profile-details">
         <!-- <div id="progress">
@@ -145,32 +149,59 @@
               </button>
             </div>
           </form>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> a4296b40c001cc70b3e9406d3bff0aa24efbc17a
       </div>
       <div class="profile-images"></div>
     </section>
 
 
     <!-- *!ADDRESS -->
-    <section id="address" >
+    <section id="address">
       <div class="address-details">
         <div class="addressTitle"><h2>ADDRESS</h2></div>
+        
         <form action="" id="addressForm">
           <div class="fieldAddress">
           <!-- First name -->
+<<<<<<< HEAD
           <input type="text" id="firstNameAddress" placeholder="NAME"/><br>
           <small id="errFirstNameAddress"></small><br />
+=======
+          <label for="firstNameAddress">
+          <input type="text" id="firstNameAddress" placeholder="NAME"/>
+          <small></small>
+        </label>
+>>>>>>> a4296b40c001cc70b3e9406d3bff0aa24efbc17a
           <!--Last name-->
+          <label for="lastNameAddress">
           <input type="text" id="lastNameAddress" placeholder="LAST NAME" />
+          <small></small>
+        </label>
         </div>
           <!--Birthday-->
+          <label for="birthdayAddress">
           <input type="date" name="" id="birthdayAddress" />
+          <small></small>
+        </label>
           <!--Address 1-->
+          <label for="address1">
           <input type="text" name="" id="address1" placeholder="ADDRESS 1"/>
+          <small></small>
+        </label>
           <!--Address 2-->
+        <label for="address2">
           <input type="text" id="address2" placeholder="ADDRESS 2"/>
+          <small></small>
+        </label>
           <div class="fieldAddress">
           <!--Postal code-->
+            <label for="postalCodeAddress">
           <input type="number" name="" id="postalCodeAddress" placeholder="POSTAL CODE"/>
+          <small></small>
+        </label>
           <!--Country-->
           <select name="" id="countryBornAddress">
             <option value="Andorra" selected>Andorra</option>
@@ -190,16 +221,20 @@
             <option value="">30 - GRC</option>
           </select>
           <!--Phone number-->
-          <input type="tel" name="" id="phoneNumberAddress" placeholder="PHONE NUMBER" />
+          <label for="phoneNumberAddress">
+          <input type="number" name="" id="phoneNumberAddress" placeholder="PHONE NUMBER" />
+          <small></small>
+        </label>
           </div>
           <!-- Current address checkbox -->
           <div class="fieldAddress fieldCurrentAddress">
-          <label for="currentAddress" class="currAddr">This is my regular address</label>
-          <input type="checkbox" name="" id="currentAddress" />
+          <label for="currentAddress" class="currAddr">This is my regular address 
+            <input type="checkbox" name="" id="currentAddress" />
+          </label>
         </div>
           <!--Submit -->
           <div class="fieldAddress addressBtn">
-          <input type="reset" value="Reset" />
+          <input type="reset" value="Reset" class="resetSection" />
           <input type="submit" value="Next" class="nextSection" /></div>
         </form>
       </div>
@@ -209,11 +244,11 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping">
+    <section id="shipping" >
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
-          <form action="" class="radioImput" id="shippingForm">
+          <!--<form action="" class="radioImput" id="shippingForm">-->
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -230,6 +265,8 @@
                   <p id="dateToEstimate"></p>
                 </div>
               </div>
+              <!-- MSG ERROR SHIPPING-->
+              <div class="msgErrorShipping"></div>
               <!-- FOR GIFT -->
               <div class="checkbox-form">
                   <label class="labelCheckbox" for="forGift"><input
@@ -243,7 +280,7 @@
               </div>
               <!-- GIFT IMAGE -->
               <div class="image-form">
-                  <label id="formImageShipping" for="wrapperImage">Gift wrapper image</label>
+                  <label id="formImageShipping" for="wrapperImage">Add gift wrapper image</label>
                   <label class="buttonFile" for="file-button">Select image</label>
                   <input id="file-button" class="form--input03" type="file" onchange='inputChangeFile()'
                       accept="image/png, image/jpeg" name="select_image" style="display:none;" />
@@ -264,7 +301,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order" >
+ <section id="order">
    <!--Left Section-->
    <div class="order-details">
      <div class="order-details-title">
@@ -315,10 +352,10 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou" >
+ <section id="thankYou">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
-       <h2>THANK YOU!</h2>
+       <h2>THANK YOU</h2>
      </div>
      <div class="thankYou-details-content">
     <div class="thankYou-details-field1">
@@ -334,7 +371,7 @@
     </div>
     <div class="thankYou-details-field2">
       <div class="thankYou-price">
-        <h2>Your Order</h2>
+        <h2>Your order</h2>
         <div class="thankYou-field-price">
           <p>Sweatshirt: 27,95€</p>
           <p><span id="orderShipType"></span> Shipping: <span id="orderShipPrice"></span>€</p>
@@ -351,13 +388,29 @@
    <div class="thankYou-image "></div>
  </section>
  <!--! INTERVAL ALERT -->
- <div class="intervalTimer">
+ <!-- <div class="intervalTimer" >
   <p>You started registering <br />
     <span id="timeMinutes"></span> Hurry up!
   </p>
 </div>
 <div class="intervalTimerOver">
   <p>Your time it's over</p>
+</div> -->
+
+
+<div class="intervalTimer">
+  <div class="pop-up-msg">
+      <p>You've started registrering <span id="timeMinutes"></span> min ago.</p>
+  </div>
+  <div class="pop-up-msg2">
+      <h2>Hurry up!</h2>
+  </div>
+  <div class="pop-up-img"></div>
+</div>
+
+<div class="intervalTimerOver">
+  <div class="time-over-msg"><p>Your time is over!<br>You'll be redirected to the main page.</p></div>
+  <div class="time-over-image"></div>
 </div>
   </body>
 </html>

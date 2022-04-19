@@ -8,13 +8,14 @@
   width: 60%;
   height: 100%;
   display: flex;
+  padding-left: 30%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    189deg,
-    rgba(255, 255, 255, 1) 70%,
+    126deg,
+    rgba(255, 255, 255, 1) 10%,
     rgba(190, 229, 228, 1) 100%
   );
 }
@@ -42,6 +43,7 @@
   margin-top: 10%;
   padding-left: 20%;
   margin-left: 35%;
+
 }
 
 .radioImputShipping {
@@ -51,6 +53,7 @@
 }
 .radioImputShipping > * {
   padding: 0.3rem 0;
+  padding-left: 0%;
 }
 
 .dateContainerShipping {
@@ -63,14 +66,14 @@
 
 .shippingTittle {
   position: absolute;
-  font-size: 7rem;
+  font-size: 6rem;
   letter-spacing: 0.8rem;
   display: flex;
   justify-content: center;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   text-transform: uppercase;
-  margin-left: 25%;
+  margin-left: -10%;
   margin-top: 6%;
   font-style: bolder;
 }
@@ -106,7 +109,7 @@ textarea {
   color: gray;
   background-color: #a4efe3;
   height: 30px;
-  width: 33%;
+  width: 40%;
   margin-top: 7px;
 }
 
@@ -127,7 +130,7 @@ textarea {
 }
 .next--button {
   font-size: 1rem;
-  padding: 0px 40px;
+  padding: 0px 0px;
   height: 30px;
   width: 30%;
 }
@@ -139,6 +142,10 @@ textarea {
   width: 30%;
   font-size: 1rem;
   border: 0;
+}
+.next--button {
+  background-color: #8dcfbe;
+  border: none;
 }
 
 .buttonFile {
@@ -171,4 +178,11 @@ textarea {
   writing-mode: vertical-lr;
   padding-right: 200px;
   rotate: 50%;
+}
+
+
+/* ERROR DIV */
+.msgErrorShipping{
+  color: red;
+  text-align: left;
 }
