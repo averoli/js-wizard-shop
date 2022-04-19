@@ -29,7 +29,7 @@
 
 
 <!-- *!MAIN PRODUCT -->
-    <section id="mainProduct">
+    <section id="mainProduct" style="display:none">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -235,11 +235,11 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping" >
+    <section id="shipping" style="display:flex" >
       <div class="containerShipping">
           <h1 class="shippingTittle">SHIPPING</h1>
           <!-- SHIPPING TYPE -->
-          <!--<form action="" class="radioImput" id="shippingForm">-->
+          <form action="" class="radioImput" id="shippingForm">
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -280,7 +280,7 @@
               <!-- BUTTON OF CLEAR AND NEXT -->
               <aside>
                   <div class="aside--01">
-                      <input class="clear--button" type="reset" name="clear_form_button" value="Clear form" />
+                      <input id="clearButton" class="clear--button" type="reset" name="clear_form_button" value="Clear form" />
                       <input id="nextButton" class="next--button" type="submit" name="next_button" value="Next" />
                   </div>
               </aside>
