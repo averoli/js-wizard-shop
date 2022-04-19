@@ -36,7 +36,7 @@
   flex-direction: column;
 }
 /*FORM INPUTS*/
-#addressForm input:not(#currentAddress),
+#addressForm input:not(#currentAddress, .nextSection, .resetSection),
 select {
   padding: 0.6rem;
   margin-top: 1rem;
@@ -49,7 +49,7 @@ select {
 .fieldAddress {
   display: flex;
 }
-.fieldAddress input,
+.fieldAddress input:not(.nextSection, .resetSection),
 select {
   flex: 1;
 }
@@ -66,9 +66,6 @@ select {
   padding: 1rem 0;
 }
 
-.addressBtn input {
-  padding: 0.5rem 1.2rem;
-}
 .currAddr {
   display: flex !important;
   flex-direction: row-reverse !important;
@@ -92,6 +89,10 @@ select {
   width: 40%;
 }
 
+/*BUttons*/
+/* .addressBtn input {
+  padding: 0.5rem 1.2rem;
+}
 .fieldAddress .resetSection {
   background: rgb(116, 116, 116) !important;
   color: rgba(190, 229, 228, 1);
@@ -100,7 +101,7 @@ select {
 .fieldAddress .nextSection {
   background-color: #8dcfbe !important;
   border: none !important;
-}
+} */
 /*ERROR STYLE INPUT*/
 .error-input {
   border: 2px solid red !important;

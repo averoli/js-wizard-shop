@@ -53,12 +53,12 @@ function timeRegister(params) {
         timerOver();
       }
     }
-  }, 10000);
+  }, 60000);
 
   function timerDuration() {
     setTimeout(function () {
       intervalContainer.style.display = "none";
-    }, 2000);
+    }, 5000);
   }
 }
 
@@ -71,7 +71,7 @@ function timerOver() {
   setTimeout(function () {
     intervalContainer2.style.display = "none";
     redirectProduct();
-  }, 2000);
+  }, 5000);
 }
 
 function redirectProduct() {

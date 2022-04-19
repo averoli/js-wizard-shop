@@ -6,6 +6,8 @@
 @import url(thankyou.css);
 @import url(order.css);
 @import url(alert.css);
+@import url(buttons.css);
+@import url(menu.css);
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 * {
   margin: 0;
@@ -13,42 +15,6 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   color: gray;
-}
-/* PRELOAD IMAGES
-body:after {
-  display: none;
-  content: url(../assets/tshirt-front/orange-sweatshirt.png)
-    url(../assets/tshirt-front/blue-sweatshirt.png)
-    url(../assets/tshirt-front/pink-sweatshirt.png)
-    url(../assets/tshirt-back/green-sweatshirt.png)
-    url(../assets/tshirt-back/orange-sweatshirt.png)
-    url(../assets/tshirt-back/blue-sweatshirt.png)
-    url(../assets/tshirt-back/pink-sweatshirt.png)
-    url(../assets/tshirt-back/green-sweatshirt.png)
-    url(../assets/tshirt-back-front/orange-sweatshirt.png)
-    url(../assets/tshirt-back-front/blue-sweatshirt.png)
-    url(../assets/tshirt-back-front/pink-sweatshirt.png)
-    url(../assets/tshirt-back-front/green-sweatshirt.png);
-} */
-/*MENU NAVEGADOR*/
-.menu-navigation {
-  position: fixed;
-  height: 10vh;
-  /* cursor: pointer; */
-}
-.menu-navigation ul {
-  display: flex;
-  list-style: none;
-  font-size: 0.8rem;
-  padding: 10px;
-}
-.shopButton {
-  font-size: 1.4rem;
-  margin-top: -5px;
-}
-
-.menu-navigation ul li {
-  padding: 10px 15px;
 }
 
 /*DISPLAY / HIDE*/

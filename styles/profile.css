@@ -27,7 +27,6 @@
   padding-right: 10px;
 }
 
-
 /*TITLE + FORM*/
 
 .profile-title {
@@ -59,7 +58,7 @@ small {
 }
 
 /*PROFILE  BUTTONS BLOCK - CLEAR + NEXT*/
-.buttons-block {
+/* .buttons-block {
   margin: 20px 0;
 }
 
@@ -76,7 +75,7 @@ small {
 .clear-btn {
   font-size: 1.1rem;
   padding: 10px 50px;
-}
+} */
 
 /*PROFILE IMAGES*/
 .profile-images {

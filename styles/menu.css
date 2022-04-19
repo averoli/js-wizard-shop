@@ -1,0 +1,20 @@
+/*MENU NAVEGADOR*/
+.menu-navigation {
+  position: fixed;
+  height: 10vh;
+  /* cursor: pointer; */
+}
+.menu-navigation ul {
+  display: flex;
+  list-style: none;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+.shopButton {
+  font-size: 1.4rem;
+  margin-top: -5px;
+}
+
+.menu-navigation ul li {
+  padding: 10px 15px;
+}
