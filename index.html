@@ -82,29 +82,16 @@
     </section>
     <section id="profile">
       <div class="profile-details">
-        <div id="progress">
-        <nav class = "navmenu">
-          <ul id="prorgess-ul">
-        <li><a href="#" class="active"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </nav>
-  </div>
         <!-- <div id="progress">
-          <div id="progress-bar">progress</div>
+          <div id="progress-bar"></div>
           <ul id="progress-num">
             <li class="step active"></li>
             <li class="step"></li>
             <li class="step"></li>
             <li class="step"></li>
+            <button id="progress-next" class="btn">Next</button>
           </ul>
-          <button id="next-progress">Next progress</button>
         </div> -->
-        
-      
           <!-- <div class="social-media-icons">
             <span>
               <img src="assets/icons/instagram.png" alt="" />
@@ -126,6 +113,7 @@
               placeholder="USERNAME"
             /><br />
             <small id="errUserNameProfile"></small><br />
+
             <input type="email" id="emailProfile" class="input-profile"
             placeholder="EMAIL"/><br />
             <small id="errEmailProfile"></small><br />
@@ -169,7 +157,8 @@
         <form action="" id="addressForm">
           <div class="fieldAddress">
           <!-- First name -->
-          <input type="text" id="firstNameAddress" placeholder="NAME"/>
+          <input type="text" id="firstNameAddress" placeholder="NAME"/><br>
+          <small id="errFirstNameAddress"></small><br />
           <!--Last name-->
           <input type="text" id="lastNameAddress" placeholder="LAST NAME" />
         </div>

@@ -43,7 +43,8 @@
 
 .input-profile {
   margin-top: 20px;
-  padding: 10px 120px 10px 8px;
+  width: 300px;
+  padding: 10px 0 10px 8px;
   background-color: transparent;
   border-style: solid;
   border-color: rgb(116, 116, 116);

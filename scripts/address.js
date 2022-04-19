@@ -8,6 +8,12 @@ const countryPhoneOpt = document.querySelectorAll(
 const countrySelect = document.querySelector("#countryBornAddress");
 countrySelect.addEventListener("change", checkCountryBornAddress);
 //
+
+// Error messages
+const smallFirstNameAddress = document.getElementById("errFirstNameAddress")
+
+
+
 function checkInputAddress(e) {
   let checkedForm = true;
   e.preventDefault();
@@ -42,7 +48,7 @@ function checkFirstNameAddres(firstName, firstNameContainer) {
     console.log("Only 20 characters allowed");
     return false;
   } else if (firstName.length === 0) {
-    console.log("This field is required");
+    errFirstNameAddress.textContent = "lastName is required"
     return false;
   } else {
     console.log("First name is OK: " + firstName);
