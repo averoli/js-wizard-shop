@@ -10,9 +10,43 @@ countrySelect.addEventListener("change", checkCountryBornAddress);
 //
 
 // Error messages
-const smallFirstNameAddress = document.getElementById("errFirstNameAddress")
+const smallFirstNameAddress = document.getElementById("errFirstNameAddress");
 
+const inputFormAddress = document.querySelectorAll("#addressForm");
 
+for (const input of inputFormAddress) {
+  input.addEventListener("change", validateOnPressKeyAddress);
+}
+
+function validateOnPressKeyAddress(e) {
+  let input = e.target;
+  switch (input.id) {
+    case "firstNameAddress":
+      checkFirstNameAddres(input);
+      break;
+    case "lastNameAddress":
+      checkLastNameAddres(input);
+      break;
+    case "birthdayAddress":
+      checkBirthdayAddres(input);
+      break;
+    case "address1":
+      checkAddres1(input);
+      break;
+    case "address2":
+      checkAddres2(input);
+      break;
+    case "postalCodeAddress":
+      checkPostalCodeAddress(input);
+      break;
+    case "phoneNumberAddress":
+      checkPhoneNumberAddres(input);
+      break;
+    default:
+      break;
+  }
+  console.log(e.target);
+}
 
 function checkInputAddress(e) {
   let checkedForm = true;
