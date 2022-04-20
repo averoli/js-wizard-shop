@@ -1,22 +1,16 @@
 /* PROFILE CONTAINER*/
 #profile {
   height: 100vh;
+  width: 100%;
+  display: flex;
 }
 
 /*PROFILE DETAILS*/
 .profile-details {
   display: flex;
   width: 60%;
-<<<<<<< Updated upstream
-  background: linear-gradient(
-    126deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(190, 229, 228, 1) 100%
-  );
-=======
   height: 100%;
   background-color: aliceblue;
->>>>>>> Stashed changes
   justify-content: end;
   align-items: center;
 }

@@ -13,11 +13,7 @@
   justify-content: center;
   text-align: center;
   padding-top: 10%;
-  background: linear-gradient(
-    189deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(190, 229, 228, 1) 70%
-  );
+  background-color: aliceblue;
   
 }
 .product-details > * {
