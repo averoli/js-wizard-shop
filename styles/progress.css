@@ -44,11 +44,12 @@
   z-index: 999;
 } 
 
-.progress-stop:first-child {
+.first {
   background-color: lightseagreen;
 }
 .second {
   background-color: white;
+  animation: unset;
 }
 .third {
   background-color: white;
@@ -63,6 +64,14 @@
   }
   100% {
     height: 0%;
+  }
+}
+@keyframes profile-stopBackground{
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: lightseagreen;
   }
 }
 

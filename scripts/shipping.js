@@ -151,9 +151,18 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", ButtonValidationShipping);
 
+
+
 function progressOrder(){
   const progressBar = document.querySelector("#order #myBar");
   progressBar.style.animationName = "order-animation";
+  const second = document.querySelector("#order .second");
+  second.style.backgroundColor = "lightseagreen";
+  const third = document.querySelector("#order .third");
+  third.style.backgroundColor = "lightseagreen";
+  const fourth = document.querySelector("#order .fourth");
+  fourth.style.backgroundColor = "lightseagreen";
+  fourth.style.animation = "profile-stopBackground 2s ease-in-out";
 }
 
 function ButtonValidationShipping(e) {

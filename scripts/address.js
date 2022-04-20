@@ -83,6 +83,11 @@ function checkInputAddress(e) {
 function progressAddress() {
   const progressBar = document.querySelector("#shipping #myBar");
   progressBar.style.animationName = "shipping-animation";
+  const second = document.querySelector("#shipping .second");
+  second.style.backgroundColor = "lightseagreen";
+  const third = document.querySelector("#shipping .third");
+  third.style.backgroundColor = "lightseagreen";
+  third.style.animation = "profile-stopBackground 2s ease-in-out";
 }
 
 function checkFirstNameAddres(firstN) {

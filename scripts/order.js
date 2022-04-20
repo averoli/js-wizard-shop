@@ -13,3 +13,4 @@ function nextSectionOrder(e) {
     currentSection.style.display = "none";
   }
 }
+
