@@ -15,6 +15,10 @@
   ;
 }
 
+.order-details > p{
+  font-size: 24px;
+}
+
 /*Order details title*/
 .order-details-title h2 {
   font-size: 6rem;
