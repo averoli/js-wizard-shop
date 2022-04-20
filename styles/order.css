@@ -126,3 +126,7 @@
   flex: 2;
   background-position: center;
 }
+
+.orderShippingFlex {
+  display: flex;
+}

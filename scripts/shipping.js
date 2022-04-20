@@ -53,7 +53,7 @@ document
 // const containerPremium = document.querySelector(".containerPremium");
 function showPremium(e) {
   //Store variables in object
-  tshirt.shippingType = "Premium";
+  tshirt.shippingType = "Premium ";
   tshirt.shippingDate = `Between: ${datePremium} and ${dateFinally}`;
   tshirt.shippingPrice = 9.99;
   tshirt.totalPrice = 9.99 + 27.95;
@@ -74,7 +74,7 @@ document.querySelector("#extra").addEventListener("change", showExtra);
 
 function showExtra(e) {
   //Store variables in object
-  tshirt.shippingType = "Extra";
+  tshirt.shippingType = "Extra ";
   tshirt.shippingDate = `Between: ${dateExtra} and ${dateExtraFinally}`;
   tshirt.shippingPrice = 4.99;
   tshirt.totalPrice = 4.99 + 27.95;
@@ -95,7 +95,7 @@ document.querySelector("#free").addEventListener("change", showFree);
 
 function showFree(e) {
   //Store variables in object
-  tshirt.shippingType = "Free";
+  tshirt.shippingType = "Free ";
   tshirt.shippingDate = `Between: ${dateFree} and ${freeDateFinally}`;
   tshirt.shippingPrice = "Gratis";
   tshirt.totalPrice = 27.95;
