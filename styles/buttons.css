@@ -1,4 +1,34 @@
 .nextSection,
 .resetSection {
   padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: none;
+  margin-right: 1rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+
+.nextSection{
+  background-color: #9ccff37d;
+  color: white;
+}
+
+.resetSection{
+  background-color: rgb(109, 109, 109);
+  color: rgb(255, 255, 255);
+}
+
+.nextSection:hover{
+  background-color: #96c8ec;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+
+}
+
+.resetSection:hover{
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+
 }

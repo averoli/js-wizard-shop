@@ -13,11 +13,7 @@
   justify-content: center;
   text-align: center;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    126deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(190, 229, 228, 1) 100%
-  );
+  background-color: aliceblue;
 }
 
 .containerShipping > * {
@@ -39,10 +35,9 @@
   padding: 2% 0%;
   max-width: 100%;
   max-height: 100%;
-  background-color: #c8fcef;
   margin-top: 10%;
   padding-left: 20%;
-  margin-left: 35%;
+  margin-left: 0%;
 }
 
 .radioImputShipping {
