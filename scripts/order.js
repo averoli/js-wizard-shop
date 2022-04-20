@@ -8,9 +8,12 @@ function nextSectionOrder(e) {
   const acceptOrder = document.querySelector("#acceptOrder").checked;
   const nextSection = document.querySelector("#thankYou");
   const currentSection = document.querySelector("#order");
+  const errMsg = document.querySelector("#checkOrderError");
   if (acceptOrder) {
     nextSection.style.display = "flex";
     currentSection.style.display = "none";
+    errMsg.textContent = "";
+  } else {
+    errMsg.textContent = "You must accept terms and conditions.";
   }
 }
-
