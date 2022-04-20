@@ -39,14 +39,19 @@ function timeRegister(params) {
   let countDown = 5;
 
   let timerOneMinute = setInterval(function () {
-    intervalContainer.style.display = "flex";
-    timerDuration();
-    countDown -= 1;
-    minutesTime.textContent = countDown;
-    if (countDown === 0) {
-      countDown = 5;
+    const thankYou = document.querySelector("#thankYou");
+    if (thankYou.style.display === "flex") {
       clearInterval(timerOneMinute);
-      timerOver();
+    } else {
+      intervalContainer.style.display = "flex";
+      timerDuration();
+      countDown -= 1;
+      minutesTime.textContent = countDown;
+      if (countDown === 0) {
+        countDown = 5;
+        clearInterval(timerOneMinute);
+        timerOver();
+      }
     }
   }, 60000);
 
@@ -70,16 +75,17 @@ function timerOver() {
 }
 
 function redirectProduct() {
-  const mainProduct = document.querySelector("#mainProduct");
-  const sections = document.querySelectorAll("body > section");
+  location.reload();
+  // const mainProduct = document.querySelector("#mainProduct");
+  // const sections = document.querySelectorAll("body > section");
 
-  for (const step of sections) {
-    if (step.id === mainProduct.id) {
-      step.style.display = "flex";
-    } else {
-      step.style.display = "none";
-    }
-  }
+  // for (const step of sections) {
+  //   if (step.id === mainProduct.id) {
+  //     step.style.display = "flex";
+  //   } else {
+  //     step.style.display = "none";
+  //   }
+  // }
 }
 const mainImage = document.querySelector(".product-images");
 /*GET INFO PRODUCTS*/

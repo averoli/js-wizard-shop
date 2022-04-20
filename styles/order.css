@@ -35,7 +35,7 @@
   font-size: 10px;
 }
 .orderCheckbox input {
-  width: 1.em;
+  width: 1em;
   height: 1rem;
 }
 
@@ -44,12 +44,12 @@
 }
 
 /*Order form button*/
-.orderSubmit input {
+/* .orderSubmit input {
   padding: 0.2rem 1rem;
   font-size: 1.2rem;
   background-color: #8dcfbe;
   border: none;
-}
+} */
 /*Order details content title,size etc...*/
 .order-details-content {
   width: 50%;
@@ -81,7 +81,6 @@
   font-size: 1rem;
   justify-content: space-around;
   flex: 1;
-  
 }
 .order-image-info > * {
   padding: 1rem;
@@ -93,7 +92,6 @@
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
 /*Order color */

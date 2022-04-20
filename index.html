@@ -27,7 +27,6 @@
       </nav>
     </header>
 
-
 <!-- *!MAIN PRODUCT -->
     <section id="mainProduct">
       <div class="product-details">
@@ -84,32 +83,17 @@
     </section>
 
    <!-- *!PROFILE --> 
-    <section id="profile">
+    <section id="profile" style="display:flex;">
       <div class="profile-details">
-      
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
           <div class="progress-stop second"></div>
-          <div class="progress-stop fird"></div>
+          <div class="progress-stop third"></div>
           <div class="progress-stop fourth"></div>
           <div id="bar-background">
-          <div id="myBar" class="myBarProfile"></div>
+          <div id="myBar" class="myBarAdress"></div>
           </div>  
         </div>
-        
-
-          <!-- <div class="social-media-icons">
-            <span>
-              <img src="assets/icons/instagram.png" alt="" />
-            </span>
-            <span>
-              <img src="assets/icons/twitter.png" alt="" />
-            </span>
-            <span>
-              <img src="assets/icons/facebook.png" alt="" />
-            </span>
-          </div> -->
-
           <h2 class="profile-title">PROFILE</h2>
           <form id="formProfile">
             <input
@@ -141,7 +125,7 @@
             <small id="errConfirmPassProfile"></small><br />
 
             <div class="buttons-block">
-              <button id="clearBtnProfile" class="clear-btn" type="button">CLEAR</button>
+              <button id="clearBtnProfile" class="clear-btn resetSection" type="button">CLEAR</button>
               <button
                 id="nextBtnProfile"
                 class="next-btn nextSection"
@@ -157,7 +141,7 @@
 
 
     <!-- *!ADDRESS -->
-    <section id="address">
+    <section id="address"  style="display:flex;">
       <div class="address-details">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -246,7 +230,7 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping" >
+    <section id="shipping" style="display:flex;" >
       <div class="containerShipping">
         <div id="myProgress"> 
           <div class="progress-stop"></div>
@@ -260,7 +244,7 @@
           <h1 class="shippingTittle">SHIPPING</h1>
           
           <!-- SHIPPING TYPE -->
-          <!--<form action="" class="radioImput" id="shippingForm">-->
+          <form action="" class="radioImput" id="shippingForm">
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -301,8 +285,8 @@
               <!-- BUTTON OF CLEAR AND NEXT -->
               <aside>
                   <div class="aside--01">
-                      <input class="clear--button" type="reset" name="clear_form_button" value="Clear form" />
-                      <input id="nextButton" class="next--button" type="submit" name="next_button" value="Next" />
+                      <input id="clearButton" class="clear--button resetSection" type="reset" name="clear_form_button" value="Clear form" />
+                      <input id="nextButton" class="next--button nextSection" type="submit" name="next_button" value="Next" />
                   </div>
               </aside>
             </form>
@@ -313,7 +297,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order">
+ <section id="order" style="display:flex;">
    <!--Left Section-->
    <div class="order-details">
     <div id="myProgress"> 
@@ -349,7 +333,7 @@
       <label for="acceptOrder">I have read and accept the terms and conditions.</label>
     </div>
     <div class="orderSubmit">
-      <input type="submit" value="Buy now!">
+      <input type="submit" value="Buy now!" class="nextSection">
     </div>
     </form>
    </div>
@@ -373,7 +357,7 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou">
+ <section id="thankYou" style="display:flex;">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU</h2>
@@ -402,23 +386,13 @@
       <div class="thankYou-details-image imageSelectedOrder"></div>
     </div>
     <div class="thankYou-details-field3">
-      <button><a href=".">Main Product</a></button>
+      <button class="nextSection"><a href=".">Main Product</a></button>
     </div>
    </div>
   </div>
    <div class="thankYou-image "></div>
  </section>
  <!--! INTERVAL ALERT -->
- <!-- <div class="intervalTimer" >
-  <p>You started registering <br />
-    <span id="timeMinutes"></span> Hurry up!
-  </p>
-</div>
-<div class="intervalTimerOver">
-  <p>Your time it's over</p>
-</div> -->
-
-
 <div class="intervalTimer">
   <div class="pop-up-msg">
       <p>You've started registrering <span id="timeMinutes"></span> min ago.</p>

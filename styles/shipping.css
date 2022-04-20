@@ -43,7 +43,6 @@
   margin-top: 10%;
   padding-left: 20%;
   margin-left: 35%;
-
 }
 
 .radioImputShipping {
@@ -125,10 +124,10 @@ textarea {
   border: 0;
   display: flex;
 }
-.aside--01 > input {
+.aside--01 > input:not(.nextSection, .resetSection) {
   margin-right: 1rem;
 }
-.next--button {
+/* .next--button {
   font-size: 1rem;
   padding: 0px 0px;
   height: 30px;
@@ -146,7 +145,7 @@ textarea {
 .next--button {
   background-color: #8dcfbe;
   border: none;
-}
+} */
 
 .buttonFile {
   text-align: center;
@@ -180,9 +179,8 @@ textarea {
   rotate: 50%;
 }
 
-
 /* ERROR DIV */
-.msgErrorShipping{
+.msgErrorShipping {
   color: red;
   text-align: left;
 }

@@ -227,3 +227,14 @@ function AddOrderParamsFor(elementHtml, property) {
     e.textContent = property;
   }
 }
+
+// CLEAR ALL BUTTON
+
+const buttonClear = document.getElementById("clearButton")
+const msgErrorDiv = document.querySelector(".msgErrorShipping");
+buttonClear.addEventListener("click", clearAllButton);
+
+function clearAllButton(){
+  msgErrorDiv.textContent = "";
+  containerDate.style.display = "none";
+}
