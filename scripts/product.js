@@ -22,6 +22,8 @@ function showSection() {
   const currentSection = document.querySelector("#mainProduct");
   nextSection.style.display = "flex";
   currentSection.style.display = "none";
+  const icons = document.querySelector(".step-icons");
+  icons.style.display = "flex";
   timeRegister();
   console.log(tshirt);
 }

@@ -166,7 +166,6 @@ function progressOrder(){
 }
 
 function ButtonValidationShipping(e) {
-  e.preventDefault();
   if (
     buttonRadioFree.checked ||
     buttonRadioExtra.checked ||

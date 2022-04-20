@@ -14,11 +14,7 @@
   align-items: center;
   justify-content: end;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    126deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(190, 229, 228, 1) 100%
-  );
+  background-color: aliceblue;
 }
 
 /*thank you details title*/

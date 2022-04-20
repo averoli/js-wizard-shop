@@ -8,6 +8,7 @@
 @import url(alert.css);
 @import url(buttons.css);
 @import url(menu.css);
+@import url(icons.css);
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 * {
   margin: 0;

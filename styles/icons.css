@@ -1,0 +1,39 @@
+.step-icons{
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    display: none;
+    flex-direction: column;
+
+}
+
+.step-icons span {
+    opacity: 60%;
+    transition: all 0.3s ease-in-out;
+}
+
+.step-icons span:hover{
+    opacity: 100%;
+    transform: scale(1.1);
+}
+
+
+/* .product-details-ICONS */
+
+.product-details-icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 40%;
+    opacity: 60%;
+}
+
+.product-details-icons span{
+    opacity: 60%;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-details-icons span:hover{
+    opacity: 100%;
+    transform: scale(1.1);
+}

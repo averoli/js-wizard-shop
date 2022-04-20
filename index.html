@@ -28,7 +28,7 @@
     </header>
 
 <!-- *!MAIN PRODUCT -->
-    <section id="mainProduct">
+    <section id="mainProduct" style="display: none;">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -68,13 +68,13 @@
         </div>
         <div class="product-details-icons">
           <span>
-            <img src="assets/icons/instagram.png" alt="" />
+            <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png" alt="" /></a>
           </span>
           <span>
-            <img src="assets/icons/twitter.png" alt="" />
+            <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
           </span>
           <span>
-            <img src="assets/icons/facebook.png" alt="" />
+            <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png" alt="" /></a>
           </span>
         </div>
       </div>
@@ -83,7 +83,7 @@
     </section>
 
    <!-- *!PROFILE --> 
-    <section id="profile" style="display:flex;">
+    <section id="profile">
       <div class="profile-details">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -141,7 +141,7 @@
 
 
     <!-- *!ADDRESS -->
-    <section id="address"  style="display:flex;">
+    <section id="address">
       <div class="address-details">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -220,8 +220,8 @@
         </div>
           <!--Submit -->
           <div class="fieldAddress addressBtn">
-          <input type="reset" value="Reset" class="resetSection" />
-          <input type="submit" value="Next" class="nextSection" /></div>
+          <input type="reset" value="CLEAR" class="resetSection" />
+          <input type="submit" value="NEXT" class="nextSection" /></div>
         </form>
       </div>
       <div class="address-image"></div>
@@ -230,7 +230,7 @@
 
 
     <!-- *!SHIPPING -->
-    <section id="shipping" style="display:flex;" >
+    <section id="shipping" style="display: flex;">
       <div class="containerShipping">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -249,9 +249,9 @@
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
                   <label for="extra"><input type="radio" name="shipping" id="extra"
-                          value="registro" /> Extra shipping (48H)<b> 4,99$</b> </label>
+                          value="registro" /> Extra shipping (48H)<b> 4,99€</b> </label>
                   <label for="shipping-premium"><input type="radio" name="shipping"
-                          id="shipping-premium" value="registro" /> Premium (24H)<b> 9,99$</b> </label>
+                          id="shipping-premium" value="registro" /> Premium (24H)<b> 9,99€</b> </label>
               </div>
               <!-- SHIPPING DATE -->
               <div class="dateContainerShipping">
@@ -285,8 +285,8 @@
               <!-- BUTTON OF CLEAR AND NEXT -->
               <aside>
                   <div class="aside--01">
-                      <input id="clearButton" class="clear--button resetSection" type="reset" name="clear_form_button" value="Clear form" />
-                      <input id="nextButton" class="next--button nextSection" type="submit" name="next_button" value="Next" />
+                      <input id="clearButton" class="clear--button resetSection" type="reset" name="clear_form_button" value="CLEAR" />
+                      <input id="nextButton" class="next--button nextSection" type="submit" name="next_button" value="NEXT" />
                   </div>
               </aside>
             </form>
@@ -297,7 +297,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order" style="display:flex;">
+ <section id="order">
    <!--Left Section-->
    <div class="order-details">
     <div id="myProgress"> 
@@ -317,7 +317,7 @@
      <div class="order-details-info">
      <h2><span id="orderDetailsColorTitle"></span> SWEATSHIRT</h2>
      <div class="orderField">
-     <p>Size: <span id="orderDetailsSize"></span></p>
+     <p>Size: XS<span id="orderDetailsSize"></span></p>
      <p class="colorParragraph">Color: <span id="orderDetailsColor"></span> </p>
     </div>
      <!-- Date about the order -->
@@ -333,7 +333,7 @@
       <label for="acceptOrder">I have read and accept the terms and conditions.</label>
     </div>
     <div class="orderSubmit">
-      <input type="submit" value="Buy now!" class="nextSection">
+      <input type="submit" value="BUY NOW" class="nextSection">
     </div>
     </form>
    </div>
@@ -357,7 +357,7 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou" style="display:flex;">
+ <section id="thankYou">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU</h2>
@@ -386,7 +386,7 @@
       <div class="thankYou-details-image imageSelectedOrder"></div>
     </div>
     <div class="thankYou-details-field3">
-      <button class="nextSection"><a href=".">Main Product</a></button>
+      <a href="."><button class="nextSection">MAIN PRODUCT</button></a>
     </div>
    </div>
   </div>
@@ -406,6 +406,20 @@
 <div class="intervalTimerOver">
   <div class="time-over-msg"><p>Your time is over!<br>You'll be redirected to the main page.</p></div>
   <div class="time-over-image"></div>
+</div>
+
+
+<!-- ! ICONS -->
+<div class="step-icons">
+  <span>
+    <a href="https://www.instagram.com/assemblerinstitute/"><img src="assets/icons/instagram.png" alt="" /></a>
+  </span>
+  <span>
+    <a href="https://twitter.com/assemblerinstit"><img src="assets/icons/twitter.png" alt="" /></a>
+  </span>
+  <span>
+    <a href="https://www.facebook.com/assemblerinstitute/"><img src="assets/icons/facebook.png" alt="" /></a>
+  </span>
 </div>
   </body>
 </html>

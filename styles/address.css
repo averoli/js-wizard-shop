@@ -15,11 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  background: linear-gradient(
-    126deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(190, 229, 228, 1) 100%
-  );
+  background-color: aliceblue;
 }
 /*FORM*/
 #addressForm {
@@ -83,7 +79,7 @@ select {
 }
 /*ADDRESS-IMAGE main*/
 .address-image {
-  background-image: url("../assets/image-step/imagenShipping.png");
+  background-image: url("../assets/image-step/coverIMG.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 40%;
