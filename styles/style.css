@@ -17,7 +17,11 @@
   font-family: "Raleway", sans-serif;
   color: gray;
 }
-
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 /*DISPLAY / HIDE*/
 #profile,
 #address,
