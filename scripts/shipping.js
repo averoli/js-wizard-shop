@@ -151,9 +151,7 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", ButtonValidationShipping);
 
-
-
-function progressOrder(){
+function progressOrder() {
   const progressBar = document.querySelector("#order #myBar");
   progressBar.style.animationName = "order-animation";
   const second = document.querySelector("#order .second");
@@ -166,6 +164,7 @@ function progressOrder(){
 }
 
 function ButtonValidationShipping(e) {
+  e.preventDefault();
   if (
     buttonRadioFree.checked ||
     buttonRadioExtra.checked ||
@@ -177,8 +176,7 @@ function ButtonValidationShipping(e) {
     currentSection.style.display = "none";
     addOrderParameters();
     progressOrder();
-  }
-  else{
+  } else {
     const msgErrorShipping = document.querySelector(".msgErrorShipping");
     msgErrorShipping.textContent = "You must complete the field";
   }
@@ -238,11 +236,11 @@ function AddOrderParamsFor(elementHtml, property) {
 
 // CLEAR ALL BUTTON
 
-const buttonClear = document.getElementById("clearButton")
+const buttonClear = document.getElementById("clearButton");
 const msgErrorDiv = document.querySelector(".msgErrorShipping");
 buttonClear.addEventListener("click", clearAllButton);
 
-function clearAllButton(){
+function clearAllButton() {
   msgErrorDiv.textContent = "";
   containerDate.style.display = "none";
 }

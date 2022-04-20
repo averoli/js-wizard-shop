@@ -6,19 +6,19 @@
 
 .containerShipping {
   width: 60%;
-  /* height: 100%; */
   display: flex;
-  padding-left: 30%;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
+  justify-content: end;
   background: rgb(255, 255, 255);
   background-color: aliceblue;
+  padding: 9rem;
 }
 
 .containerShipping > * {
   max-height: 100%;
-  padding: 10px 0;
+  padding: 10px 70px;
   margin-left: 20%;
 }
 
@@ -35,7 +35,6 @@
   padding: 2% 0%;
   max-width: 100%;
   max-height: 100%;
-  margin-top: 10%;
   padding-left: 20%;
   margin-left: 0%;
 }
@@ -68,7 +67,6 @@
   transform: rotate(-180deg);
   text-transform: uppercase;
   margin-left: -10%;
-  margin-top: 6%;
   font-style: bolder;
 }
 
@@ -103,7 +101,6 @@ textarea {
   color: gray;
   background-color: #a4efe3;
   height: 30px;
-  width: 40%;
   margin-top: 7px;
 }
 
@@ -177,5 +174,9 @@ textarea {
 /* ERROR DIV */
 .msgErrorShipping {
   color: red;
+  text-align: left;
+}
+
+.labelCheckbox {
   text-align: left;
 }

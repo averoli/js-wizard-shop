@@ -28,7 +28,7 @@
     </header>
 
 <!-- *!MAIN PRODUCT -->
-    <section id="mainProduct" style="display: none;">
+    <section id="mainProduct" style="display: flex;">
       <div class="product-details">
         <h2>SWEATSHIRT</h2>
         <p class="product-details-price">27'95€</p>
@@ -83,7 +83,7 @@
     </section>
 
    <!-- *!PROFILE --> 
-    <section id="profile">
+    <section id="profile" style="display: flex;">
       <div class="profile-details">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -141,7 +141,7 @@
 
 
     <!-- *!ADDRESS -->
-    <section id="address">
+    <section id="address" style="display: flex;">
       <div class="address-details">
         <div id="myProgress"> 
           <div class="progress-stop first"></div>
@@ -241,10 +241,11 @@
           <div id="myBar" class="myBarAdress"></div>
           </div>  
         </div>
-          <h1 class="shippingTittle">SHIPPING</h1>
+     
           
           <!-- SHIPPING TYPE -->
           <form action="" class="radioImput" id="shippingForm">
+            <h1 class="shippingTittle">SHIPPING</h1>
               <div class="radioImputShipping">
                   <label for="free"><input type="radio" name="shipping" id="free"
                           value="registro" /> Free shipment (72H) </label>
@@ -297,7 +298,7 @@
 
 
   <!-- *!ORDER SECTION-->
- <section id="order">
+ <section id="order" style="display: flex;">
    <!--Left Section-->
    <div class="order-details">
     <div id="myProgress"> 
@@ -317,7 +318,7 @@
      <div class="order-details-info">
      <h2><span id="orderDetailsColorTitle"></span> SWEATSHIRT</h2>
      <div class="orderField">
-     <p>Size: XS<span id="orderDetailsSize"></span></p>
+     <p>Size: <span id="orderDetailsSize"></span></p>
      <p class="colorParragraph">Color: <span id="orderDetailsColor"></span> </p>
     </div>
      <!-- Date about the order -->
@@ -357,7 +358,7 @@
 
 
  <!-- *!THANK YOU SECTION -->
- <section id="thankYou">
+ <section id="thankYou" style="display: flex;">
    <div class="thankYou-details">
      <div class="thankYou-details-title">
        <h2>THANK YOU</h2>

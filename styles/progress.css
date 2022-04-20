@@ -30,7 +30,6 @@
   animation-fill-mode: forwards;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  
 }
 
 .progress-stop {
@@ -42,7 +41,7 @@
   box-sizing: border-box;
   postion: absolute;
   z-index: 999;
-} 
+}
 
 .first {
   background-color: lightseagreen;
@@ -89,10 +88,9 @@
     height: 33.33333%;
   }
   100% {
-    height: 66.66666%;
+    height: 63%;
   }
 }
-
 
 @keyframes order-animation {
   0% {
