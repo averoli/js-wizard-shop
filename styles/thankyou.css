@@ -33,7 +33,7 @@
   justify-content: center;
 }
 .thankYou-details-content > div {
-  padding: 1rem 0;
+  padding: 1rem 5px;
 }
 /*thank you details field 1*/
 .thankYou-details-field1 > * {
