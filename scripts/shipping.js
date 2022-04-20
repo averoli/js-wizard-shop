@@ -151,6 +151,11 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", ButtonValidationShipping);
 
+function progressOrder(){
+  const progressBar = document.querySelector("#order #myBar");
+  progressBar.style.animationName = "order-animation";
+}
+
 function ButtonValidationShipping(e) {
   e.preventDefault();
   if (
@@ -163,6 +168,7 @@ function ButtonValidationShipping(e) {
     nextSection.style.display = "flex";
     currentSection.style.display = "none";
     addOrderParameters();
+    progressOrder();
   }
   else{
     const msgErrorShipping = document.querySelector(".msgErrorShipping");

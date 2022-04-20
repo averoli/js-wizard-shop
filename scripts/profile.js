@@ -17,15 +17,31 @@ const smallConfirmPassProfile = document.getElementById(
   "errConfirmPassProfile"
 );
 
-const progressBar = document.getElementById("progress-bar");
-const progressNext = document.getElementById("progress-next");
+for (const input of fields) {
+  input.addEventListener("change" , validationChangeProfile);
+}
 
-const steps = document.querySelectorAll(".step");
-let active = 1;
+function validationChangeProfile(e) {
+  const inputName = e.target.id;
+  switch (inputName) {
+    case "userNameProfile":
+      userNameProfileValidation();
+      break;
+      case "emailProfile":
+        emailProfileValidation();
+        break;
+        case "passwordProfile":
+          passwordProfileValidation();
+          break;
+          case "confirmPassProfile":
+            confirmPassProfileValidation();
+            break;
 
+  }
+
+}
 
 const requiredFiel = "This field is required";
-
 // Clear the form - Button Clear
 document
   .getElementById("clearBtnProfile")
@@ -129,36 +145,21 @@ formProfile.addEventListener("submit", function (event) {
     passwordProfile.style.borderColor == "green" &&
     confirmPassProfile.style.borderColor == "green"
   ) {
-   
     sectionProfile.style.display = "none";
     sectionAddress.style.display = "flex";
-    // progress();
+    progressProfile();
+    secondStop();
   }
 });
 
+function progressProfile() {
+const progressBar = document.querySelector("#address #myBar");
+progressBar.style.animationName = "address-animation";
+}
 
-// PROGRESS BAR
-progressNext.addEventListener("click", () => {
-  active++;
-  if (active > steps.length) {
-    active = steps.length;
-  }
-  updateProgress();
-});
-
-
-const updateProgress = () => {
-  steps.forEach((step, i) => {
-    if (i < active) {
-      step.classList.add("active");
-    } else {
-      step.classList.remove("active");
-    }
-  });
-  progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
-   if (active === steps.length) {
-    progressNext.disabled = true;
-  } else {
-    progressNext.disabled = false;
-  }
-};
+function secondStop(){
+  
+  const second = document.querySelector(".second");
+  console.log(second.style.backgroundColor);
+  second.style.backgroundColor = "lightseagreen";
+}

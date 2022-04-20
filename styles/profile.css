@@ -1,25 +1,22 @@
 /* PROFILE CONTAINER*/
 #profile {
   height: 100vh;
-  width: auto;
-  display: flex;
 }
 
 /*PROFILE DETAILS*/
 .profile-details {
   display: flex;
   width: 60%;
-  height: 100%;
   background: linear-gradient(
     126deg,
     rgba(255, 255, 255, 1) 10%,
     rgba(190, 229, 228, 1) 100%
   );
   justify-content: end;
+  align-items: center;
 }
 
 /*SOCIAL ICONS*/
-
 .social-media-icons {
   display: flex;
   justify-content: center;
@@ -27,14 +24,12 @@
   padding-right: 10px;
 }
 
-
 /*TITLE + FORM*/
-
 .profile-title {
   font-size: 7rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  text-align: center;
+  padding: 1rem;
 }
 
 #formProfile {
@@ -75,7 +70,7 @@ small {
 .next-btn,
 .clear-btn {
   font-size: 1.1rem;
-  padding: 10px 50px;
+  padding: 10px 45px;
 }
 
 /*PROFILE IMAGES*/
@@ -86,3 +81,6 @@ small {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+

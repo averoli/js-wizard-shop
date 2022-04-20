@@ -10,9 +10,7 @@ countrySelect.addEventListener("change", checkCountryBornAddress);
 //
 
 // Error messages
-const smallFirstNameAddress = document.getElementById("errFirstNameAddress")
-
-
+const smallFirstNameAddress = document.getElementById("errFirstNameAddress");
 
 function checkInputAddress(e) {
   let checkedForm = true;
@@ -42,7 +40,13 @@ function checkInputAddress(e) {
   if (firstN && lastN && birthD && addr1 && addr2 && postC && phoneN) {
     //Function to show next section or not
     isFormCheckedAddress(checkedForm);
+    progressAddress();
   }
+}
+
+function progressAddress() {
+  const progressBar = document.querySelector("#shipping #myBar");
+  progressBar.style.animationName = "shipping-animation";
 }
 
 function checkFirstNameAddres(firstN) {

@@ -1,57 +1,95 @@
-#progress {
- position: relative;
-  margin: auto;
-}
-
-#progress-bar {
-  position: absolute;
-  background: lightseagreen;
-  height: 5px;
-  width: 0%;
-  top: 50%;
-  left: 0;
-}
-
-#progress-num {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#myProgress {
+  height: 350px;
+  border-radius: 16px;
+  position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-#progress-num::before {
-  content: "";
-  background-color: lightgray;
+
+#bar-background {
   position: absolute;
-  top: 50%;
-  left: 0;
-  height: 5px;
-  width: 100%;
-  z-index: -1;
-} 
-
- #progress-num .step {
-  border: 3px solid lightgray;
-  border-radius: 100%;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-  background-color: #fff;
-  font-family: sans-serif;
-  font-size: 14px;  
-  position: relative;
   z-index: 1;
-} 
-#progress-num .step.active {
-  border-color: lightseagreen;
-  background-color: lightseagreen;
-  color: #fff;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  background-color: #e6f2fa;
+  height: 100%;
+  width: 8px;
+  border-radius: 16px;
 }
 
-.btn {
-    background: lightgray;    
-    border: none;
-    border-radius: 3px;
-    padding: 6px 12px;   
+#myBar {
+  background-color: lightseagreen;
+  width: 8px;
+  text-align: right;
+  font-size: 20px;
+  margin-right: 2px;
+  border-radius: 8px;
+  animation-name: profile-animation;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  
+}
+
+.progress-stop {
+  border-radius: 50%;
+  background-color: white;
+  width: 16px;
+  height: 16px;
+  border: 2px solid lightseagreen;
+  box-sizing: border-box;
+  postion: absolute;
+  z-index: 999;
 } 
+
+.progress-stop:first-child {
+  background-color: lightseagreen;
+}
+.second {
+  background-color: white;
+}
+.third {
+  background-color: white;
+}
+.fourth {
+  background-color: white;
+}
+
+@keyframes profile-animation {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes address-animation {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 33.33333%;
+  }
+}
+
+@keyframes shipping-animation {
+  0% {
+    height: 33.33333%;
+  }
+  100% {
+    height: 66.66666%;
+  }
+}
+
+
+@keyframes order-animation {
+  0% {
+    height: 66.66666%;
+  }
+  100% {
+    height: 99%;
+  }
+}
