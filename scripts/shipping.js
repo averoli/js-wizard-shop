@@ -1,5 +1,8 @@
 //Import object from index.js
 import { tshirt } from "./index.js";
+
+import progress from "./utils.js"
+
 ///FECHAS DE ENVIOS///
 const hoy = new Date();
 const month = [
@@ -151,18 +154,6 @@ const nextButton = document.getElementById("nextButton");
 
 nextButton.addEventListener("click", ButtonValidationShipping);
 
-function progressOrder() {
-  const progressBar = document.querySelector("#order #myBar");
-  progressBar.style.animationName = "order-animation";
-  const second = document.querySelector("#order .second");
-  second.style.backgroundColor = "lightseagreen";
-  const third = document.querySelector("#order .third");
-  third.style.backgroundColor = "lightseagreen";
-  const fourth = document.querySelector("#order .fourth");
-  fourth.style.backgroundColor = "lightseagreen";
-  fourth.style.animation = "profile-stopBackground 2s ease-in-out";
-}
-
 function ButtonValidationShipping(e) {
   e.preventDefault();
   if (
@@ -175,7 +166,7 @@ function ButtonValidationShipping(e) {
     nextSection.style.display = "flex";
     currentSection.style.display = "none";
     addOrderParameters();
-    progressOrder();
+    progress("order", 4);
   } else {
     const msgErrorShipping = document.querySelector(".msgErrorShipping");
     msgErrorShipping.textContent = "You must complete the field";

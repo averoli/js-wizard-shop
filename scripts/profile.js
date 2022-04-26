@@ -1,3 +1,5 @@
+import progress from "./utils.js"
+
 let element = false;
 
 const sectionProfile = document.getElementById("profile");
@@ -147,14 +149,7 @@ formProfile.addEventListener("submit", function (event) {
   ) {
     sectionProfile.style.display = "none";
     sectionAddress.style.display = "flex";
-    progressProfile();
+    progress("address", 2);
   }
 });
 
-function progressProfile() {
-const progressBar = document.querySelector("#address #myBar");
-const second = document.querySelector("#address .second");
-progressBar.style.animationName = "address-animation";
-second.style.backgroundColor = "lightseagreen";
-second.style.animation = "profile-stopBackground 2s ease-in-out";
-}

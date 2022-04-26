@@ -1,3 +1,5 @@
+import progress from "./utils.js"
+
 const addressForm = document.querySelector("#addressForm");
 addressForm.addEventListener("submit", checkInputAddress);
 /*Country*/
@@ -76,19 +78,12 @@ function checkInputAddress(e) {
   if (firstN && lastN && birthD && addr1 && addr2 && postC && phoneN) {
     //Function to show next section or not
     isFormCheckedAddress(checkedForm);
-    progressAddress();
+    // progressAddress();
+    progress("shipping", 3)
   }
 }
 
-function progressAddress() {
-  const progressBar = document.querySelector("#shipping #myBar");
-  progressBar.style.animationName = "shipping-animation";
-  const second = document.querySelector("#shipping .second");
-  second.style.backgroundColor = "lightseagreen";
-  const third = document.querySelector("#shipping .third");
-  third.style.backgroundColor = "lightseagreen";
-  third.style.animation = "profile-stopBackground 2s ease-in-out";
-}
+
 
 function checkFirstNameAddres(firstN) {
   let firstName = firstN.value;
